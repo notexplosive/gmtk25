@@ -1,0 +1,1 @@
+dotnet run --project .\Tools\AssetBuilder\AssetBuilder.csproj -- .\Library\Assets\Content\Content.mgcb
