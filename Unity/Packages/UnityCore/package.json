@@ -1,0 +1,10 @@
+{
+    "name": "ca.secretplan.core",
+    "version": "0.0.1",
+    "displayName": "Secret Plan Core",
+    "unity": "2020.3",
+    "dependencies": {
+        "com.dbrizov.naughtyattributes": "2.1.4",
+        "com.unity.addressables": "1.22.3"
+    }
+}
