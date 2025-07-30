@@ -1,0 +1,17 @@
+{
+    "name": "OutLoop.Runtime",
+    "rootNamespace": "Outloop",
+    "references": [
+        "GUID:56d0e8b1852c7d54992db89fa677c364",
+        "GUID:3b0621fbd8d5e7843b04c90fe91eaafe"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
