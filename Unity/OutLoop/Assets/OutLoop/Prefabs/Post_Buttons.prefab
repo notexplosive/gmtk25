@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3598777555288994022}
   - component: {fileID: 6072075269795157383}
   m_Layer: 5
-  m_Name: ButtonRow
+  m_Name: Post_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 40
   m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
+  m_FlexibleHeight: 0
   m_LayoutPriority: 1
 --- !u!1001 &6258354244665261282
 PrefabInstance:
