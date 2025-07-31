@@ -1,9 +1,10 @@
 {
     "name": "OutLoop.Runtime",
-    "rootNamespace": "Outloop",
+    "rootNamespace": "OutLoop",
     "references": [
         "GUID:56d0e8b1852c7d54992db89fa677c364",
-        "GUID:3b0621fbd8d5e7843b04c90fe91eaafe"
+        "GUID:3b0621fbd8d5e7843b04c90fe91eaafe",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
