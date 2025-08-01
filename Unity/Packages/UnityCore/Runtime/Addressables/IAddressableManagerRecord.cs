@@ -7,5 +7,6 @@
         bool IsEmpty();
         bool IsReady();
         void Release();
+        void ForceLoadNow();
     }
 }

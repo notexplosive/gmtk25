@@ -12,7 +12,7 @@ namespace SecretPlan.Core
             _record = record;
         }
 
-        public IEnumerator WaitUntilReady()
+        public IEnumerator WaitUntilReadyCoroutine()
         {
             while (!_record.IsReady())
             {
@@ -35,6 +35,12 @@ namespace SecretPlan.Core
             
             var casted = _record as AddressablesManagerRecord<T>;
             return casted?.Result();
+        }
+
+        public T? WaitUntilReadyBlocking()
+        {
+            _record.ForceLoadNow();
+            return Asset();
         }
     }
 }

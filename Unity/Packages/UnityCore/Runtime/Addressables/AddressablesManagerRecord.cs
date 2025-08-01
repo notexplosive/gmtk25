@@ -39,6 +39,11 @@ namespace SecretPlan.Core
             Addressables.Release(_handle);
         }
 
+        public void ForceLoadNow()
+        {
+            _handle.WaitForCompletion();
+        }
+
         public T Result()
         {
             return _handle.Result;

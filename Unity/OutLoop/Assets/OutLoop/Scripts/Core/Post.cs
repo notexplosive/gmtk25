@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using OutLoop.Data;
+using SecretPlan.Core;
+using UnityEngine;
 
 namespace OutLoop.Core
 {
@@ -13,6 +15,7 @@ namespace OutLoop.Core
             Author = accountTable[postData.AuthorUsername];
             Likes = Constants.CalculateReposts(postData.RepostsMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
             Reposts = Constants.CalculateLikes(postData.LikesMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
+            AttachedImage = new Addressable<Sprite>(postData.ImagePath ?? string.Empty);
         }
 
         public int Reposts { get; }
@@ -21,6 +24,7 @@ namespace OutLoop.Core
         public string Text { get; }
         public PostData OriginalData { get; }
         public string? Id { get; }
+        public Addressable<Sprite> AttachedImage { get; }
         public Post? LinkedPost { get; set; }
     }
 }

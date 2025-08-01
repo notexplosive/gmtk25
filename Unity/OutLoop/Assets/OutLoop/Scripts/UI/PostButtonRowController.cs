@@ -23,5 +23,23 @@ namespace OutLoop.UI
         
         [SerializeField]
         private TMP_Text? _likeCount;
+
+        public void DisplayStats(int likes, int reposts, int comments)
+        {
+            if (_likeCount != null)
+            {
+                _likeCount.text = likes.ToString();
+            }
+            
+            if (_repostCount != null)
+            {
+                _repostCount.text = reposts.ToString();
+            }
+            
+            if (_commentCount != null)
+            {
+                _commentCount.text = comments.ToString();
+            }
+        }
     }
 }

@@ -15,13 +15,8 @@ MonoBehaviour:
   m_GroupName: ProfilePictures
   m_GUID: 94f41af8b3d380e4ba2f70c6049e1ec6
   m_SerializeEntries:
-  - m_GUID: 6d168a6bea4f476458eb29f8470ebe4a
-    m_Address: pfp_default
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b9be929a13108b24ead30d43c6e914c8
-    m_Address: pfp_tronix
+  - m_GUID: 794719972da4c634f9b4b1eb5a4396fc
+    m_Address: ProfilePictures
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

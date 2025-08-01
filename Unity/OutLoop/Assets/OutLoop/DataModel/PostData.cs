@@ -23,9 +23,9 @@ namespace OutLoop.Data
         public int? RepostsMagnitude { get; set; } = null;
         
         [YamlMember(Alias = "image")]
-        public string? ImagePath { get; set; } = "";
+        public string? ImagePath { get; set; } = null;
         
         [YamlMember(Alias = "linked_post_id")]
-        public string? LinkedPostId { get; set; } = "";
+        public string? LinkedPostId { get; set; } = null;
     }
 }

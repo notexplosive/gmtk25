@@ -22,5 +22,10 @@ namespace SecretPlan.Core
         {
             AddressablesManager.Release(_address);
         }
+
+        public T? ForceLoadNow(Component owner)
+        {
+            return LoadAsync(owner).WaitUntilReadyBlocking();
+        }
     }
 }

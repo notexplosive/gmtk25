@@ -39,5 +39,10 @@ namespace OutLoop.Core
                 yield return post;
             }
         }
+
+        public int CommentCount()
+        {
+            return NormalComments.Count + ThreadComments.Count;
+        }
     }
 }

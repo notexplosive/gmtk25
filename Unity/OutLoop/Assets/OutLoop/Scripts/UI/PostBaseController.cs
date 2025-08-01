@@ -1,4 +1,4 @@
-﻿using OutLoop.Data;
+﻿using OutLoop.Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +31,7 @@ namespace OutLoop.UI
         [SerializeField]
         private GameObject? _threadIndicator;
 
-        public void Populate(PostData post, bool isPartOfThread)
+        public void Populate(Post post, bool isPartOfThread, int comments)
         {
             if (_threadIndicator != null)
             {
@@ -40,12 +40,40 @@ namespace OutLoop.UI
 
             if (_profilePicture != null)
             {
-                
+                _profilePicture.sprite = post.Author.ProfilePicture.ForceLoadNow(this);
             }
 
             if (_displayNameAndUserName != null)
             {
-                // _displayNameAndUserName.text = ;
+                _displayNameAndUserName.text = post.Author.DisplayNameAndUsernameStyled;
+            }
+
+            if (_bodyText != null)
+            {
+                _bodyText.text = post.Text;
+            }
+
+            if (_media != null)
+            {
+                _media.sprite = post.AttachedImage.ForceLoadNow(this);
+            }
+
+            if (_contextHeader != null)
+            {
+                // not sure if we're even using this anymore
+            }
+
+            if (_linkedPost != null)
+            {
+                if (post.LinkedPost != null)
+                {
+                    _linkedPost.Populate(post.LinkedPost, false, 0);
+                }
+            }
+
+            if (_buttons != null)
+            {
+                _buttons.DisplayStats(post.Likes, post.Reposts, comments);
             }
         }
     }

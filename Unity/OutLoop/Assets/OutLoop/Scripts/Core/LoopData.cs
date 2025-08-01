@@ -7,8 +7,12 @@ namespace OutLoop.Core
     public class LoopData
     {
         private readonly List<Account> _allAccounts = new();
-        private List<Puzzle> _allPuzzles = new();
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
+        private readonly List<Puzzle> _allPuzzles = new();
+
+        public LoopData()
+        {
+        }
 
         public LoopData(List<AccountData> accountDataList, List<PuzzleData> puzzleDataList,
             List<TopLevelPostData> topLevelPostList)
@@ -50,6 +54,8 @@ namespace OutLoop.Core
                 _allPuzzles.Add(puzzle);
             }
         }
+
+        public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
 
         public Dictionary<string, Account> BuildAccounts(List<AccountData> accountDataList)
         {

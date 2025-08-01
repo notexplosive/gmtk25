@@ -10,14 +10,23 @@ namespace OutLoop.Core
         public Account(AccountData data)
         {
             UserName = data.UserName;
-            DisplayName = data.DisplayName;
+            DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
             if (data.IsFakeProfile)
             {
                 Bio = "<style=System>This profile cannot be loaded at this time.</style>";
             }
 
             Bio = data.Bio ?? string.Empty;
-            ProfilePicture = new Addressable<Sprite>("pfp_tronix");
+
+            if (data.IsFakeProfile)
+            {
+                ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
+            }
+            else
+            {
+                ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
+            }
+
             var followerCount = Constants.CalculateFollowers(data.FollowerCountMagnitude);
             FollowerCount = followerCount;
             OriginalData = data;
@@ -32,5 +41,6 @@ namespace OutLoop.Core
         public AccountData OriginalData { get; }
 
         public string UserNameWithAt => $"@{UserName}";
+        public string DisplayNameAndUsernameStyled => $"{DisplayName} <style=Username>{UserNameWithAt}</style>";
     }
 }

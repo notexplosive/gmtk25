@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace SecretPlan.Core
 {
@@ -15,7 +18,14 @@ namespace SecretPlan.Core
             }
             else
             {
-                _addressToRecord[address] = new AddressablesManagerRecord<T>(address);
+                if (string.IsNullOrWhiteSpace(address))
+                {
+                    _addressToRecord[address] = new EmptyAddressableRecord();
+                }
+                else
+                {
+                    _addressToRecord[address] = new AddressablesManagerRecord<T>(address);
+                }
             }
 
             return new PendingAddressable<T>(_addressToRecord[address]);
