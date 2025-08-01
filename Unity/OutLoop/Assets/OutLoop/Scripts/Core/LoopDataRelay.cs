@@ -30,9 +30,9 @@ namespace OutLoop.Core
                 return new LoopData();
             }
 
-            var lines = File.ReadAllText(accountsYamlFile.FullName);
+            var accountsYamlText = File.ReadAllText(accountsYamlFile.FullName);
             var deserializer = new Deserializer();
-            var accounts = deserializer.Deserialize<Dictionary<string, AccountData>>(lines);
+            var accounts = deserializer.Deserialize<Dictionary<string, AccountData>>(accountsYamlText);
 
 
             var postsDirectory = new DirectoryInfo(Application.dataPath + "/LoopDB/Posts");
@@ -47,7 +47,18 @@ namespace OutLoop.Core
 
             var puzzles = new List<PuzzleData>();
 
-            return new LoopData(accounts.Values.ToList(), puzzles, posts);
+            
+            var timelineYamlFile = loopDbDirectory.GetFiles("timeline.yaml").FirstOrDefault();
+
+            if (timelineYamlFile == null)
+            {
+                Debug.LogError("Could not find timeline yaml");
+                return new LoopData();
+            }
+            
+            var timelineIds = deserializer.Deserialize<List<string>>(File.ReadAllText(timelineYamlFile.FullName));
+
+            return new LoopData(accounts.Values.ToList(), puzzles, posts, timelineIds);
         }
 
         [UsedImplicitly]

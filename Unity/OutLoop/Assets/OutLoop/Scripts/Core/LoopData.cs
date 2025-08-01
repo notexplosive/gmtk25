@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Data;
@@ -12,22 +11,29 @@ namespace OutLoop.Core
         private readonly List<Puzzle> _allPuzzles = new();
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
         private readonly List<DirectMessage> _messages = new();
-        private PageType _currentPage;
         private readonly HashSet<DirectMessage> _readMessages = new();
+        private readonly List<TopLevelPost> _timelinePosts = new();
+        private PageType _currentPage;
 
         public LoopData()
         {
         }
 
         public LoopData(List<AccountData> accountDataList, List<PuzzleData> puzzleDataList,
-            List<TopLevelPostData> topLevelPostList)
+            List<TopLevelPostData> topLevelPostList, List<string> timelinePostIds)
         {
             var accountTable = BuildAccounts(accountDataList);
 
+            var topLevelPostById = new Dictionary<string, TopLevelPost>();
+            
             foreach (var topLevelPostData in topLevelPostList)
             {
                 var topLevelPost = new TopLevelPost(topLevelPostData, accountTable);
                 _allTopLevelPosts.Add(topLevelPost);
+                if (topLevelPost.RootPost.Id != null)
+                {
+                    topLevelPostById[topLevelPost.RootPost.Id] = topLevelPost;
+                }
             }
 
             var postsById = new Dictionary<string, Post>();
@@ -58,6 +64,11 @@ namespace OutLoop.Core
 
                 _allPuzzles.Add(puzzle);
             }
+
+            foreach (var postId in timelinePostIds)
+            {
+                _timelinePosts.Add(topLevelPostById[postId]);
+            }
         }
 
         public PageType CurrentPage
@@ -72,6 +83,7 @@ namespace OutLoop.Core
 
         public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
         public IEnumerable<TopLevelPost> AllTopLevelPostsSorted => _allTopLevelPosts; // todo: algo sort
+        public IEnumerable<TopLevelPost> TimelinePosts => _timelinePosts;
 
         public void ReceiveMessage(DirectMessage message)
         {

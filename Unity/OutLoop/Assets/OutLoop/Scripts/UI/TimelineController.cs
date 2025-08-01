@@ -38,7 +38,7 @@ namespace OutLoop.UI
             }
 
             var loopData = _loopDataRelay.State();
-            foreach (var topLevelPost in loopData.AllTopLevelPosts)
+            foreach (var topLevelPost in loopData.TimelinePosts)
             {
                 var spawned = SpawnUtility.Spawn(_postPrefab, new InstantiateParameters { parent = _contentRoot });
                 spawned.Populate(topLevelPost.RootPost, false, topLevelPost.CommentCount());
