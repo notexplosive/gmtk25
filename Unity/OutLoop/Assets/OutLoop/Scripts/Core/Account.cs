@@ -18,7 +18,7 @@ namespace OutLoop.Core
 
             Bio = data.Bio ?? string.Empty;
 
-            if (data.IsFakeProfile)
+            if (data.IsLikelyFakeProfile())
             {
                 ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
             }

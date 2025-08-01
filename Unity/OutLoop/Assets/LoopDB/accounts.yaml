@@ -2,10 +2,12 @@ COACentral:
     user_name: COACentral
     display_name: ""
     bio: Your one-stop shop for all @CondorsOfAvalon fan-art, theories, and discussion. Stassóni Vassili! <broken link>
+    profile_picture: pfp_coafan
 ChristinaMcPheeTV:
     user_name: ChristinaMcPheeTV
     display_name: ""
     bio: '#PrincessVasylin on @Nubi TV''s #CondorsOfAvalon. Stassóni Vassili!'
+    profile_picture: pfp_christina
 DukeHolloway:
     user_name: DukeHolloway
     display_name: ""
@@ -38,6 +40,7 @@ Loop:
     user_name: Loop
     display_name: Loop Social
     bio: Stay in the loop.
+    profile_picture: pfp_loop_corpo
 MildredJones:
     user_name: MildredJones
     display_name: ""
@@ -46,6 +49,7 @@ Nubi:
     user_name: Nubi
     display_name: Nubi
     bio: We've got everything.
+    profile_picture: pfp_nubi
 ProfEricsson:
     user_name: ProfEricsson
     display_name: ""
@@ -62,6 +66,7 @@ SirPeterSmalls:
     user_name: SirPeterSmalls
     display_name: ""
     bio: 'Shakespearean thespian and scholar. Hamlet at @WestgraveLondon: <broken link>'
+    profile_picture: pfp_peter
 SusanneSmith:
     user_name: SusanneSmith
     display_name: ""
@@ -118,6 +123,7 @@ justice_leek:
     user_name: justice_leek
     display_name: ""
     bio: ""
+    profile_picture: pfp_justiceleek
 kaylamack:
     user_name: kaylamack
     display_name: ""
@@ -130,6 +136,7 @@ luclferd:
     user_name: luclferd
     display_name: Lucas L. Ferdinand
     bio: Father. Husband. CEO of @Loop
+    profile_picture: pfp_luciferd
 manish_agarwal:
     user_name: manish_agarwal
     display_name: ""

@@ -15,7 +15,7 @@ namespace OutLoop.Data
         public string DisplayName { get; set; } = "";
 
         [YamlMember(Alias = "is_fake_profile")]
-        public bool IsFakeProfile { get; set; } = true;
+        public bool IsFakeProfile { get; set; } = false;
 
         [YamlMember(Alias = "profile_picture")]
         public string? ProfilePicture { get; set; } = null;
@@ -28,5 +28,20 @@ namespace OutLoop.Data
 
         [YamlMember(Alias = "known_followers")]
         public List<string> KnownFollowers { get; set; } = new();
+
+        public bool IsLikelyFakeProfile()
+        {
+            if (IsFakeProfile)
+            {
+                return true;
+            }
+
+            if (ProfilePicture == null)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
