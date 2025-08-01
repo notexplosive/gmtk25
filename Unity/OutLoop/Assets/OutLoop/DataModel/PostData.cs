@@ -17,10 +17,10 @@ namespace OutLoop.Data
         public string Text { get; set; } = "";
 
         [YamlMember(Alias = "likes")]
-        public int? Likes { get; set; } = null;
+        public int? LikesMagnitude { get; set; } = null;
         
         [YamlMember(Alias = "reposts")]
-        public int? Reposts { get; set; } = null;
+        public int? RepostsMagnitude { get; set; } = null;
         
         [YamlMember(Alias = "image")]
         public string? ImagePath { get; set; } = "";
