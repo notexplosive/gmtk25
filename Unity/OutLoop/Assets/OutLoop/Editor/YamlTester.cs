@@ -1,5 +1,8 @@
-﻿using UnityEditor;
+﻿using OutLoop.Data;
+using UnityEditor;
 using UnityEngine;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace OutLoop.Editor.Editor
 {
@@ -8,7 +11,17 @@ namespace OutLoop.Editor.Editor
         [MenuItem("OutLoop/RunYaml")]
         public static void RunYaml()
         {
-            Debug.Log("Hello world!");
+            var data = new PostData()
+            {
+                Text = "Hello world!",
+                AuthorUsername = "johnsmith"
+            };
+            
+            var serializer = new SerializerBuilder().Build();
+
+            var output = serializer.Serialize(data);
+            
+            Debug.Log(output);
         }
     }
 }
