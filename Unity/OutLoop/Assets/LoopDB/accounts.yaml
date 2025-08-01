@@ -121,18 +121,6 @@ luclferd:
     display_name: Lucas L. Ferdinand
     bio: Father. Husband. CEO of @Loop
     profile_picture: pfp_luciferd
-manish_agarwal:
-    user_name: manish_agarwal
-    display_name: ""
-    bio: ""
-michaellovescake:
-    user_name: michaellovescake
-    display_name: ""
-    bio: ""
-pizzaluver8:
-    user_name: pizzaluver8
-    display_name: ""
-    bio: ""
 reportergirl7:
     user_name: reportergirl7
     display_name: Anastasia Phong
@@ -153,41 +141,21 @@ potatolover23:
     user_name: potatolover23
     display_name: antony
     bio: the biggest potato fan. waffle fry supremacy
-HealthyHeartsSociety:
-    user_name: HealthyHeartsSociety
-    display_name: Healthy Hearts Society
+HealingHeartsSociety:
+    user_name: HealingHeartsSociety
+    display_name: Healing Hearts Society
     bio: 'Healing hearts since 2021. Let''s make the world healthier.'
 
-benclover:
-    user_name: benclover
-mosspaul:
-    user_name: mosspaul
-bella248:
-    user_name: bella248
-mark:
-    user_name: mark
-therealnaruto:
-    user_name: therealnaruto
-natlat:
-    user_name: natlat
 TronixLive:
     user_name: TronixLive
     display_name: Tronix
     bio: Content creator trying to make the world a better place. Join the Tronix Troop!
     profile_picture: pfp_tronix
-kaylamack:
-    user_name: kaylamack
-    display_name: ""
-    bio: ""
 landonloveslattes:
     user_name: landonloveslattes
     display_name: ""
     bio: ""
 heleny:
     user_name: heleny
-    display_name: ""
-    bio: ""
-jackson:
-    user_name: jackson
     display_name: ""
     bio: ""
