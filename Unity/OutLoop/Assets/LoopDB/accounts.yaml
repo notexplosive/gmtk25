@@ -1,8 +1,3 @@
-COACentral:
-    user_name: COACentral
-    display_name: ""
-    bio: Your one-stop shop for all @CondorsOfAvalon fan-art, theories, and discussion. Stassóni Vassili! <broken link>
-    profile_picture: pfp_coafan
 ChristinaMcPheeTV:
     user_name: ChristinaMcPheeTV
     display_name: ""
@@ -10,10 +5,6 @@ ChristinaMcPheeTV:
     profile_picture: pfp_christina
 DukeHolloway:
     user_name: DukeHolloway
-    display_name: ""
-    bio: ""
-GeorgeCassidy:
-    user_name: GeorgeCassidy
     display_name: ""
     bio: ""
 HavitOfficial:
@@ -26,10 +17,6 @@ HeckinPuppers:
     bio: awf! i just a liwwl pupper!
 JackGerard43:
     user_name: JackGerard43
-    display_name: ""
-    bio: ""
-JennyK:
-    user_name: JennyK
     display_name: ""
     bio: ""
 JosephLeeVC:
@@ -87,10 +74,6 @@ VasylinFan:
     user_name: VasylinFan
     display_name: ""
     bio: 'Captain Gin x First Officer Vergil 4 ever!! #VerGin NO LONGER A #VASDEF FAN ACCOUNT'
-VasylnFan:
-    user_name: VasylnFan
-    display_name: ""
-    bio: ""
 catboyslim:
     user_name: catboyslim
     display_name: ""
@@ -101,10 +84,6 @@ catcradler:
     bio: i need to get out of the loop
 cowhaver:
     user_name: cowhaver
-    display_name: ""
-    bio: ""
-dadjokes2:
-    user_name: dadjokes2
     display_name: ""
     bio: ""
 fred_the_communist:
@@ -125,10 +104,6 @@ reportergirl7:
     user_name: reportergirl7
     display_name: Anastasia Phong
     bio: Reporter for @TechHub. Posts not representative of my employer.
-therealninja:
-    user_name: therealninja
-    display_name: ""
-    bio: ""
 trolled_daal:
     user_name: trolled_daal
     display_name: ""
@@ -159,3 +134,8 @@ heleny:
     user_name: heleny
     display_name: ""
     bio: ""
+
+JennyK:
+    user_name: JennyK
+    display_name: Jenny
+    bio: Infrastructure Engineer at @null
