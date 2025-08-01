@@ -2,7 +2,6 @@
 using UnityEditor;
 using UnityEngine;
 using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
 
 namespace OutLoop.Editor.Editor
 {
