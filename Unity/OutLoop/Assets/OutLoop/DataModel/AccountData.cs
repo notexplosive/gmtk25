@@ -8,7 +8,7 @@ namespace OutLoop.Data
     [YamlSerializable]
     public class AccountData
     {
-        [YamlMember(Alias = "display_name")]
+        [YamlMember(Alias = "user_name")]
         public string UserName { get; set; } = "";
 
         [YamlMember(Alias = "display_name")]
