@@ -4,7 +4,7 @@ namespace SecretPlan.Core
 {
     public class Addressable<T> : IAddressable where T : Object
     {
-        private readonly string _address;
+        private readonly string _address = string.Empty;
 
         public Addressable(string address)
         {
