@@ -68,6 +68,7 @@ namespace OutLoop.Core
         }
 
         public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
+        public IEnumerable<TopLevelPost> AllTopLevelPostsSorted => _allTopLevelPosts; // todo: algo sort
         public event Action<PageType>? PageUpdated;
 
         public Dictionary<string, Account> BuildAccounts(List<AccountData> accountDataList)
