@@ -21,10 +21,14 @@ namespace OutLoop.UI
 
         [SerializeField]
         private Transform? _searchResultsRoot;
+
+        [SerializeField]
+        private TMP_Text? _statusText;
         
         private string _cachedSearchText = string.Empty;
         private string _currentSearchQuery = string.Empty;
         private float _delay;
+        private string _defaultSearchMessage = "Type something to search";
 
         private void Awake()
         {
@@ -32,6 +36,8 @@ namespace OutLoop.UI
             {
                 _inputField.onValueChanged.AddListener(TextChanged);
             }
+            
+            SetStatus(_defaultSearchMessage);
         }
 
         private void Update()
@@ -54,17 +60,19 @@ namespace OutLoop.UI
 
             if (string.IsNullOrWhiteSpace(_currentSearchQuery))
             {
-                // no results for an empty post
+                SetStatus(_defaultSearchMessage);
                 return;
             }
 
             int postLimit = 6;
+            var resultCount = 0;
 
             foreach (var post in _loopDataRelay.State().AllTopLevelPostsSorted)
             {
                 var match = Regex.Match(post.RootPost.Text, @$"\b({_currentSearchQuery})\b", RegexOptions.IgnoreCase);
                 if (match.Length > 0)
                 {
+                    resultCount++;
                     SpawnPost(post);
                     postLimit--;
                 }
@@ -73,6 +81,16 @@ namespace OutLoop.UI
                 {
                     break;
                 }
+            }
+
+            SetStatus($"Found {resultCount} results");
+        }
+
+        private void SetStatus(string text)
+        {
+            if (_statusText != null)
+            {
+                _statusText.text = text;
             }
         }
 
@@ -97,6 +115,7 @@ namespace OutLoop.UI
             
             _cachedSearchText = text;
             _delay = 0.25f;
+            SetStatus("Searching...");
         }
     }
 }
