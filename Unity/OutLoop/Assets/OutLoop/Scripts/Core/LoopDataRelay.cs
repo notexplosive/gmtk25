@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using JetBrains.Annotations;
+using NaughtyAttributes;
 using OutLoop.Data;
 using SecretPlan.Core;
 using UnityEngine;
@@ -46,6 +48,15 @@ namespace OutLoop.Core
             var puzzles = new List<PuzzleData>();
 
             return new LoopData(accounts.Values.ToList(), puzzles, posts);
+        }
+
+        [UsedImplicitly]
+        [Button]
+        private void SendRandomMessage()
+        {
+            var loopData = State();
+            var rng = new NoiseBasedRng((int)Time.time);
+            loopData.ReceiveMessage(new DirectMessage(rng.GetRandomElement(loopData.AllAccounts().ToList()), "Hello!"));
         }
     }
 }

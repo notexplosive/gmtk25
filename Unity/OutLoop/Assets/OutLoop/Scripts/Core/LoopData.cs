@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Data;
@@ -10,7 +11,9 @@ namespace OutLoop.Core
         private readonly List<Account> _allAccounts = new();
         private readonly List<Puzzle> _allPuzzles = new();
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
+        private readonly List<DirectMessage> _messages = new();
         private PageType _currentPage;
+        private readonly HashSet<DirectMessage> _readMessages = new();
 
         public LoopData()
         {
@@ -69,6 +72,14 @@ namespace OutLoop.Core
 
         public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
         public IEnumerable<TopLevelPost> AllTopLevelPostsSorted => _allTopLevelPosts; // todo: algo sort
+
+        public void ReceiveMessage(DirectMessage message)
+        {
+            _messages.Add(message);
+            MessageReceived?.Invoke(message);
+        }
+
+        public event Action<DirectMessage>? MessageReceived;
         public event Action<PageType>? PageUpdated;
 
         public Dictionary<string, Account> BuildAccounts(List<AccountData> accountDataList)
@@ -91,6 +102,21 @@ namespace OutLoop.Core
             }
 
             return accountsByName;
+        }
+
+        public IEnumerable<DirectMessage> AllMessages()
+        {
+            return _messages;
+        }
+
+        public bool IsMessageRead(DirectMessage message)
+        {
+            return _readMessages.Contains(message);
+        }
+
+        public IEnumerable<Account> AllAccounts()
+        {
+            return _allAccounts;
         }
     }
 }
