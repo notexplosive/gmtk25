@@ -1,8 +1,6 @@
 ﻿using OutLoop.Core;
-using OutLoop.Data;
 using UnityEditor;
 using UnityEngine;
-using YamlDotNet.Serialization;
 
 namespace OutLoop.Editor.Editor
 {

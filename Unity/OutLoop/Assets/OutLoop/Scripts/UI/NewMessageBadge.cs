@@ -70,28 +70,30 @@ namespace OutLoop.UI
 
         private void UpdateState()
         {
-            if (_relay != null)
+            if (_relay == null)
             {
-                var loopData = _relay.State();
-                var unreadMessageCount = loopData.AllMessages().Count(a => !loopData.IsMessageRead(a));
-                if (unreadMessageCount > 0)
-                {
-                    if (_number != null)
-                    {
-                        _number.text = unreadMessageCount.ToString();
-                    }
+                return;
+            }
 
-                    if (_root != null)
-                    {
-                        _root.SetActive(true);
-                    }
-                }
-                else
+            var loopData = _relay.State();
+            var unreadMessageCount = loopData.AllMessages().Count(a => !loopData.IsMessageRead(a));
+            if (unreadMessageCount > 0)
+            {
+                if (_number != null)
                 {
-                    if (_root != null)
-                    {
-                        _root.SetActive(false);
-                    }
+                    _number.text = unreadMessageCount.ToString();
+                }
+
+                if (_root != null)
+                {
+                    _root.SetActive(true);
+                }
+            }
+            else
+            {
+                if (_root != null)
+                {
+                    _root.SetActive(false);
                 }
             }
         }
