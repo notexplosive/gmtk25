@@ -31,7 +31,7 @@ namespace OutLoop.UI
         [SerializeField]
         private GameObject? _threadIndicator;
 
-        public void Populate(Post post, bool isPartOfThread)
+        public void Populate(PostData post, bool isPartOfThread)
         {
             if (_threadIndicator != null)
             {

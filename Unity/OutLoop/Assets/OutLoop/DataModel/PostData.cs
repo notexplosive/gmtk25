@@ -5,7 +5,7 @@ namespace OutLoop.Data
 {
     [Serializable]
     [YamlSerializable]
-    public class Post
+    public class PostData
     {
         [YamlMember(Alias = "post_id")]
         public string? PostId { get; set; }

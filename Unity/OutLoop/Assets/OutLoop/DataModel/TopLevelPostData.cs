@@ -9,12 +9,12 @@ namespace OutLoop.Data
     public class TopLevelPostData
     {
         [YamlMember(Alias = "original_post")]
-        public Post OriginalPost { get; set; } = new();
+        public PostData OriginalPost { get; set; } = new();
         
         [YamlMember(Alias = "thread")]
-        public List<Post> ThreadEntries { get; set; } = new();
+        public List<PostData> ThreadEntries { get; set; } = new();
         
         [YamlMember(Alias = "comments")]
-        public List<Post> NormalComments { get; set; } = new();
+        public List<PostData> NormalComments { get; set; } = new();
     }
 }
