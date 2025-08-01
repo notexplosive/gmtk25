@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using OutLoop.Core;
+﻿using OutLoop.Core;
 using SecretPlan.Core;
 using UnityEngine;
 
@@ -35,13 +34,15 @@ namespace OutLoop.UI
 
             for (var i = 0; i < _contentRoot.childCount; i++)
             {
-                Destroy(_contentRoot.GetChild(0).gameObject);
+                Destroy(_contentRoot.GetChild(i).gameObject);
             }
-            
-            var spawned = SpawnUtility.Spawn(_postPrefab, new InstantiateParameters { parent = _contentRoot });
+
             var loopData = _loopDataRelay.State();
-            var topLevelPost = loopData.AllTopLevelPosts.First();
-            spawned.Populate(topLevelPost.RootPost, false, topLevelPost.CommentCount());
+            foreach (var topLevelPost in loopData.AllTopLevelPosts)
+            {
+                var spawned = SpawnUtility.Spawn(_postPrefab, new InstantiateParameters { parent = _contentRoot });
+                spawned.Populate(topLevelPost.RootPost, false, topLevelPost.CommentCount());
+            }
         }
     }
 }
