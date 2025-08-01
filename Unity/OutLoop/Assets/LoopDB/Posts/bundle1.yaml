@@ -24,20 +24,15 @@
     author: luclferd
     text: All this vitriol towards @Nubi is uncalled for. I've known CEO @GabrielVilacruzNubi for years and he has always been a kind, thoughtful, and brilliant man. Nubi is one of the most innovative companies in the startup space. We need more people like Gabriel, not less.
   comments:
-    - author: manish_agarwal
-      text: thank you
+    - text: thank you sir
     - author: JosephLeeVC
       text: Outstanding leadership and what we need more of in the tech community! I'm glad to be In The @Loop.
-    - author: catcradler
-      text: woooowww
 - original_post:
     author: luclferd
     text: 'The #SwazzleChallenge is what I love about the @Loop community. So many people pitching in for a good cause. Thank you @HealingHearts and thank you @TronixLive! '
   comments:
-    - author: therealninja
-      text: LETT'S GOOOOO @TronixLive mention
-    - author: michaellovescake
-      text: '@luclferd I can''t believe you would support this nonsense.'
+    - text: LETT'S GOOOOO @TronixLive mention
+    - text: '@luclferd I can''t believe you would support this nonsense.'
     - author: SusanneSmith
       text: What is ''Swazzle''?
 
@@ -50,8 +45,7 @@
       text: lol trash app
     - author: SusanneSmith
       text: Thank you for all your hard work!
-    - author: jackson
-      text: hi please can i have 600$ i have a rare heart condition, please donate
+    - text: hi please can i have 600$ i have a rare heart condition, please donate
     - author: JackGerard43
       text: why did you darn tronix??
     - author: JennyK
@@ -161,12 +155,9 @@
     author: Nubi
     text: "At Nubi, we take the safety and health of our food seriously. The claims made by the recent #SwazzleChallenge video of our Cheddar Potato Bake are false. The flavors of our food explode in your mouth, not your microwave."
   comments:
-    - author: dadjokes2
-      text: ok but can you tell us why the potato exploded?
-    - author: kaylamack
-      text: the video was obviously fake lol why did anyone take it seriously
-    - author: pizzaluver8
-      text: does NOT explain why your food sucks
+    - text: ok but can you tell us why the potato exploded?
+    - text: the video was obviously fake lol why did anyone take it seriously
+    - text: does NOT explain why your food sucks
 - original_post:
     author: Nubi
     linked_post_id: coa_announcement
@@ -249,7 +240,7 @@
     #image:  'TODO: (stock image of troops in uniform w/ american flag superimposed)'
   comments:
     - author: landonloveslattes
-      text: 'tronix has done more than the us army #SwazzleChallenge'
+      text: '@TronixLive has done more than the us army #SwazzleChallenge'
     - author: fred_the_communist
       text: '@landonloveslattes you don''t know how right you are lol'
     - author: TruePatriot
@@ -295,7 +286,7 @@
       text: maybe if you didn't blab your whole life story with every recipe
 - original_post:
     author: SallysKitchen
-    text: 'You don''t need to do the #SwazzleChallenge to have a Healthy Heart. Check out 10 Heart Healthy recipes here: <broken link>'
+    text: 'You don''t need to do the #SwazzleChallenge to Heal your Heart. Check out 10 Heart Healthy recipes here: <broken link>'
   comments:
     - author: MildredJones
       text: Can not click link.
@@ -333,7 +324,7 @@
   comments: []
 - original_post:
     author: ChristinaMcPheeTV
-    text: 'Excited to be doing the #SwazzleChallenge for the @HealthyHeartsSociety! Now let''s see some condors explode! Next up: I nominate @SirPeterSmalls!'
+    text: 'Excited to be doing the #SwazzleChallenge for the @HealingHeartsSociety! Now let''s see some condors explode! Next up: I nominate @SirPeterSmalls!'
   comments:
     - author: VasylnFan
       text: YESS QUEEN SLAY!!
@@ -477,17 +468,15 @@
     author: potatolover23
     text: 'my video blew up way more than i thought it would. i feel rly bad but the video is fake :/ i just thought it''d be funny to make'
   comments:
-    - author: benclover
-      text: you owe @Nubi an apology
-    - author: mosspaul
-      text: dude you waited THIS long to tell us??
-    - author: bella248
-      text: yikes
+    - text: you owe @Nubi an apology
+    - text: dude you waited THIS long to tell us??
+    - text: yikes
 - original_post:
     author: potatolover23
     text: nubi sent me a cease and desist should i be worried
 - original_post:
     author: potatolover23
+    post_id: exploding_potato
     text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @Tronix"
     # TODO <<photo of nubi potatoes exploded in microwave>>
   comments:
@@ -495,12 +484,9 @@
       text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. the brand is nubi"
     - author: TronixLive
       text: this video is SICK!!!
-    - author: mark
-      text: not surprised this is nubi
-    - author: therealnaruto
-      text: this is crazy wtf is in our food
-    - author: natlat
-      text: LMAOOOOO
+    - text: not surprised this is nubi
+    - text: this is crazy wtf is in our food
+    - text: LMAOOOOO
 - original_post:
     author: potatolover23
     text: anyone who says potato salad is their favorite form of the potato needs therapy
@@ -509,14 +495,74 @@
     text: breakfast potatoes are so underratedD
 
 - original_post:
-    author: HealthyHeartsSociety
+    author: HealingHeartsSociety
     text: If you are having a heart attack, call your local emergency line. Remember, the signs are chest discomfort, pain in the upper body, shortness of breath, sweating, nausea, and dizziness.
 - original_post:
-    author: HealthyHeartsSociety
+    author: HealingHeartsSociety
     text: 'Keep a healthy heart: exercise regularly, eat nutritious foods, and get 7-8 hours of sleep every night.'
 - original_post:
-    author: HealthyHeartsSociety
+    author: HealingHeartsSociety
     text: 'We''re so excited to announce a partnership with @TronixLive to raise money for Healing Hearts Society! With the money donated, we will fund research into cardiovascular diseases, create community programs advocating for healthier lifestyles, and educate others on CPR.'
 - original_post:
-    author: HealthyHeartsSociety
+    author: HealingHeartsSociety
     text: 'We''re Healing Hearts Society, a nonprofit for improving heart health!'
+
+- original_post:
+    author: TronixLive
+    text: An apology
+    # TODO: notes app apology
+  comments:
+    - text: "I''m really disappointed. People have been saying for days that the swazzle challenge is dangerous, and you''ve said nothing until now"
+    - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
+    - text: 'you aren''t sorry for what you did. you''re sorry you got caught.'
+    - text: 'Thank you for apologizing. Everyone makes mistakes. What''s important is you learn and do better in the future.'
+- original_post:
+    author: TronixLive
+    text: Thank you for 5 million subscribers <3 Tronix Troop is the best
+- original_post:
+    author: TronixLive
+    text: 'I''ve been working 12 hours every day the last month, no weekends off, just filming. It''s been tiring but the next few videos are going to be the best yet.'
+- original_post:
+    author: TronixLive
+    text: Any content creators I should collab with?
+- original_post:
+    author: TronixLive
+    text: 'Scrolling through the #SwazzleChallenge videos and you guys are INSANE! I''ve seen people blow up their TV, a jar of pickles, and even a couch?? KEEP THEM COMING'
+- original_post:
+    author: TronixLive
+    text: 'We hit $50k donated to @HealingHeartsSociety. You guys are AMAZING!'
+- original_post:
+    author: TronixLive
+    text: Am I the only person who liked the last Condors of Avalon episode?
+- original_post:
+    author: TronixLive
+    text: bruh @nubi potatoes are TOXIC??? WTF
+    linked_post_id: exploding_potato
+- original_post:
+    author: TronixLive
+    text: 'In the last 24 hours, we''ve raised $24,000 for the Healing Hearts Society. Can we make it to $50,000?'
+  comments:
+    - text: Just donated $20
+    - text: shoutout to Tronix for being the goat
+    - text: the Tronix troop is the best!!!!
+    - author: HealingHeartsSociety
+      text: We can do it!
+
+- original_post:
+    author: TronixLive
+    text: Looking for a part-time editor, DM with portfolio to apply
+- original_post:
+    author: TronixLive
+    text: 'Announcing…the #SwazzleChallenge! I''m partnering with the Healing Hearts Society to raise money for heart health. The rules are simple: Donate to charity, upload your craziest explosion video, and get SWAZZLED!'
+  comments:
+    - author: TronixLive
+      text: 'The best #SwazzleChallenge video and the biggest donator will get flown to Los Angeles and film an epic collab where we blow up a Rolls-Royce! Tronix Troop, you guys got this'
+    - text: Tronix doing more for the world than most leaders have done in the last ten years
+    - author: HealingHeartsSociety
+      text: Thank you so much Tronix for spotlighting Healing Hearts Society. Together, we can save lives <3
+    - text: tronix literally changing lives
+    - text: My mom passed of a heart attack last year. Thanks for doing what you do.
+    - text: this is stupid lol
+- original_post:
+    author: TronixLive 
+    text: 'Watched the final cut of the next video and Y''ALL ARE NOT READY FOR THIS. I''ve been COOKING.'
