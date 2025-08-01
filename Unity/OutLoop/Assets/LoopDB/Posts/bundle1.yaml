@@ -174,7 +174,7 @@
 - original_post:
     author: Nubi
     text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Affordable. Healthy. Sign up now <broken link>' 
-    image: "TODO: promotional image of a woman eating a salad"
+    ##image: "TODO: promotional image of a woman eating a salad"
   comments:
     - author: SusanneSmith
       text: Wow! So convenient. My husband and I currently use Foodbaby but I'll talk to him to see if we can switch.
@@ -184,7 +184,7 @@
 - original_post:
     author: COA_Official
     text: "What did you all think of the new Condors of Avalon episode? \U0001F633"
-    image: "TODO: a promotional still"
+    #image: "TODO: a promotional still"
   comments:
     - author: VasylnFan
       text: "Lord DeFontaigne \U0001F62D\U0001F62D\U0001F62D#VasDef #COA"
@@ -227,7 +227,7 @@
 - original_post:
     author: reportergirl7
     text: 'My latest for @TechHub: New @Nubi meal-prep service has an explosive start: <broken link>'
-    image: 'TODO (picture of the exploded potato from the meme)'
+    #image: 'TODO (picture of the exploded potato from the meme)'
   comments:
     - author: catboyslim
       text: lol epic article title
@@ -238,7 +238,7 @@
 - original_post:
     author: TruePatriot
     text: 'Why is @Loop censoring ''''bald eagle'''' the symbol of our beautiful country THIS IS CENSORSHIP'
-    image: <picture: screenshot of the search bar searching ''''bald eagle'''' and returning nothing>
+    #image: <picture: screenshot of the search bar searching ''''bald eagle'''' and returning nothing>
   comments: []
 - original_post:
     author: TruePatriot
@@ -247,7 +247,7 @@
 - original_post:
     author: TruePatriot
     text: 'What is #TronixTroop? The only troops I support are the BRAVE MEN AND WOMEN OF OUR ARMED FORCES'
-    image:  'TODO: (stock image of troops in uniform w/ american flag superimposed)'
+    #image:  'TODO: (stock image of troops in uniform w/ american flag superimposed)'
   comments:
     - author: landonloveslattes
       text: 'tronix has done more than the us army #SwazzleChallenge'
@@ -346,7 +346,7 @@
       text: My daughter visiting there next week!
     - author: SusanneSmith
       text: '@MildredJones I hope she has fun! We went there last year and it was gorgeous!'
-      image: <pictures of landscapes>
+      #image: <pictures of landscapes>
     - author: SusanneSmith
       text: Just be careful though! There is flooding this time of year.
 
@@ -419,7 +419,7 @@
 - original_post:
     author: HeckinPuppers
     text: potato? wat about PUP-tato!
-    image: <picture of a dog in a potato costume>
+    #image: <picture of a dog in a potato costume>
   comments:
     - author: SusanneSmith
       text: Adorable!
@@ -482,3 +482,9 @@
     author: MildredJones
     text: Hello
   comments: []
+
+- original_post:
+    author: justice_leek
+    post_id: justice_leek_nubi_boycott
+    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
+    #image: "TODO informatic about all Nubi products to boycott"

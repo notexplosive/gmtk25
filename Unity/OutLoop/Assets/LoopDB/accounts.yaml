@@ -122,7 +122,7 @@ jackson:
 justice_leek:
     user_name: justice_leek
     display_name: ""
-    bio: ""
+    bio: Not sorry. Corpos, bootlickers, cannibalism apologists DO NOT ENGAGE
     profile_picture: pfp_justiceleek
 kaylamack:
     user_name: kaylamack
@@ -161,3 +161,7 @@ trolled_daal:
     user_name: trolled_daal
     display_name: ""
     bio: ""
+COA_Official:
+    user_name: COA_Official
+    display_name: Condors of Avalon
+    bio: It's time to leave the nest. Watch now on @Nubi TV
