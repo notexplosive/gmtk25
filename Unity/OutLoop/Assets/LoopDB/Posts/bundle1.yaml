@@ -408,7 +408,8 @@
       text: Do not contact me again.
 - original_post:
     author: HeckinPuppers
-    text: swazzew chawwen? how about snuggle chawwen? (picture of the most disgustingly cute dog)
+    text: swazzew chawwen? how about snuggle chawwen?
+    # image: TODO (picture of the most disgustingly cute dog)
   comments:
     - author: SusanneSmith
       text: Cute!
@@ -477,7 +478,7 @@
 - original_post:
     author: potatolover23
     post_id: exploding_potato
-    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @Tronix"
+    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @TronixLive"
     # TODO <<photo of nubi potatoes exploded in microwave>>
   comments:
     - author: potatolover23
@@ -516,6 +517,7 @@
     - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
     - text: 'you aren''t sorry for what you did. you''re sorry you got caught.'
     - text: 'Thank you for apologizing. Everyone makes mistakes. What''s important is you learn and do better in the future.'
+    - text: '@TronixLive real name Bartholomew Joseph Sampson birthday April 3 address 742 Conifer Dr Springfield IL 62766'
 - original_post:
     author: TronixLive
     text: Thank you for 5 million subscribers <3 Tronix Troop is the best
