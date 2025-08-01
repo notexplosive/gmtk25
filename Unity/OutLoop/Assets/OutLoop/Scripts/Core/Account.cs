@@ -9,39 +9,38 @@ namespace OutLoop.Core
     {
         private readonly bool _isUnavailableAccount;
 
+        public Account()
+        {
+            _isUnavailableAccount = true;
+            UserName = "";
+            DisplayName = "";
+            Bio = "";
+            ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_grey.png");
+            OriginalData = new AccountData();
+        }
+
         public Account(AccountData data)
         {
-            if (string.IsNullOrWhiteSpace(data.UserName))
+            UserName = data.UserName;
+            DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
+            if (data.IsFakeProfile)
             {
-                _isUnavailableAccount = true;
-                UserName = "";
-                DisplayName = "";
-                Bio = "";
-                ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_grey.png");
+                Bio = "<style=System>This profile cannot be loaded at this time.</style>";
+            }
+
+            Bio = data.Bio ?? string.Empty;
+
+            if (data.IsLikelyFakeProfile())
+            {
+                ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
             }
             else
             {
-                UserName = data.UserName;
-                DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
-                if (data.IsFakeProfile)
-                {
-                    Bio = "<style=System>This profile cannot be loaded at this time.</style>";
-                }
-
-                Bio = data.Bio ?? string.Empty;
-
-                if (data.IsLikelyFakeProfile())
-                {
-                    ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
-                }
-                else
-                {
-                    ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
-                }
-
-                var followerCount = Constants.CalculateFollowers(data.FollowerCountMagnitude);
-                FollowerCount = followerCount;
+                ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
             }
+
+            var followerCount = Constants.CalculateFollowers(data.FollowerCountMagnitude);
+            FollowerCount = followerCount;
             OriginalData = data;
         }
 
@@ -54,6 +53,7 @@ namespace OutLoop.Core
         public AccountData OriginalData { get; }
 
         public string UserNameWithAt => $"@{UserName}";
+
         public string DisplayNameAndUsernameStyled
         {
             get
@@ -62,6 +62,7 @@ namespace OutLoop.Core
                 {
                     return "<style=System>(Account Unavailable)</style>";
                 }
+
                 return $"{DisplayName} <style=Username>{UserNameWithAt}</style>";
             }
         }

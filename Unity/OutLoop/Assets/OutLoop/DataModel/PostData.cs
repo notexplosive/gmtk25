@@ -11,7 +11,7 @@ namespace OutLoop.Data
         public string? PostId { get; set; }
 
         [YamlMember(Alias = "author")]
-        public string AuthorUsername { get; set; } = "";
+        public string? AuthorUsername { get; set; }
         
         [YamlMember(Alias = "text")]
         public string Text { get; set; } = "";

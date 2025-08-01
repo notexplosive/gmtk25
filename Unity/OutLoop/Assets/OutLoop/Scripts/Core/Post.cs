@@ -12,7 +12,7 @@ namespace OutLoop.Core
             Id = postData.PostId;
             OriginalData = postData;
             Text = postData.Text;
-            Author = accountTable[postData.AuthorUsername];
+            Author = postData.AuthorUsername == null ? new Account() : accountTable[postData.AuthorUsername];
             Likes = Constants.CalculateReposts(postData.RepostsMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
             Reposts = Constants.CalculateLikes(postData.LikesMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
             AttachedImage = new Addressable<Sprite>(postData.ImagePath ?? string.Empty);

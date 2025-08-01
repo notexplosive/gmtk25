@@ -3,7 +3,9 @@
     "rootNamespace": "OutLoop.Editor",
     "references": [
         "GUID:071bed74abbd9c54ca1575cc549265f4",
-        "GUID:b3f49edfedc855a48aa1a9e5d3cba438"
+        "GUID:b3f49edfedc855a48aa1a9e5d3cba438",
+        "GUID:b96bbcdfc8aa1de4eb09810af9c52905",
+        "GUID:56d0e8b1852c7d54992db89fa677c364"
     ],
     "includePlatforms": [
         "Editor"

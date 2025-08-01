@@ -15,6 +15,11 @@ namespace OutLoop.Core
     {
         protected override LoopData CreateState()
         {
+            return CreateLoopDataFromFiles();
+        }
+
+        public static LoopData CreateLoopDataFromFiles()
+        {
             var loopDbDirectory = new DirectoryInfo(Application.dataPath + "/LoopDB");
             if (!loopDbDirectory.Exists)
             {
