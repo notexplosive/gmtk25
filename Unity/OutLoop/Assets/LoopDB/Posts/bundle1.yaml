@@ -17,9 +17,8 @@
       text: '@GeorgeCassidy this is a comment, not a post.'
     - author: GeorgeCassidy
       text: '@cowhaver what''s the difference?'
-- original_post:
-    author: luclferd
-    text: 'Annette Manning, KNIT3 Santa Omela: Hi Lou. I''m Annette from KNIT3 Santa Omela. Would you be open to an interview about the recent outages? My DMs are open.'
+    - author: AnnetteManning
+      text: 'Annette Manning, KNIT3 Santa Omela: Hi Lou. I''m Annette from KNIT3 Santa Omela. Would you be open to an interview about the recent outages? My DMs are open.'
   comments: []
 - original_post:
     author: luclferd
@@ -329,7 +328,7 @@
 
 - original_post:
     author: ChristinaMcPheeTV
-    text: 'So proud of this episode. @PeterSmalls brought a gravitas and humanity to Lord DeFontaigne that few actors I know could. I''m honored to have worked with him on #CondorsOfAvalon.'
+    text: 'So proud of this episode. @SirPeterSmalls brought a gravitas and humanity to Lord DeFontaigne that few actors I know could. I''m honored to have worked with him on #CondorsOfAvalon.'
     linked_post_id: coa_announcement
   comments: []
 - original_post:
@@ -352,11 +351,9 @@
 
 - original_post:
     author: SirPeterSmalls
-    text: '@DrBethHargrave I would respectfully disagree. While Edmund cannot be necessarily said to be a true ''''villain'''' per Beckendorf''s classification, his rage and sense of entitlement underlies a similar trend among young men of this generation–one that has only been exacerbated by ''''influencers'''' such as this ''''Tornix'''' fellow or whatever his name is. And this trend has only worsened since I last played the character.'
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: '- Peter'
+    text: '@DrBethHargrave I would respectfully disagree. While Edmund cannot be necessarily said to be a true ''''villain'''' per Beckendorf''s classification, his rage and sense of entitlement underlies a similar trend among young men of this generation–one that has only been exacerbated by ''''influencers'''' such as this ''''Tornix'''' fellow or whatever his name is. And this trend has only worsened since I last played the character.
+
+    Peter'
   comments:
     - author: cowhaver
       text: wth is a tornix
@@ -366,11 +363,9 @@
       text: learn to quote-take dude
 - original_post:
     author: SirPeterSmalls
-    text: '@DukeHolloway It was a pleasure seeing you and the Duchess at the Gala last week. Your patronage of the fine arts and thoughtful conversation is always appreciated.'
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: '- Peter'
+    text: '@DukeHolloway It was a pleasure seeing you and the Duchess at the Gala last week. Your patronage of the fine arts and thoughtful conversation is always appreciated.
+
+    Peter'
   comments:
     - author: DukeHolloway
       text: "\U0001F44D"
@@ -380,11 +375,9 @@
       text: So handsome!
 - original_post:
     author: SirPeterSmalls
-    text: '@ProfEricsson My thoughts exactly! While there is still debate as to whether The Bard had first-hand access to Dante, it is clear through a cursory analysis of the Canon that the _Divina Commedia_ (forgive me for this blasted website''s inability to do proper formatting) had a profound effect on the Tragedies—and by extent—the entirety of literary canon.'
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: '- Peter'
+    text: '@ProfEricsson My thoughts exactly! While there is still debate as to whether The Bard had first-hand access to Dante, it is clear through a cursory analysis of the Canon that the _Divina Commedia_ (forgive me for this blasted website''s inability to do proper formatting) had a profound effect on the Tragedies—and by extent—the entirety of literary canon.
+
+    Peter'
   comments:
     - author: cowhaver
       text: bro what is defontaigne talking about
@@ -392,29 +385,20 @@
       text: Sir Smalls could you please unblock my friend @ToneDefont? I know what you've said about not interacting with fans but she said she's sorry and you really mean a lot to her…
 - original_post:
     author: SirPeterSmalls
-    text: '@DrBethHargrave While I understand the feminist critique of ''''Taming'''', I believe Cruz and Teller are fundamentally misconstruing my words. Petruchio is a character near to my heart, having been the first character I portrayed at the Westgrave, and to merely dismiss him as a ''''chauvinist'''' is irresponsible.'
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: '- Peter'
+    text: '@DrBethHargrave While I understand the feminist critique of ''''Taming'''', I believe Cruz and Teller are fundamentally misconstruing my words. Petruchio is a character near to my heart, having been the first character I portrayed at the Westgrave, and to merely dismiss him as a ''''chauvinist'''' is irresponsible.
+
+    Peter'
   comments:
     - author: MildredJones
       text: You are really Smart!
 - original_post:
     author: SirPeterSmalls
-    text: Hi @lunavelasquez,
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: I am deeply sorry for your loss. While I have made my opinion on ''Condors of Avalon'' clear elsewhere, I am glad that show and my role in it has given you and your mother solace in what must be a very trying time. As the Bard says in Macbeth, ''Give sorrow words; the grief that does not speak knits up the o-er wrought heart and bids it break.'' Feel free to get my personal contact from my agent if you and your mother need any additional assistance.
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: Godspeed,
-  comments: []
-- original_post:
-    author: SirPeterSmalls
-    text: Peter
+    text: 'Hi @lunavelasquez,
+
+    I am deeply sorry for your loss. While I have made my opinion on ''Condors of Avalon'' clear elsewhere, I am glad that show and my role in it has given you and your mother solace in what must be a very trying time. As the Bard says in Macbeth, ''Give sorrow words; the grief that does not speak knits up the o-er wrought heart and bids it break.'' Feel free to get my personal contact from my agent if you and your mother need any additional assistance.
+
+    Godspeed,
+    Peter'
   comments: []
 - original_post:
     author: HeckinPuppers
@@ -488,3 +472,51 @@
     post_id: justice_leek_nubi_boycott
     text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
     #image: "TODO informatic about all Nubi products to boycott"
+
+- original_post:
+    author: potatolover23
+    text: 'my video blew up way more than i thought it would. i feel rly bad but the video is fake :/ i just thought it''d be funny to make'
+  comments:
+    - author: benclover
+      text: you owe @Nubi an apology
+    - author: mosspaul
+      text: dude you waited THIS long to tell us??
+    - author: bella248
+      text: yikes
+- original_post:
+    author: potatolover23
+    text: nubi sent me a cease and desist should i be worried
+- original_post:
+    author: potatolover23
+    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @Tronix"
+    # TODO <<photo of nubi potatoes exploded in microwave>>
+  comments:
+    - author: potatolover23
+      text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. the brand is nubi"
+    - author: TronixLive
+      text: this video is SICK!!!
+    - author: mark
+      text: not surprised this is nubi
+    - author: therealnaruto
+      text: this is crazy wtf is in our food
+    - author: natlat
+      text: LMAOOOOO
+- original_post:
+    author: potatolover23
+    text: anyone who says potato salad is their favorite form of the potato needs therapy
+- original_post:
+    author: potatolover23
+    text: breakfast potatoes are so underratedD
+
+- original_post:
+    author: HealthyHeartsSociety
+    text: If you are having a heart attack, call your local emergency line. Remember, the signs are chest discomfort, pain in the upper body, shortness of breath, sweating, nausea, and dizziness.
+- original_post:
+    author: HealthyHeartsSociety
+    text: 'Keep a healthy heart: exercise regularly, eat nutritious foods, and get 7-8 hours of sleep every night.'
+- original_post:
+    author: HealthyHeartsSociety
+    text: 'We''re so excited to announce a partnership with @TronixLive to raise money for Healing Hearts Society! With the money donated, we will fund research into cardiovascular diseases, create community programs advocating for healthier lifestyles, and educate others on CPR.'
+- original_post:
+    author: HealthyHeartsSociety
+    text: 'We''re Healing Hearts Society, a nonprofit for improving heart health!'

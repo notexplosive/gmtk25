@@ -111,27 +111,11 @@ fred_the_communist:
     user_name: fred_the_communist
     display_name: ""
     bio: ""
-heleny:
-    user_name: heleny
-    display_name: ""
-    bio: ""
-jackson:
-    user_name: jackson
-    display_name: ""
-    bio: ""
 justice_leek:
     user_name: justice_leek
     display_name: ""
     bio: Not sorry. Corpos, bootlickers, cannibalism apologists DO NOT ENGAGE
     profile_picture: pfp_justiceleek
-kaylamack:
-    user_name: kaylamack
-    display_name: ""
-    bio: ""
-landonloveslattes:
-    user_name: landonloveslattes
-    display_name: ""
-    bio: ""
 luclferd:
     user_name: luclferd
     display_name: Lucas L. Ferdinand
@@ -165,3 +149,45 @@ COA_Official:
     user_name: COA_Official
     display_name: Condors of Avalon
     bio: It's time to leave the nest. Watch now on @Nubi TV
+potatolover23:
+    user_name: potatolover23
+    display_name: antony
+    bio: the biggest potato fan. waffle fry supremacy
+HealthyHeartsSociety:
+    user_name: HealthyHeartsSociety
+    display_name: Healthy Hearts Society
+    bio: 'Healing hearts since 2021. Let''s make the world healthier.'
+
+benclover:
+    user_name: benclover
+mosspaul:
+    user_name: mosspaul
+bella248:
+    user_name: bella248
+mark:
+    user_name: mark
+therealnaruto:
+    user_name: therealnaruto
+natlat:
+    user_name: natlat
+TronixLive:
+    user_name: TronixLive
+    display_name: Tronix
+    bio: Content creator trying to make the world a better place. Join the Tronix Troop!
+    profile_picture: pfp_tronix
+kaylamack:
+    user_name: kaylamack
+    display_name: ""
+    bio: ""
+landonloveslattes:
+    user_name: landonloveslattes
+    display_name: ""
+    bio: ""
+heleny:
+    user_name: heleny
+    display_name: ""
+    bio: ""
+jackson:
+    user_name: jackson
+    display_name: ""
+    bio: ""
