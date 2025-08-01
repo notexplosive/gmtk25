@@ -1,6 +1,7 @@
 - original_post:
     author: luclferd
-    text: Huge props to our team for all their hard work. We'll be back up and running soon! (qt of @Loop post about outage)
+    text: Huge props to our team for all their hard work. We'll be back up and running soon!
+    linked_post_id: loop_outage
   comments:
     - author: catcradler
       text: resign
@@ -22,7 +23,7 @@
   comments: []
 - original_post:
     author: luclferd
-    text: All this vitriol towards @Nubi is uncalled for. I've known CEO @GabrielVilacruzNubi for years and he has always been a kind, thoughtful, and brilliant man. Nubi is one of the most innovative companies in the startup space.. We need more people like Gabriel, not less.
+    text: All this vitriol towards @Nubi is uncalled for. I've known CEO @GabrielVilacruzNubi for years and he has always been a kind, thoughtful, and brilliant man. Nubi is one of the most innovative companies in the startup space. We need more people like Gabriel, not less.
   comments:
     - author: manish_agarwal
       text: thank you
@@ -32,16 +33,18 @@
       text: woooowww
 - original_post:
     author: luclferd
-    text: 'The #SwazzleChallenge is what I love about the @Loop community. So many people pitching together for a good cause. Thank you @HealingHearts and thank you @Tronix! '
+    text: 'The #SwazzleChallenge is what I love about the @Loop community. So many people pitching in for a good cause. Thank you @HealingHearts and thank you @TronixLive! '
   comments:
     - author: therealninja
-      text: LETT'S GOOOOO @Tronix mention
+      text: LETT'S GOOOOO @TronixLive mention
     - author: michaellovescake
       text: '@luclferd I can''t believe you would support this nonsense.'
     - author: SusanneSmith
       text: What is ''Swazzle''?
+
 - original_post:
     author: Loop
+    post_id: loop_outage
     text: "Hi folks! We're currently experiencing some in-app outages. Some features currently aren't working right now but we're working hard on fixing them! \U0001F528"
   comments:
     - author: catcradler
@@ -75,47 +78,35 @@
     - author: JosephLeeVC
       text: '@heleny I like ''''darn''''! It goes with the knitting theme (loop, thread)'
     - author: catcradler
-      text: wat
+      text: what
     - author: justice_leek
       text: 'NAME AND SHAME! This is because of the new #Levitia Obscenity Law! @DukeHolloway is a FASCIST!'
-    - author: catcradler
-      text: no. stop.
     - author: heleny
       text: '@JosephLeeVC yes! ''''darn it to heck! cut the bull swaz!'''''
+    - author: catcradler
+      text: no. stop.
     - author: fred_the_communist
       text: '@justice_leek you have no idea what youre talking about.'
     - author: JosephLeeVC
       text: '@heleny you could be a startup founder with those ideas!'
     - author: catcradler
       text: i hate you both so much
+
 - original_post:
     author: catcradler
-    text: 'lol so right now with with the ''''outage'''':'
-  comments: []
-- original_post:
-    author: catcradler
-    text: '- posting completely disabled'
-  comments: []
-- original_post:
-    author: catcradler
-    text: '- ALL external links broken'
-  comments: []
-- original_post:
-    author: catcradler
-    text: '- search only returns top 5 results'
-  comments: []
-- original_post:
-    author: catcradler
-    text: '- profiles/images broken for like half of all users'
-  comments: []
-- original_post:
-    author: catcradler
-    text: i love this hellsite
+    text: 'lol so right now with with the ''''outage'''':
+    
+      - posting completely disabled
+      - ALL external links broken
+      - search only returns top 5 results
+      - profiles/images broken for like half of all users
+
+      i love this hellsite'
   comments:
     - author: catboyslim
       text: wait @catcradler how are *you* able to post
     - author: catcradler
-      text: '@catboyslim secret'
+      text: '@catboyslim secret :3'
     - author: JennyK
       text: '@catboyslim it''s a rolling outage. @MarkKassowitz was able to post until 5 min ago'
     - author: catboyslim
@@ -131,13 +122,15 @@
     text: hey @luclferd care to tell us why @catboyslim is d*rned??
   comments: []
 - original_post:
+    post_id: catcradler_loop
     author: catcradler
-    text: help i'm stuck in a time loop! (quote posts the same post recursively)
+    text: help i'm stuck in a time loop!
+    linked_post_id: catcradler_loop
   comments:
     - author: catboyslim
       text: How did you do that??
     - author: catcradler
-      text: '@catboyslim lol this site is broken AH'
+      text: '@catboyslim lol this site is broken AF'
     - author: JennyK
       text: '@catboyslim I''m pretty sure @catcradler just calculated the PID of the post and used a bot to link it at the right time. Still, it''s pretty impressive…'
     - author: catcradler
@@ -160,13 +153,14 @@
       text: Dukes are nobility, not royalty.
     - author: catcradler
       text: '@JennyK shuuuut'
+
 - original_post:
     author: Nubi
     text: In accordance with the FDA recall, all Nubi Go packets must be IMMEDIATELY disposed of. Please see <broken link> for more info.
   comments: []
 - original_post:
     author: Nubi
-    text: At Nubi, we take the safety and health of our food seriously. The claims made by the recent Swazzle Challenge video of our Cheddar Potato Bake are false. The flavors of our food explode in your mouth, not your microwave.
+    text: "At Nubi, we take the safety and health of our food seriously. The claims made by the recent #SwazzleChallenge video of our Cheddar Potato Bake are false. The flavors of our food explode in your mouth, not your microwave."
   comments:
     - author: dadjokes2
       text: ok but can you tell us why the potato exploded?
@@ -176,7 +170,21 @@
       text: does NOT explain why your food sucks
 - original_post:
     author: Nubi
-    text: "What did you all think of the new Condors of Avalon episode? \U0001F633 (Image: a promotional still)"
+    linked_post_id: coa_announcement
+- original_post:
+    author: Nubi
+    text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Affordable. Healthy. Sign up now <broken link>' 
+    ##image: "TODO: promotional image of a woman eating a salad"
+  comments:
+    - author: SusanneSmith
+      text: Wow! So convenient. My husband and I currently use Foodbaby but I'll talk to him to see if we can switch.
+    - author: fred_the_communist
+      text: another capitalist excess.
+
+- original_post:
+    author: COA_Official
+    text: "What did you all think of the new Condors of Avalon episode? \U0001F633"
+    #image: "TODO: a promotional still"
   comments:
     - author: VasylnFan
       text: "Lord DeFontaigne \U0001F62D\U0001F62D\U0001F62D#VasDef #COA"
@@ -185,32 +193,26 @@
     - author: MildredJones
       text: How do I watch
 - original_post:
-    author: Nubi
-    text: 'On the next Condors of Avalon: DeFontaigne faces his greatest foe. Vasylin makes a difficult choice. M''rkrk''yk rides south. Watch now on Nubi TV: <broken link>'
+    author: COA_Official
+    post_id: coa_announcement
+    text: 'On the next Condors of Avalon: DeFontaigne faces his greatest foe. Vasylin makes a difficult choice. M''rkrk''yk rides south. Watch now on @Nubi TV: <broken link>'
   comments:
     - author: VasylnFan
       text: AHHHHHHHHHH
-- original_post:
-    author: Nubi
-    text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Affordable. Healthy. Sign up now <broken link> (Image: promotional image of a woman eating a salad)'
-  comments:
-    - author: SusanneSmith
-      text: Wow! So convenient. My husband and I currently use Foodbaby but I'll talk to him to see if we can switch.
-    - author: fred_the_communist
-      text: another capitalist excess.
+
 - original_post:
     author: HavitOfficial
-    text: 'We promise we won''t kill off your OTP #VasDef Watch Maxwell''s Demon at Havit ALL <link>'
+    text: 'We promise we won''t kill off your OTP #VasDef Watch Maxwell''s Demon on Havit ALL <link>'
   comments:
     - author: cowhaver
       text: lol y'all are so real for this
     - author: ToneDefont
-      text: ooh @VasylisFan have you seen this?
-    - author: VasylisFan
+      text: ooh @VasylinFan have you seen this?
+    - author: VasylinFan
       text: "@ToneDefont I can't afford another streaming service \U0001F62D"
     - author: ToneDefont
       text: 'girl the #NubiBoycott! cancel that swaz!'
-    - author: VasylisFan
+    - author: VasylinFan
       text: hmmm
 - original_post:
     author: HavitOfficial
@@ -224,25 +226,28 @@
       text: '@TronixLive has done more in a week than you have your entire life lady'
 - original_post:
     author: reportergirl7
-    text: 'My latest for @TechHub: New @Nubi meal-prep service has an explosive start: <broken link> (picture of the exploded potato from the meme)'
+    text: 'My latest for @TechHub: New @Nubi meal-prep service has an explosive start: <broken link>'
+    #image: 'TODO (picture of the exploded potato from the meme)'
   comments:
     - author: catboyslim
       text: lol epic article title
 - original_post:
     author: reportergirl7
-    text: 'Omg #CondorsOfAvalon you cannot do this to me!! #VasDef #Spoilers'
+    text: 'OMG #CondorsOfAvalon you cannot do this to me!! #VasDef #Spoilers'
   comments: []
 - original_post:
     author: TruePatriot
-    text: 'Why is @Loop censoring ''''bald eagle'''' the symbol of our beautiful country THIS IS CENSORSHIP <picture: screenshot of the search bar searching ''''bald eagle'''' and returning nothing>'
+    text: 'Why is @Loop censoring ''''bald eagle'''' the symbol of our beautiful country THIS IS CENSORSHIP'
+    #image: <picture: screenshot of the search bar searching ''''bald eagle'''' and returning nothing>
   comments: []
 - original_post:
     author: TruePatriot
-    text: 'What is #Swazzle #SwazzleChallenge? How does this help HEARTS? The only things I want to see exploding are TERRORISTS'
+    text: 'What is #Swazzle #SwazzleChallenge? How does this help HEARTS? The only things I want to see exploding is the TERRORIST'
   comments: []
 - original_post:
     author: TruePatriot
-    text: 'What is #TronixTroop? The only troops I support are the BRAVE MEN AND WOMEN OF OUR ARMED FORCES (picture: stock image of troops in uniform w/ american flag superimposed)'
+    text: 'What is #TronixTroop? The only troops I support are the BRAVE MEN AND WOMEN OF OUR ARMED FORCES'
+    #image:  'TODO: (stock image of troops in uniform w/ american flag superimposed)'
   comments:
     - author: landonloveslattes
       text: 'tronix has done more than the us army #SwazzleChallenge'
@@ -256,6 +261,7 @@
       text: where is that
     - author: JennyK
       text: It's in Northern Europe
+
 - original_post:
     author: TruthRevealed
     text: Loop = Circles of Hell. 9 logo = 9 layers. ''Lucas L. Ferdinand'' @luclferd = Lucifer = the devil himself. Get out NOW
@@ -320,9 +326,11 @@
     author: RepLorretaJackson
     text: Access to healthy and non-exploding food is a right to all Americans, which is why the recent reports of improperly packaged @Nubi Go packets are of deep concern to me. My colleagues and I are keeping a close eye on the situation.
   comments: []
+
 - original_post:
     author: ChristinaMcPheeTV
-    text: 'So proud of this episode. @PeterSmalls brought a gravitas and humanity to Lord DeFontaigne that few actors I know could. I''m honored to have worked with him on #CondorsOfAvalon (repost: Nubi TV post of Condors of Avalon).'
+    text: 'So proud of this episode. @PeterSmalls brought a gravitas and humanity to Lord DeFontaigne that few actors I know could. I''m honored to have worked with him on #CondorsOfAvalon.'
+    linked_post_id: coa_announcement
   comments: []
 - original_post:
     author: ChristinaMcPheeTV
@@ -337,9 +345,11 @@
     - author: MildredJones
       text: My daughter visiting there next week!
     - author: SusanneSmith
-      text: '@MildredJones I hope she has fun! We went there last year and it was gorgeous! <pictures of landscapes>'
+      text: '@MildredJones I hope she has fun! We went there last year and it was gorgeous!'
+      #image: <pictures of landscapes>
     - author: SusanneSmith
       text: Just be careful though! There is flooding this time of year.
+
 - original_post:
     author: SirPeterSmalls
     text: '@DrBethHargrave I would respectfully disagree. While Edmund cannot be necessarily said to be a true ''''villain'''' per Beckendorf''s classification, his rage and sense of entitlement underlies a similar trend among young men of this generation–one that has only been exacerbated by ''''influencers'''' such as this ''''Tornix'''' fellow or whatever his name is. And this trend has only worsened since I last played the character.'
@@ -351,7 +361,7 @@
     - author: cowhaver
       text: wth is a tornix
     - author: cowhaver
-      text: wait haha you mean @Tronix??
+      text: wait haha you mean @TronixLive??
     - author: trolled_daal
       text: learn to quote-take dude
 - original_post:
@@ -408,7 +418,8 @@
   comments: []
 - original_post:
     author: HeckinPuppers
-    text: potato? wat about PUP-tato! <picture of a dog in a potato costume>
+    text: potato? wat about PUP-tato!
+    #image: <picture of a dog in a potato costume>
   comments:
     - author: SusanneSmith
       text: Adorable!
@@ -428,22 +439,25 @@
       text: Cute!
     - author: justice_leek
       text: this is problematic.
+
 - original_post:
-    author: VasylisFan
+    author: VasylinFan
     text: 'OMG #MaxwellsDemon is SO GOOD'
   comments:
     - author: ToneDefont
       text: haha you still have your old username
-    - author: VasylisFan
+    - author: VasylinFan
       text: Ughhh I can't change it for some reason! stupid site.
     - author: JennyK
-      text: <quote post to @Loop comment about outages>
+      linked_post_id: loop_outage
 - original_post:
-    author: VasylisFan
-    text: 'GAHHH I''M SO EXCITED (qt: announcement post for the next Condors of Avalon episode)'
+    author: VasylinFan
+    text: 'GAHHH I''M SO EXCITED'
+    linked_post_id: coa_announcement
   comments:
     - author: trolled_daal
       text: defontaigne dies
+
 - original_post:
     author: ProfEricsson
     text: 'Are there any other #SocialInformatics academics on @Loop? I''d like to build up the community!'
@@ -468,3 +482,9 @@
     author: MildredJones
     text: Hello
   comments: []
+
+- original_post:
+    author: justice_leek
+    post_id: justice_leek_nubi_boycott
+    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
+    #image: "TODO informatic about all Nubi products to boycott"
