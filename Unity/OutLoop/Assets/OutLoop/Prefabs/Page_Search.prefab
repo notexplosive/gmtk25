@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ff3107a656486bb54d8146b14621a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pageType: 1
 --- !u!1 &2741654823271191194
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +610,7 @@ GameObject:
   - component: {fileID: 7355777135763784682}
   - component: {fileID: 6170627717602542565}
   - component: {fileID: 9076585571420599675}
+  - component: {fileID: 2025581686697506008}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -764,17 +766,29 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
-  m_RichText: 1
+  m_RichText: 0
   m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_OnFocusSelectAll: 1
-  m_ResetOnDeActivation: 1
+  m_OnFocusSelectAll: 0
+  m_ResetOnDeActivation: 0
   m_KeepTextSelectionVisible: 0
-  m_RestoreOriginalTextOnEscape: 1
+  m_RestoreOriginalTextOnEscape: 0
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   isAlert: 0
   m_InputValidator: {fileID: 0}
-  m_ShouldActivateOnSelect: 1
+  m_ShouldActivateOnSelect: 0
+--- !u!114 &2025581686697506008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274835548066585028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5282511cac7b4283885b46db93aa36dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8657191717182036007
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using System.Linq;
 using OutLoop.Data;
 using SecretPlan.Core;
 using UnityEngine;
+using YamlDotNet.Serialization;
 
 namespace OutLoop.Core
 {
@@ -18,7 +19,7 @@ namespace OutLoop.Core
                 Debug.LogError("Could not find LoopDB");
                 return new LoopData();
             }
-            
+
             var accountsYamlFile = loopDbDirectory.GetFiles("accounts.yaml").FirstOrDefault();
 
             if (accountsYamlFile == null)
@@ -28,8 +29,8 @@ namespace OutLoop.Core
             }
 
             var lines = File.ReadAllText(accountsYamlFile.FullName);
-            var deserializer = new YamlDotNet.Serialization.Deserializer();
-            var accounts = deserializer.Deserialize<Dictionary<string,AccountData>>(lines);
+            var deserializer = new Deserializer();
+            var accounts = deserializer.Deserialize<Dictionary<string, AccountData>>(lines);
 
 
             var postsDirectory = new DirectoryInfo(Application.dataPath + "/LoopDB/Posts");
@@ -43,7 +44,7 @@ namespace OutLoop.Core
             }
 
             var puzzles = new List<PuzzleData>();
-            
+
             return new LoopData(accounts.Values.ToList(), puzzles, posts);
         }
     }

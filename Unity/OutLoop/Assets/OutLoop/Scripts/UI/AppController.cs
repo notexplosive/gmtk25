@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using OutLoop.Core;
 using UnityEngine;
 
 namespace OutLoop.UI
@@ -13,6 +14,9 @@ namespace OutLoop.UI
         [SerializeField]
         private List<AppPage> _pages = new();
 
+        [SerializeField]
+        private LoopDataRelay? _relay;
+        
         private AppPage? _currentPage;
 
         private void Awake()
@@ -86,6 +90,11 @@ namespace OutLoop.UI
             _currentPage.FlyOut(direction);
             page.FlyIn(direction);
             _currentPage = page;
+
+            if (_relay != null)
+            {
+                _relay.State().CurrentPage = page.PageType;
+            }
         }
     }
 }

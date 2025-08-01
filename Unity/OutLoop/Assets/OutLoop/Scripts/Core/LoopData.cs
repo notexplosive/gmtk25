@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Data;
 
@@ -7,8 +8,9 @@ namespace OutLoop.Core
     public class LoopData
     {
         private readonly List<Account> _allAccounts = new();
-        private readonly List<TopLevelPost> _allTopLevelPosts = new();
         private readonly List<Puzzle> _allPuzzles = new();
+        private readonly List<TopLevelPost> _allTopLevelPosts = new();
+        private PageType _currentPage;
 
         public LoopData()
         {
@@ -55,7 +57,18 @@ namespace OutLoop.Core
             }
         }
 
+        public PageType CurrentPage
+        {
+            get => _currentPage;
+            set
+            {
+                _currentPage = value;
+                PageUpdated?.Invoke(_currentPage);
+            }
+        }
+
         public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
+        public event Action<PageType>? PageUpdated;
 
         public Dictionary<string, Account> BuildAccounts(List<AccountData> accountDataList)
         {

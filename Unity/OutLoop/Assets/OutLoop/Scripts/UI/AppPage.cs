@@ -1,8 +1,10 @@
-﻿using ExTween;
+﻿using System;
+using ExTween;
 using ExTween.Unity;
 using OutLoop.Core;
 using SecretPlan.Core;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace OutLoop.UI
 {
@@ -12,10 +14,14 @@ namespace OutLoop.UI
 
         private readonly float _pageOverSpeed = 0.15f;
         private readonly Ease.Delegate _easeFunction = Ease.QuadFastSlow;
-        
+
+        [SerializeField]
+        private PageType _pageType;
+
+        public PageType PageType => _pageType;
+
         public void FlyOut(int direction)
         {
-            
             TweenService.Instance.ClearChannelAndSet("AppPagingOut", new SequenceTween()
                 .Add(transform.GetTweenableLocalPositionX()
                     .TweenTo(OutsideXPosition() * direction * -1, _pageOverSpeed, _easeFunction))
@@ -46,6 +52,9 @@ namespace OutLoop.UI
         private void Show()
         {
             gameObject.SetActive(true);
+            Selected?.Invoke();
         }
+
+        public event Action? Selected;
     }
 }

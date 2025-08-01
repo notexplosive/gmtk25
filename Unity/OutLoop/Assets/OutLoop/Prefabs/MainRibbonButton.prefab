@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3029199962968557026}
   - component: {fileID: 8623873154229538406}
   - component: {fileID: 3172624732304710677}
+  - component: {fileID: 9099506555025760418}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -96,6 +97,31 @@ MonoBehaviour:
   m_FlexibleWidth: 0
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &9099506555025760418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968224608403181276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b7f37f783240ba926077ceccceb1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _states:
+    _normal:
+      _state: {x: 0, y: 0}
+      _duration: 0.1
+    _navigatedTo:
+      _state: {x: 0, y: 0}
+      _duration: 0.1
+    _pressed:
+      _state: {x: 0, y: 10}
+      _duration: 0
+    _disabled:
+      _state: {x: 0, y: 0}
+      _duration: 0
 --- !u!1 &1893483834999469827
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +133,7 @@ GameObject:
   - component: {fileID: 3596594014440001404}
   - component: {fileID: 8473363436334981368}
   - component: {fileID: 3984342651404633842}
+  - component: {fileID: 2867727669369463386}
   m_Layer: 5
   m_Name: MainRibbonButton
   m_TagString: Untagged
@@ -148,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _decorators:
-  - {fileID: 7079043985518692641}
+  - {fileID: 9099506555025760418}
   _navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -171,6 +198,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e53949d97285844a47a2d770c71c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2867727669369463386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893483834999469827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f538907ff3642948127c828a7d2dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _relay: {fileID: 11400000, guid: 6aed0919bda2dcc4480d15247a080c41, type: 2}
+  _pageType: 0
+  _activeIndicator: {fileID: 3418023754637862758}
 --- !u!1 &1975147320453462633
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +271,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2836381485472409833}
-  - component: {fileID: 7079043985518692641}
   m_Layer: 5
   m_Name: AnimRoot
   m_TagString: Untagged
@@ -257,31 +298,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7079043985518692641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3324958573172741420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f3f7320bed405699d7f2283ac55ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _states:
-    _normal:
-      _state: {x: 1, y: 1}
-      _duration: 0
-    _navigatedTo:
-      _state: {x: 1, y: 1}
-      _duration: 0.1
-    _pressed:
-      _state: {x: 0.8, y: 0.8}
-      _duration: 0
-    _disabled:
-      _state: {x: 1, y: 1}
-      _duration: 0
 --- !u!1 &3418023754637862758
 GameObject:
   m_ObjectHideFlags: 0
