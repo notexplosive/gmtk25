@@ -7,28 +7,41 @@ namespace OutLoop.Core
 {
     public class Account
     {
+        private readonly bool _isUnavailableAccount;
+
         public Account(AccountData data)
         {
-            UserName = data.UserName;
-            DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
-            if (data.IsFakeProfile)
+            if (string.IsNullOrWhiteSpace(data.UserName))
             {
-                Bio = "<style=System>This profile cannot be loaded at this time.</style>";
-            }
-
-            Bio = data.Bio ?? string.Empty;
-
-            if (data.IsLikelyFakeProfile())
-            {
-                ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
+                _isUnavailableAccount = true;
+                UserName = "";
+                DisplayName = "";
+                Bio = "";
+                ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_grey.png");
             }
             else
             {
-                ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
-            }
+                UserName = data.UserName;
+                DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
+                if (data.IsFakeProfile)
+                {
+                    Bio = "<style=System>This profile cannot be loaded at this time.</style>";
+                }
 
-            var followerCount = Constants.CalculateFollowers(data.FollowerCountMagnitude);
-            FollowerCount = followerCount;
+                Bio = data.Bio ?? string.Empty;
+
+                if (data.IsLikelyFakeProfile())
+                {
+                    ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_default.png");
+                }
+                else
+                {
+                    ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
+                }
+
+                var followerCount = Constants.CalculateFollowers(data.FollowerCountMagnitude);
+                FollowerCount = followerCount;
+            }
             OriginalData = data;
         }
 
@@ -41,6 +54,16 @@ namespace OutLoop.Core
         public AccountData OriginalData { get; }
 
         public string UserNameWithAt => $"@{UserName}";
-        public string DisplayNameAndUsernameStyled => $"{DisplayName} <style=Username>{UserNameWithAt}</style>";
+        public string DisplayNameAndUsernameStyled
+        {
+            get
+            {
+                if (_isUnavailableAccount)
+                {
+                    return "<style=System>(Account Unavailable)</style>";
+                }
+                return $"{DisplayName} <style=Username>{UserNameWithAt}</style>";
+            }
+        }
     }
 }

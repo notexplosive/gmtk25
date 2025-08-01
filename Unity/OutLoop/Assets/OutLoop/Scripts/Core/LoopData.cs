@@ -126,6 +126,14 @@ namespace OutLoop.Core
             return _readMessages.Contains(message);
         }
 
+        public void MarkMessageAsRead(DirectMessage message)
+        {
+            _readMessages.Add(message);
+            MessageMarkedAsRead?.Invoke(message);
+        }
+
+        public event Action<DirectMessage>? MessageMarkedAsRead;
+
         public IEnumerable<Account> AllAccounts()
         {
             return _allAccounts;

@@ -67,7 +67,7 @@ namespace OutLoop.Core
         {
             var loopData = State();
             var rng = new NoiseBasedRng((int)Time.time);
-            loopData.ReceiveMessage(new DirectMessage(rng.GetRandomElement(loopData.AllAccounts().ToList()), "Hello!"));
+            loopData.ReceiveMessage(new DirectMessage(rng.GetRandomElement(loopData.AllAccounts().ToList()), rng.NextInt().ToString()));
         }
     }
 }

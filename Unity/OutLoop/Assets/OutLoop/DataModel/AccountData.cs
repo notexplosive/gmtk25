@@ -9,7 +9,7 @@ namespace OutLoop.Data
     public class AccountData
     {
         [YamlMember(Alias = "user_name")]
-        public string UserName { get; set; } = "";
+        public string? UserName { get; set; }
 
         [YamlMember(Alias = "display_name")]
         public string DisplayName { get; set; } = "";
