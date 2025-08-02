@@ -80,14 +80,14 @@
     author: catcradler
     post_id: catcradler_outage
     text: |
-     'DAHAHAAA so right now with with the #LoopOutage:
+     DAHAHAAA so right now with with the #LoopOutage:
     
       - posting is COMPLETELY disabled
       - ALL external links broken
       - search only returns top 5 results
       - profiles and images broken for like half of all users
 
-      i love this app'
+      i love this app
     likes: 4
   comments:
     - author: catboyslim
@@ -107,8 +107,9 @@
       text: "@Loop gtfo Corpo \U0001F595"
 - original_post:
     author: catcradler
-    text: hey @luclferd care to tell us why @catboyslim is d*rned??
-  comments: []
+    text: potato
+  comments:
+    - text: potato
 - original_post:
     post_id: catcradler_loop
     author: catcradler
@@ -832,6 +833,19 @@
       text: "@fred_the_communist are you okay??"
 - original_post:
     author: catboyslim
+    text: potato
+    linked_post_id: exploding_potato
+  thread:
+    - author: catcradler
+      text: noooo slim you werent supposed to link to the original take
+    - author: catboyslim
+      text: oh whoops
+    - author: catboyslim
+      text: i can take it down
+    - author: catcradler
+      text: "it's fiiiiiiiine"
+- original_post:
+    author: catboyslim
     text: ughhh some idiot tried to do that "swazzle challenge" thing at the club and left a huge mess. and guess who had to clean it up. T_T
 - original_post:
     author: catboyslim
@@ -970,6 +984,16 @@
 - original_post:
     author: fred_the_communist
     text: "wait THAT'S what they're using 'swaz' for now? That's hilarious."
+- original_post:
+    author: fred_the_communist
+    text: potato
+    comments:
+      - author: catcradler
+        text: YES!
+      - author: catboyslim
+        text: ?
+      - author: catcradler
+        text: haha slim ill dm you
 - original_post:
     author: fred_the_communist
     text: "A lot of Davort's analysis is applicable to social media. Fame and power, no matter how small or illusory, infects with the entitlement of the bourgeoisie. If not identified and cast aside, it spreads like a virus, throwing away all class solidarity and making one slave to the chains of greed."
