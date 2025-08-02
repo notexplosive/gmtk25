@@ -5,18 +5,7 @@
   comments:
     - author: catcradler
       text: resign
-    - author: cowhaver
-      text: why can't I post?
-    - author: GeorgeCassidy
-      text: '@cowhaver You''re posting now.'
-    - author: cowhaver
-      text: omgg what!!
-    - author: cowhaver
-      text: wait
-    - author: cowhaver
-      text: '@GeorgeCassidy this is a comment, not a post.'
-    - author: GeorgeCassidy
-      text: '@cowhaver what''s the difference?'
+    - text: why can't I post?
     - author: AnnetteManning
       text: 'Annette Manning, KNIT3 Santa Omela: Hi Lou. I''m Annette from KNIT3 Santa Omela. Would you be open to an interview about the recent outages? My DMs are open.'
   comments: []
@@ -49,8 +38,9 @@
     - author: JackGerard43
       text: why did you darn tronix??
     - author: JennyK
-      text: Looking at the request data map it seems like there has been a sharp spike in requests in the past 8 hours. (image
-    - author: VasylnFan
+      text: 'Looking at the ping request cache it seems like there has been a massive spike in requests in the past 8 hours:'
+      linked_post_id: jennyk_info
+    - author: VasylinFan
       text: 'LOL we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
 - original_post:
     author: Loop
@@ -163,11 +153,13 @@
     linked_post_id: coa_announcement
 - original_post:
     author: Nubi
-    text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Affordable. Healthy. Sign up now <broken link>' 
+    text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Fresh. Five minutes in your microwave. Sign up now <broken link>' 
     ##image: "TODO: promotional image of a woman eating a salad"
   comments:
     - author: SusanneSmith
       text: Wow! So convenient. My husband and I currently use Foodbaby but I'll talk to him to see if we can switch.
+    - author: JosephLeeVC
+      text: another game changer from @Nubi!
     - author: fred_the_communist
       text: another capitalist excess.
 
@@ -176,7 +168,7 @@
     text: "What did you all think of the new Condors of Avalon episode? \U0001F633"
     #image: "TODO: a promotional still"
   comments:
-    - author: VasylnFan
+    - author: VasylinFan
       text: "Lord DeFontaigne \U0001F62D\U0001F62D\U0001F62D#VasDef #COA"
     - author: SusanneSmith
       text: Too violent for me! But my husband loves it.
@@ -187,7 +179,7 @@
     post_id: coa_announcement
     text: 'On the next Condors of Avalon: DeFontaigne faces his greatest foe. Vasylin makes a difficult choice. M''rkrk''yk rides south. Watch now on @Nubi TV: <broken link>'
   comments:
-    - author: VasylnFan
+    - author: VasylinFan
       text: AHHHHHHHHHH
 
 - original_post:
@@ -247,8 +239,7 @@
       text: '@fred_the_communist YOU ARE NOT A TRUE PATRIOT'
     - author: fred_the_communist
       text: dude I live in Levitia
-    - author: MildredJones
-      text: where is that
+    - text: where is that
     - author: JennyK
       text: It's in Northern Europe
 
@@ -304,13 +295,13 @@
   comments:
     - author: SusanneSmith
       text: Delicious! I'll have my husband try it out (he usually only eats chicken parmesan).
-    - author: VasylnFan
+    - author: VasylinFan
       text: if you actually watched the show you would know this is really distasteful.
-    - author: VasylnFan
+    - author: VasylinFan
       text: The Condors in COA aren't just pets. They're life partners. Soulmates. To bond with one is to bond one's destiny forever with the Weave. Killing one, much less eating one, is a sin greater than murder.
     - author: cowhaver
       text: lol calm down its just a show.
-    - author: VasylnFan
+    - author: VasylinFan
       text: 'just a show??? COA is a masterpiece of our generation. #VasDef literally SAVED MY LIFE'
 - original_post:
     author: RepLorretaJackson
@@ -326,7 +317,7 @@
     author: ChristinaMcPheeTV
     text: 'Excited to be doing the #SwazzleChallenge for the @HealingHeartsSociety! Now let''s see some condors explode! Next up: I nominate @SirPeterSmalls!'
   comments:
-    - author: VasylnFan
+    - author: VasylinFan
       text: YESS QUEEN SLAY!!
 - original_post:
     author: ChristinaMcPheeTV
@@ -372,7 +363,7 @@
   comments:
     - author: cowhaver
       text: bro what is defontaigne talking about
-    - author: VasylnFan
+    - author: VasylinFan
       text: Sir Smalls could you please unblock my friend @ToneDefont? I know what you've said about not interacting with fans but she said she's sorry and you really mean a lot to her…
 - original_post:
     author: SirPeterSmalls
@@ -404,16 +395,19 @@
     author: HeckinPuppers
     text: 'ohnooes! what happen to lord de-FURR-tain in the latest #CondorsOfAvalon? weww miss you @SirPeterSmalls!'
   comments:
+    - text: spoilers!!
+    - text: Lord DeFontaigne nooooo
     - author: SirPeterSmalls
       text: Do not contact me again.
 - original_post:
     author: HeckinPuppers
-    text: swazzew chawwen? how about snuggle chawwen? (picture of the most disgustingly cute dog)
+    text: swazzew chawwen? how about snuggle chawwen?
+    # image: TODO (picture of the most disgustingly cute dog)
   comments:
     - author: SusanneSmith
       text: Cute!
     - author: justice_leek
-      text: this is problematic.
+      text: this is EXTREMELY problematic.
 
 - original_post:
     author: VasylinFan
@@ -463,6 +457,19 @@
     post_id: justice_leek_nubi_boycott
     text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
     #image: "TODO informatic about all Nubi products to boycott"
+  comments:
+    - text: YESSSS
+    - text: doing my part!
+    - text: no longer buying from Nubi Books. supporting my local bookstores instead.
+    - text: "cancelling my @Nubi TV subscription! Bye Condors of Avalon!"
+    - text: spread the word!
+    - text: good riddance. that potato was DISGUSTING.
+    - text: "why can't we post? Is @luclferd in cahoots with #Nubi? #Censorship"
+    - author: JennyK
+      text: there's an outage
+    - author: JennyK
+      text: "more information here"
+      linked_post_id: jennyk_info
 
 - original_post:
     author: potatolover23
@@ -471,17 +478,19 @@
     - text: you owe @Nubi an apology
     - text: dude you waited THIS long to tell us??
     - text: yikes
+    - text: wait but didnt they find e coli in the packets too?
 - original_post:
     author: potatolover23
     text: nubi sent me a cease and desist should i be worried
 - original_post:
     author: potatolover23
     post_id: exploding_potato
-    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @Tronix"
+    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @TronixLive"
     # TODO <<photo of nubi potatoes exploded in microwave>>
-  comments:
+  thread:
     - author: potatolover23
-      text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. the brand is nubi"
+      text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. its that new nubi go meal prep thing"
+  comments:
     - author: TronixLive
       text: this video is SICK!!!
     - text: not surprised this is nubi
@@ -516,6 +525,7 @@
     - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
     - text: 'you aren''t sorry for what you did. you''re sorry you got caught.'
     - text: 'Thank you for apologizing. Everyone makes mistakes. What''s important is you learn and do better in the future.'
+    - text: '@TronixLive real name Bartholomew Joseph Sampson birthday April 3 address 742 Conifer Dr Springfield IL 62766'
 - original_post:
     author: TronixLive
     text: Thank you for 5 million subscribers <3 Tronix Troop is the best
@@ -554,9 +564,10 @@
 - original_post:
     author: TronixLive
     text: 'Announcing…the #SwazzleChallenge! I''m partnering with the Healing Hearts Society to raise money for heart health. The rules are simple: Donate to charity, upload your craziest explosion video, and get SWAZZLED!'
-  comments:
+  thread:
     - author: TronixLive
       text: 'The best #SwazzleChallenge video and the biggest donator will get flown to Los Angeles and film an epic collab where we blow up a Rolls-Royce! Tronix Troop, you guys got this'
+  comments:
     - text: Tronix doing more for the world than most leaders have done in the last ten years
     - author: HealingHeartsSociety
       text: Thank you so much Tronix for spotlighting Healing Hearts Society. Together, we can save lives <3
@@ -566,3 +577,18 @@
 - original_post:
     author: TronixLive 
     text: 'Watched the final cut of the next video and Y''ALL ARE NOT READY FOR THIS. I''ve been COOKING.'
+
+- original_post:
+    author: JennyK
+    post_id: jennyk_info
+    text: 'Looking at the DNS data, the #LoopOutage seems to be caused by a large influx of posts from the last three hours. In other words, it''s a massive unintentional DDOS.'
+    # TODO image: graph with a large spike
+  thread:
+    - author: JennyK
+      text: "Checking the Trends API it seems these are the major contributors to the spike:"
+      # TODO word cloud with "condors of avalon", "nubi" "tronix" "#swazzlechallenge" and other keywords in it
+  comments:
+    - text: Wow! This is so interesting!
+    - text: is this legal?
+    - author: catcradler
+      text: okay jenny this is actually kind of cool
