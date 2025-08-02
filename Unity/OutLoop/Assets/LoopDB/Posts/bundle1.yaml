@@ -38,7 +38,8 @@
     - author: JackGerard43
       text: why did you darn tronix??
     - author: JennyK
-      text: Looking at the request data map it seems like there has been a sharp spike in requests in the past 8 hours. (image
+      text: 'Looking at the ping request cache it seems like there has been a massive spike in requests in the past 8 hours:'
+      linked_post_id: jennyk_info
     - author: VasylinFan
       text: 'LOL we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
 - original_post:
@@ -238,8 +239,7 @@
       text: '@fred_the_communist YOU ARE NOT A TRUE PATRIOT'
     - author: fred_the_communist
       text: dude I live in Levitia
-    - author: MildredJones
-      text: where is that
+    - text: where is that
     - author: JennyK
       text: It's in Northern Europe
 
@@ -457,6 +457,19 @@
     post_id: justice_leek_nubi_boycott
     text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
     #image: "TODO informatic about all Nubi products to boycott"
+  comments:
+    - text: YESSSS
+    - text: doing my part!
+    - text: no longer buying from Nubi Books. supporting my local bookstores instead.
+    - text: "cancelling my @Nubi TV subscription! Bye Condors of Avalon!"
+    - text: spread the word!
+    - text: good riddance. that potato was DISGUSTING.
+    - text: "why can't we post? Is @luclferd in cahoots with #Nubi? #Censorship"
+    - author: JennyK
+      text: there's an outage
+    - author: JennyK
+      text: "more information here"
+      linked_post_id: jennyk_info
 
 - original_post:
     author: potatolover23
@@ -564,3 +577,18 @@
 - original_post:
     author: TronixLive 
     text: 'Watched the final cut of the next video and Y''ALL ARE NOT READY FOR THIS. I''ve been COOKING.'
+
+- original_post:
+    author: JennyK
+    post_id: jennyk_info
+    text: 'Looking at the DNS data, the #LoopOutage seems to be caused by a large influx of posts from the last three hours. In other words, it''s a massive unintentional DDOS.'
+    # TODO image: graph with a large spike
+  thread:
+    - author: JennyK
+      text: "Checking the Trends API it seems these are the major contributors to the spike:"
+      # TODO word cloud with "condors of avalon", "nubi" "tronix" "#swazzlechallenge" and other keywords in it
+  comments:
+    - text: Wow! This is so interesting!
+    - text: is this legal?
+    - author: catcradler
+      text: okay jenny this is actually kind of cool
