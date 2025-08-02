@@ -33,8 +33,9 @@ Loop:
     profile_picture: pfp_loop_corpo
 MildredJones:
     user_name: MildredJones
-    display_name: ""
+    display_name: Mildred Jones
     bio: I am 76 years old.
+    profile_picture: pfp_mildred
 Nubi:
     user_name: Nubi
     display_name: Nubi
@@ -96,6 +97,7 @@ cowhaver:
     bio: ""
 fred_the_communist:
     user_name: fred_the_communist
+    profile_picture: "pfp_fred_the_communist"
     display_name: ""
     bio: ""
 justice_leek:
