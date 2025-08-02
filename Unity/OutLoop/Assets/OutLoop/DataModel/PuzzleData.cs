@@ -8,22 +8,16 @@ namespace OutLoop.Data
     [YamlSerializable]
     public class PuzzleData
     {
-        [YamlMember(Alias = "trigger_post_ids")]
-        public List<string> TriggerPostIds { get; set; } = new();
+        [YamlMember(Alias = "answer")]
+        public string FinalAnswer { get; set; } = "";
 
-        [YamlMember(Alias = "sender_username")]
+        [YamlMember(Alias = "sender")]
         public string SenderUsername { get; set; } = "";
 
         [YamlMember(Alias = "question")]
-        public List<string> Question { get; set; } = new();
+        public List<string> QuestionMessages { get; set; } = new();
 
-        [YamlMember(Alias = "answer")]
-        public string Answer { get; set; } = "";
-
-        [YamlMember(Alias = "answer_type")]
-        public AnswerType AnswerType { get; set; } = AnswerType.Username;
-        
-        [YamlMember(Alias = "followup")]
-        public List<string> Followup { get; set; } = new();
+        [YamlMember(Alias = "herrings")]
+        public List<string> HerringTagsAndUsernames { get; set; } = new();
     }
 }

@@ -63,11 +63,6 @@ namespace OutLoop.Core
             foreach (var puzzleData in puzzleDataList)
             {
                 var puzzle = new Puzzle(puzzleData, accountTable);
-                foreach (var postId in puzzleData.TriggerPostIds)
-                {
-                    puzzle.TriggerPosts.Add(postsById[postId]);
-                }
-
                 _allPuzzles.Add(puzzle);
             }
 

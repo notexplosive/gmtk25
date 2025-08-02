@@ -53,7 +53,6 @@ namespace OutLoop.Core
             }
 
             var puzzles = new List<PuzzleData>();
-
             
             var timelineYamlFile = loopDbDirectory.GetFiles("timeline.yaml").FirstOrDefault();
 
