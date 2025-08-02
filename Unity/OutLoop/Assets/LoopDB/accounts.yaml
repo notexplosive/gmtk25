@@ -85,7 +85,8 @@ VasylinFan:
 catboyslim:
     user_name: catboyslim
     display_name: ""
-    bio: ""
+    bio: Berlin-based DJ and catboy. he/they
+    profile_picture: pfp_catboy
 catcradler:
     user_name: catcradler
     display_name: ""
@@ -148,7 +149,9 @@ JennyK:
     user_name: JennyK
     display_name: Jenny
     bio: Infrastructure Engineer at @null
+    profile_picture: pfp_jennyk
 InkubusMag:
     user_name: InkubusMag
     display_name: Inkubus
     bio: 'For the latest in online gossip. Join now: <broken link>'
+    profile_picture: pfp_inkubus
