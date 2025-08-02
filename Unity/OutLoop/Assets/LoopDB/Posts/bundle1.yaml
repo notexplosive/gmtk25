@@ -221,12 +221,15 @@
     text: 'My latest for @TechHub: New @Nubi meal-prep service has an explosive start: <broken link>'
     #image: 'TODO (picture of the exploded potato from the meme)'
   comments:
-    - author: catboyslim
-      text: lol epic article title
+    - text: lol epic article title
 - original_post:
     author: reportergirl7
     text: 'OMG #CondorsOfAvalon you cannot do this to me!! #VasDef #Spoilers'
   comments: []
+- original_post:
+    author: reportergirl7
+    text: "My latest for @TechHub: Tamu founder Joseph Lee under fire for employee misclassification: <broken link>"
+
 - original_post:
     author: TruePatriot
     text: 'Why is @Loop censoring ''''bald eagle'''' the symbol of our beautiful country THIS IS CENSORSHIP'
@@ -693,3 +696,47 @@
 - original_post:
     author: catboyslim
     text: okay what the heck is a "tronix"? i swear every week i learn about a new guy with like 10 million followers...
+
+- original_post:
+    author: JosephLeeVC
+    text: 'My book "The Serial Founder: 12 Steps to Success" is now available on Nubi Books: <broken link>'
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
+    likes: 3
+- original_post:
+    author: JosephLeeVC
+    text: 'Interesting XRDs for Q3 this year. Many FFs, but ACNHs and BOTCs point towards a GMTK market this year.'
+    likes: 3
+  comments:
+    - text: Interesting.
+    - text: Fascinating.
+    - text: interesting.
+    - text: interesting...
+    - text: Interesting.
+    - text: Fascinating.
+    - text: Interesting.
+    - text: Interesting.
+    - text: Fascinating.
+    - text: interesting...
+    - text: interesting...
+    - text: interesting...
+    - text: Interesting.
+    - text: 'ERROR: API Rate exceeded.'
+- original_post:
+    author: JosephLeeVC
+    text: 'Why do the #SwazzleChallenge when you can do the #StartupChallenge? instead? Found 12 startups in 12 months! #grindset'
+  comments:
+    - text: 
+- original_post:
+    author: JosephLeeVC
+    text: 'Lord DeFontaigne has the makings of a true leader. Bold. Brave. Fearless. We need more leaders like him in the startup world. #CondorsOfAvalon'
+    likes: 3
+  comments:
+    - text: such a good insight.
+    - text: such a great insight.
+    - text: Such a brilliant insight.
+    - text: Good insight.
+    - text: lol still think that after the recent episode?
