@@ -28,7 +28,7 @@
 - original_post:
     author: Loop
     post_id: loop_outage
-    text: "Hi folks! We're currently experiencing some in-app outages. Some features may be unavailable but we're working hard on fixing them! \U0001F528"
+    text: "Hi folks! We're currently experiencing some in-app outages. Certain features may be unavailable for a fraction of users but we're working hard on fixing them! \U0001F528"
   comments:
     - text: 'okay but can you explain *which* features aren''t working?'
     - author: catcradler
@@ -36,14 +36,12 @@
     - author: SusanneSmith
       text: Thank you for all your hard work!
     - text: hi please can i have 600$ i have a rare heart condition, please donate
-    - author: JackGerard43
-      text: why did you darn tronix??
     - author: JennyK
       text: 'Looking at the ping request cache it seems like there has been a massive spike in requests in the past 8 hours:'
       linked_post_id: jennyk_info
     - text: '@JennyK who asked you?'
     - author: VasylinFan
-      text: 'LOL we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
+      text: 'LOL @ToneDefont we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
 - original_post:
     author: Loop
     text: In accordance with new regulations from some of our target markets, users will no longer be able to post certain words on Loop. Starting Monday, prohibited words will be marked with stars (****). Please abide by the new rules and continue to make our community the hottest place to stay In The Loop!
@@ -79,21 +77,24 @@
 
 - original_post:
     author: catcradler
-    text: 'lol so right now with with the ''''outage'''':
+    post_id: catcradler_outage
+    text: 'DAHAHAAA so right now with with the #LoopOutage:
     
-      - posting completely disabled
+      - posting is COMPLETELY disabled
       - ALL external links broken
       - search only returns top 5 results
-      - profiles/images broken for like half of all users
+      - profiles and images broken for like half of all users
 
-      i love this hellsite'
+      i love this app'
+    likes: 4
   comments:
     - author: catboyslim
       text: wait @catcradler how are *you* able to post
     - author: catcradler
       text: '@catboyslim secret :3'
     - author: JennyK
-      text: '@catboyslim it''s a rolling outage. @MarkKassowitz was able to post until 5 min ago'
+      text: '@catboyslim it''s a rolling outage. The official @Loop post has more documentation:'
+      linked_post_id: loop_outage
     - author: catboyslim
       text: '@JennyK oooh makes sense.'
     - author: catcradler
@@ -634,8 +635,8 @@
     text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of @CondorsOfAvalon! Read here: <broken link>'
     # TODO peter smalls profile with tabloid stuff on it
   comments:
-    author: SirPeterSmalls
-    text: You will be hearing from my lawyer.
+    - author: SirPeterSmalls
+      text: You will be hearing from my lawyer.
 - original_post:
     author: InkubusMag
     text: 'Inside Nubi''s EXPLOSIVE new meal service! Read here: <broken link>'
