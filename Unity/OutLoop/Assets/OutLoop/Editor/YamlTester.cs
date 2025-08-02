@@ -16,7 +16,7 @@ namespace OutLoop.Editor.Editor
             {
                 FinalAnswer =
                     "@TronixLive started the #SwazzleChallenge for @HealingHeartsCharity but it turned out to be a #scam",
-                HerringTagsAndUsernames = new List<string> { "@luclferd", "@Nubi", "#TronixTroop", "#Swazzle" },
+                TriggerWords = new List<string> { "@luclferd", "@Nubi", "#TronixTroop", "#Swazzle" },
                 QuestionMessages = new List<string>
                 {
                     "hey",
@@ -34,7 +34,7 @@ namespace OutLoop.Editor.Editor
                 {
                     FinalAnswer =
                         "Some other #puzzle that I'm too #lazy to write",
-                    HerringTagsAndUsernames = new List<string> { "@reportergirl17", "@trolled_daal", "#ad", "#sponsored" },
+                    TriggerWords = new List<string> { "@reportergirl17", "@trolled_daal", "#ad", "#sponsored" },
                     QuestionMessages = new List<string>
                     {
                         "another message",

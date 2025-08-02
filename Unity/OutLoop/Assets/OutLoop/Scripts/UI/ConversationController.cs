@@ -1,4 +1,5 @@
 ﻿using OutLoop.Core;
+using SecretPlan.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,9 @@ namespace OutLoop.UI
         [SerializeField]
         private GameObject? _unreadBadge;
 
+        [SerializeField]
+        private SecretButton? _button;
+
         public void Populate(DirectMessage message)
         {
             if (_latestMessageTextMesh != null)
@@ -44,6 +48,16 @@ namespace OutLoop.UI
             if (_unreadBadge != null && _relay != null)
             {
                 _unreadBadge.SetActive(_relay.State().IsMessageRead(message));
+            }
+
+            if (_relay == null)
+            {
+                return;
+            }
+
+            if (_button != null)
+            {
+                _button.Clicked += () => _relay.State().RequestConversationModal(message.Sender);
             }
         }
     }

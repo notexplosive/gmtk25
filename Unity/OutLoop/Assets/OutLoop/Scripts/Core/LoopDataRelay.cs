@@ -51,8 +51,15 @@ namespace OutLoop.Core
                 var postData = deserializer.Deserialize<List<TopLevelPostData>>(File.ReadAllText(postFile.FullName));
                 posts.AddRange(postData);
             }
-
-            var puzzles = new List<PuzzleData>();
+            
+            var puzzlesYamlFile = loopDbDirectory.GetFiles("puzzles.yaml").FirstOrDefault();
+            if (puzzlesYamlFile == null)
+            {
+                Debug.LogError("Could not find puzzles yaml");
+                return new LoopData();
+            }
+            
+            var puzzles = deserializer.Deserialize<List<PuzzleData>>(File.ReadAllText(puzzlesYamlFile.FullName));
             
             var timelineYamlFile = loopDbDirectory.GetFiles("timeline.yaml").FirstOrDefault();
 

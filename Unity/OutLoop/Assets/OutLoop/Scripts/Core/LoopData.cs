@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -15,10 +16,12 @@ namespace OutLoop.Core
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
         private readonly List<IPost> _bookmarkedPosts = new();
         private readonly Dictionary<string, bool> _hashTagSeenStatus = new();
+
         private readonly List<DirectMessage> _messages = new();
         private readonly Dictionary<IPost, TopLevelPost> _postToOwner = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
+        private readonly List<Puzzle> _untriggeredPuzzles = new();
         private PageType _currentPage;
 
         public LoopData()
@@ -66,6 +69,8 @@ namespace OutLoop.Core
                 _allPuzzles.Add(puzzle);
             }
 
+            _untriggeredPuzzles.AddRange(_allPuzzles);
+
             foreach (var postId in timelinePostIds)
             {
                 _timelinePosts.Add(topLevelPostById[postId]);
@@ -106,6 +111,9 @@ namespace OutLoop.Core
         public IEnumerable<TopLevelPost> AllTopLevelPostsSorted => _allTopLevelPosts; // todo: algo sort
         public IEnumerable<TopLevelPost> TimelinePosts => _timelinePosts;
         public IEnumerable<IPost> BookmarkedPosts => _bookmarkedPosts;
+
+        public List<Puzzle> InProgressPuzzle { get; } = new();
+
         public event Action<IPost>? BookmarkAdded;
         public event Action<IPost>? BookmarkRemoved;
 
@@ -218,14 +226,39 @@ namespace OutLoop.Core
         public void AddToWordBank(string text)
         {
             _hashTagSeenStatus[text] = true;
-            WordAddedToBank?.Invoke(AnswerType.Hashtag, text);
+            OnAddedWord(AnswerType.Hashtag, text);
         }
+
+        private void OnAddedWord(AnswerType type, string text)
+        {
+            var triggeredPuzzles = new HashSet<Puzzle>();
+            foreach (var puzzle in _untriggeredPuzzles)
+            {
+                puzzle.AddWord(text);
+                if (puzzle.CanTrigger())
+                {
+                    TriggerPuzzle(puzzle);
+                    triggeredPuzzles.Add(puzzle);
+                }
+            }
+
+            _untriggeredPuzzles.RemoveAll(a => triggeredPuzzles.Contains(a));
+
+            WordAddedToBank?.Invoke(type, text);
+        }
+
+        private void TriggerPuzzle(Puzzle puzzle)
+        {
+            PuzzleTriggered?.Invoke(puzzle);
+        }
+
+        public event Action<Puzzle>? PuzzleTriggered;
 
         public void AddToNameBank(Account account)
         {
             var text = account.UserNameWithAt;
             _accountSeenStatus[text] = true;
-            WordAddedToBank?.Invoke(AnswerType.Username, text);
+            OnAddedWord(AnswerType.Username, text);
         }
 
         public TopLevelPost? GetTopLevelOfPost(IPost? post)
@@ -285,6 +318,19 @@ namespace OutLoop.Core
                 default:
                     return 0;
             }
+        }
+
+        public void StartPuzzle(Puzzle puzzle)
+        {
+            PuzzleStarted?.Invoke(puzzle);
+            InProgressPuzzle.Add(puzzle);
+        }
+
+        public event Action<Puzzle>? PuzzleStarted;
+
+        public IEnumerable<DirectMessage> GetDmConversationWith(Account account)
+        {
+            return AllMessages().Where(a => a.Sender == account);
         }
     }
 }

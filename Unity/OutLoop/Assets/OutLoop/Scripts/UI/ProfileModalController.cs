@@ -28,7 +28,9 @@ namespace OutLoop.UI
 
         [SerializeField]
         private PostBaseController? _postPrefab;
-        
+
+        public Account? CachedAccount { get; private set; }
+
         public void PopulateWithProfile(Account account)
         {
             if (_contentRoot == null)
@@ -84,6 +86,8 @@ namespace OutLoop.UI
             
             
             _loopDataRelay.State().AddToNameBank(account);
+
+            CachedAccount = account;
         }
     }
 }

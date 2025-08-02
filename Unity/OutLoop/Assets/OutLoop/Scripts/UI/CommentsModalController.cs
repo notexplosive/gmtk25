@@ -48,7 +48,11 @@ namespace OutLoop.UI
             {
                 AddPost(normalComment, false);
             }
+
+            CachedPost = post;
         }
+
+        public TopLevelPost? CachedPost { get; private set; }
 
         private void AddPost(IPost topLevelPost, bool isPartOfThread)
         {

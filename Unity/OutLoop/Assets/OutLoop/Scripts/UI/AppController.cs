@@ -75,8 +75,28 @@ namespace OutLoop.UI
 
             if (_relay != null)
             {
-                _relay.State().CommentsModalRequested += (post) =>
+                var loopData = _relay.State();
+                loopData.PuzzleTriggered += (puzzle) =>
                 {
+                    foreach (var message in puzzle.QuestionMessages)
+                    {
+                        loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
+                    }
+
+                    loopData.StartPuzzle(puzzle);
+                };
+                
+                loopData.CommentsModalRequested += (post) =>
+                {
+                    if (_currentPage.GetTopModal() is CommentsModalController existingCommentsModal)
+                    {
+                        if (existingCommentsModal.CachedPost == post)
+                        {
+                            // don't open comments for a modal we're already in
+                            return;
+                        }
+                    }
+                    
                     var commentsModal = _currentPage.OpenModal(_commentsPrefab);
                     if (commentsModal != null)
                     {
@@ -84,9 +104,36 @@ namespace OutLoop.UI
                     }
                 };
 
-                _relay.State().ProfileModalRequested += (account) =>
+                loopData.ProfileModalRequested += (account) =>
                 {
+                    if (_currentPage.GetTopModal() is ProfileModalController existingProfileModal)
+                    {
+                        if (existingProfileModal.CachedAccount == account)
+                        {
+                            // don't open the profile we're currently looking at
+                            return;
+                        }
+                    }
+                    
                     var profileModal = _currentPage.OpenModal(_profilePrefab);
+                    if (profileModal != null)
+                    {
+                        profileModal.PopulateWithProfile(account);
+                    }
+                };
+                
+                loopData.ConversationModalRequested += (account) =>
+                {
+                    if (_currentPage.GetTopModal() is ConversationModalController existingModal)
+                    {
+                        if (existingModal.Sender == account)
+                        {
+                            // don't open the profile we're currently looking at
+                            return;
+                        }
+                    }
+                    
+                    var profileModal = _currentPage.OpenModal(_conversationPrefab);
                     if (profileModal != null)
                     {
                         profileModal.PopulateWithProfile(account);

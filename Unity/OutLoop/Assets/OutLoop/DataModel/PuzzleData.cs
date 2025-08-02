@@ -17,7 +17,7 @@ namespace OutLoop.Data
         [YamlMember(Alias = "question")]
         public List<string> QuestionMessages { get; set; } = new();
 
-        [YamlMember(Alias = "herrings")]
-        public List<string> HerringTagsAndUsernames { get; set; } = new();
+        [YamlMember(Alias = "triggers")]
+        public List<string> TriggerWords { get; set; } = new();
     }
 }

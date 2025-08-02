@@ -1,21 +1,15 @@
-- answer: '@TronixLive started the #SwazzleChallenge for @HealingHeartsCharity but it turned out to be a #scam'
+- answer: 'There is a #LoopOutage because of @TronixLive'
   sender: 'bestfriendo477'
   question:
   - hey
   - I heard everyone was mad at some influencer for... something??
   - idk what's going on
   - can you explain it to me?
-  herrings:
-  - '@luclferd'
-  - '@Nubi'
-  - '#TronixTroop'
-  - '#Swazzle'
+  triggers:
+  - '#LoopOutage'
 - answer: "Some other #puzzle that I'm too #lazy to write"
   sender: 'extremely_offline'
   question:
   - another message
-  herrings:
-  - '@reportergirl17'
-  - '@trolled_daal'
-  - '#ad'
-  - '#sponsored'
+  triggers:
+  - '@TronixLive'

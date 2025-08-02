@@ -84,5 +84,16 @@ namespace OutLoop.UI
             var topModal = _openModals.Pop();
             Destroy(topModal.gameObject);
         }
+
+        public ModalController? GetTopModal()
+        {
+            if (_openModals.Count > 0)
+            {
+                var topModal = _openModals.Peek();
+                return topModal;
+            }
+
+            return null;
+        }
     }
 }
