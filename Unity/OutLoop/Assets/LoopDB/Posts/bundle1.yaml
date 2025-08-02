@@ -246,6 +246,7 @@
 - original_post:
     author: reportergirl7
     text: "My latest for Tech Hub: Globi President Joseph Lee fired for embezzling funds: <broken link>"
+    post_id: reporter_lee_fired
 
 - original_post:
     author: TruePatriot
@@ -743,6 +744,12 @@
     text: the music for maxwells demon is actually pretty sick
 - original_post:
     author: catboyslim
+    text: well there goes my trip to levitia
+  thread:
+    - author: catboyslim
+      text: "@fred_the_communist are you okay??"
+- original_post:
+    author: catboyslim
     text: ughhh some idiot tried to do that "swazzle challenge" thing at the club and left a huge mess. and guess who had to clean it up. T_T
 - original_post:
     author: catboyslim
@@ -854,3 +861,48 @@
     - text: The main chick is SMOKIN
     - author: SwoleBrian
       text: hmm.
+
+- original_post:
+    author: fred_the_communist
+    text: I weep for my country.
+  thread:
+    - author: fred_the_communist
+      text: "Levitia is by no means perfect. But it is my home and my people have been through so much. But we are strong. We will perservere. #LevitiaFloods"
+    - author: fred_the_communist
+      text: "I surfaced concerns with the lack of Levitian support to @Loop MONTHS ago. But instead they went off chasing popular trends. @luclferd has blood on his hands."
+- original_post:
+    author: fred_the_communist
+    text: hah! this is the same swaz who named one of his scam companies after Davort. to think such a revolutionary thinker would have his name appropriated by this capitalist scum... serves him right.
+    linked_post_id: reporter_lee_fired
+- original_post:
+    author: fred_the_communist
+    text: saw a cool bug today
+- original_post:
+    author: fred_the_communist
+    text: "@luclferd the fact that @Loop doesn't support the Levitian script is a huge accessibility issue. 12.3% of Loop's users have Levitian IP addresses but only 6.6% of them speak a Latin alphabet language. Social media is a lifeline in times of disaster and political unrest. By refusing to support our script you refuse our voices."
+  comments:
+    - author: Loop
+      text: "Hi @fred_the_communist! We're working hard on adding more language support and should be rolling out updates over the next few months!"
+    - author: fred_the_communist
+      text: "@Loop @luclferd it has been six months and there has not been any updates. given the forecast for this year's rain season, support would be greatly appreciated! Hello?"
+- original_post:
+    author: fred_the_communist
+    text: "wait THAT'S what they're using 'swaz' for now? That's hilarious."
+- original_post:
+    author: fred_the_communist
+    text: "A lot of Davort's analysis is applicable to social media. Fame and power, no matter how small or illusory, infects with the entitlement of the bourgeoisie. If not identified and cast aside, it spreads like a virus, throwing away all class solidarity and making one slave to the chains of greed."
+  comments:
+    - author: catboyslim
+      text: i love when you talk about this stuff. Where can I read more?
+    - author: fred_the_communist
+      text: "@catboyslim unfortunately most of Davort's work is in Levitian. I am not aware of any English translations."
+    - author: catboyslim
+      text: then I'll have to ask you more about it when I visit next year!
+    - author: fred_the_communist
+      text: "looking forward to it, friend :)"
+- original_post:
+    author: fred_the_communist
+    text: hungry
+- original_post:
+    author: fred_the_communist
+    text: watching condors of avalon. good show. a bit worried it feeds into sterotypes of "divine right of kings" but overall a fun time. also a bonus i recognize a lot of the filming locations B)
