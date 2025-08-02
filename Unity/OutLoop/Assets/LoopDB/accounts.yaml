@@ -23,8 +23,9 @@ JackGerard43:
     bio: ""
 JosephLeeVC:
     user_name: JosephLeeVC
-    display_name: ""
-    bio: ""
+    display_name: "Joseph Lee"
+    bio: "Serial entrepreneur. Founder Globi, Dutu, Haloom, Pagoodo, Wipwap, Pipu, Megadudu, Pupi, Bohatu."
+    profile_picture: pfp_vc
 Loop:
     user_name: Loop
     display_name: Loop Social
@@ -48,6 +49,7 @@ RepLorretaJackson:
     user_name: RepLorretaJackson
     display_name: ""
     bio: Proud immigrant and mother representing CA-39.
+    profile_picture: pfp_congress
 SallysKitchen:
     user_name: SallysKitchen
     display_name: ""
