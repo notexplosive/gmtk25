@@ -57,22 +57,22 @@
       text: This is CENSORSHIP!
     - author: catcradler
       text: '**** even ****???'
-    - author: heleny
+    - author: helenloveslatte
       text: ooh what should we say instead? darn still works hehe! what about ''swaz''?
     - author: JosephLeeVC
-      text: '@heleny I like ''''darn''''! It goes with the knitting theme (loop, thread)'
+      text: '@helenloveslatte I like ''''darn''''! It goes with the knitting theme (loop, thread)'
     - author: catcradler
       text: what
     - author: justice_leek
       text: 'NAME AND SHAME! This is because of the new #Levitia Obscenity Law! @DukeHolloway is a FASCIST!'
-    - author: heleny
+    - author: helenloveslatte
       text: '@JosephLeeVC yes! ''''darn it to heck! cut the bull swaz!'''''
     - author: catcradler
       text: no. stop.
     - author: fred_the_communist
       text: '@justice_leek you have no idea what youre talking about.'
     - author: JosephLeeVC
-      text: '@heleny you could be a startup founder with those ideas!'
+      text: '@helenloveslatte you could be a startup founder with those ideas!'
     - author: catcradler
       text: i hate you both so much
 
@@ -188,6 +188,7 @@
       text: AHHHHHHHHHH
     - text: I'm so excited!
     - text: this show jumped the shark in season 6
+    - text: '#BoycottNubi'
     - text: Is it true @SirPeterSmalls walked off set?
     - text: is anyone having trouble posting rn?
     - text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
@@ -215,12 +216,30 @@
       text: hmmm
 - original_post:
     author: HavitOfficial
-    text: 'Want potatoes that don''t spontaneously combust? Switch to Havit Foodbaby today: <link>'
+    text: 'Want food that doesn''t spontaneously combust? Switch to Havit Foodbaby today: <link>'
   comments: []
+- original_post:
+    author: HavitOfficial
+    text: "You can F off all you like on Havit Social: <broken link>"
+  comments:
+    - text: "Advertising on a competitor's site lololol... that takes some swaz."
+    - text: Did you all fix the Problems?
+- original_post:
+    author: HavitOfficial
+    text: 'No rules. No regulations. No problems. Buy now on Havit Market: <broken link>'
+  comments:
+    - text: okay but maybe some regulations?
+    - author: TruePatriot
+      text: I am so excited for FREEDOM
 
 - original_post:
     author: reportergirl7
     text: 'My latest for Tech Hub: @RepLorretaJackson heads Congressional inquiry into Nubi Go food packets: <broken link>'
+  thread:
+    - author: reportergirl7
+      text: "UPDATE: FDA researchers unable to reproduce initial 'explosion'. Further chemical analysis to be done."
+    - author: reportergirl7
+      text: "BREAKING: further analysis revealed trace amounts of E. coli across a wide range of Nubi Go products. Recall incoming."
 - original_post:
     author: reportergirl7
     text: 'My latest for Tech Hub: Swazzle or Scam-zle? New allegations of financial fraud at Healing Hearts Society'
@@ -368,13 +387,35 @@
     author: ChristinaMcPheeTV
     text: 'So proud of this episode. @SirPeterSmalls brought a gravitas and humanity to Lord DeFontaigne that few actors I know could. I''m honored to have worked with him on #CondorsOfAvalon.'
     linked_post_id: coa_announcement
-  comments: []
+  comments:
+    - text: You were amazing!
+    - text: when is next episode?
+    - text: Is it true you and peter are dating?
+    - text: Maxwell's Demon is better.
+    - author: helenloveslatte
+      text: You were amazing, darling! I was crying by the end.
+    - text: "@null nobody asked you!"
 - original_post:
     author: ChristinaMcPheeTV
     text: 'Excited to be doing the #SwazzleChallenge for the @HealingHeartsSociety! Now let''s see some condors explode! Next up: I nominate @SirPeterSmalls!'
   comments:
+    - author: HealingHeartsSociety
+      text: Thank you Christina!
     - author: VasylinFan
       text: YESS QUEEN SLAY!!
+    - author: helenloveslatte
+      text: Were you perhaps inspired by mine, dear? I can keep a secret.
+      linked_post_id: helen_swazzle
+    - text: "@helenloveslatte lol who even are you?"
+    - text: ignore her just some corpo shill
+- original_post:
+    author: ChristinaMcPheeTV
+    text: What a wonderful gala. So glad we could all come together for a good cause. Healing Hearts Heal the World.
+  comments:
+    - author: HealingHeartsSociety
+      text: Thank you Christina!
+    - author: helenloveslatte
+      text: "It was nice to see you there Christina! Let's get coffee sometime."
 - original_post:
     author: ChristinaMcPheeTV
     text: 'Levitia is beautiful this time of year #filming #CondorsOfAvalon #Levitia'
@@ -527,6 +568,47 @@
     - author: JennyK
       text: 'more information here:'
       linked_post_id: loop_outage
+- original_post:
+    author: justice_leek
+    text: STOP SAYING SWAZ! I don't CARE if it's some "charity challenge" it is appropriating a Levitian word for... something bad!
+  comments:
+    - text: Wow... I didn't know. Thank you for setting me straight.
+    - text: you had the PRIVILEGE of not knowing
+    - text: It used to be a part of my vocabulary... and now it's gone! See how easy that is?
+    - text: lol its just a meme stop being so dramatic
+- original_post:
+    author: justice_leek
+    text: the POTATO MEME is DISRESPECTFUL and INSENSITIVE to the Irish Potato Famine of 1845!!
+  comments:
+    - text: potato
+    - text: potato
+    - text: potato
+    - text: potato
+    - text: potato
+    - author: catcradler
+      text: potato
+    - text: potato
+    - text: potato
+    - text: potato
+    - text: potato
+    - text: potato
+    - author: justice_leek
+      text: I AM TURNING OFF MY NOTIFICATIONS BECAUSE PEOPLE DO NOT RESPECT MY BOUNDARIES.
+    - text: potato
+- original_post:
+    author: justice_leek
+    text: cannot BELIEVE people are still supporting condors of avalon they are supporting CANNIBALISM
+  comments:
+    - text: what is this freak going on about?
+    - text: this account has to be a troll
+    - author: justice_leek
+      text: "@null the condors in the show are SENTIENT that means EATING them is CANNIBALISM"
+    - author: VasylinFan
+      text: '@justice_leek I know that scene was hard to watch but I think it was important to M''rkrk''yk''s journey. Seeing their kinscondors be slaughtered like livestock made them realize how far their clan has fallen, and it was really satisfying to see them take back their mantle a few episodes later.'
+    - author: justice_leek
+      text: '@VasylinFan YOU ARE A CANNIBAL'
+    - author: VasylinFan
+      text: "I don't even know how to respond to that."
 
 - original_post:
     author: potatolover23
@@ -906,3 +988,57 @@
 - original_post:
     author: fred_the_communist
     text: watching condors of avalon. good show. a bit worried it feeds into sterotypes of "divine right of kings" but overall a fun time. also a bonus i recognize a lot of the filming locations B)
+
+- original_post:
+    author: helenloveslatte
+    text: "Paradise. #love #life #peace"
+    # TODO broken image
+  comments:
+    - text: So beautiful!
+    - text: "You're gorgeous!"
+    - text: "Gosh I'm so jealous"
+    - author: JosephLeeVC
+      text: "You are really something!"
+    - author: SwoleBrian
+      text: "🔥🔥🔥"
+    - author: helenloveslatte
+      text: "Thank you @JosephLeeVC!"
+- original_post:
+    author: helenloveslatte
+    text: 'Levitia. #vacation #europe #summer'
+  comments:
+    - text: Wish I could be there!
+    - text: Fantastic!
+    - author: ProfEricsson
+      text: Such a historic view!
+    - text: Those waterfalls look amazing!
+    - author: TruePatriot
+      text: We miss you back in AMERICA!
+    - author: JosephLeeVC
+      text: 'Went there on vacation with my wife and daughter a few years ago. You have to check out the Davort Museum!'
+- original_post:
+    author: helenloveslatte
+    text: 'Fireworks. #charity #healing #heart'
+    post_id: helen_swazzle
+    # TODO generic fireworks image
+  comments:
+    - text: 'Wait is this the #SwazzleChallenge??'
+    - text: 'Only helen could make #SwazzleChallenge this classy!'
+    - text: So many colors!
+    - author: JosephLeeVC
+      text: '@helenloveslatte Nominate me next!'
+    - text: 'I love this!'
+    - author: TruePatriot
+      text: Helen you are a TRUE PATRIOT!
+    - author: ProfEricsson
+      text: You have a good heart, Helen.
+- original_post:
+    author: helenloveslatte
+    text: "I am partnering with @Nubi Shop to bring new Divini Women's Health Supplements. Find Your Feminine Divine #Sponsored #Ad"
+  comments:
+    - text: 'I normally HATE sponsored takes but with helen i make an exception!'
+    - text: ordering now!
+    - author: JosephLeeVC
+      text: Excellent business partnership, Helen!
+    - author: SwoleBrian
+      text: "@helenloveslatte could you get in touch with Shop support? I'm having an issue with my products."
