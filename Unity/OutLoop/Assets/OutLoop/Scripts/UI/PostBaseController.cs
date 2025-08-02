@@ -18,10 +18,10 @@ namespace OutLoop.UI
         private Image? _profilePicture;
 
         [SerializeField]
-        private TMP_Text? _displayNameAndUserName;
+        private TextMeshWithHyperlinks? _displayNameAndUserName;
 
         [SerializeField]
-        private TMP_Text? _bodyText;
+        private TextMeshWithHyperlinks? _bodyText;
 
         [SerializeField]
         private Image? _media;
@@ -50,6 +50,11 @@ namespace OutLoop.UI
 
         public void Populate(IPost post, bool isPartOfThread)
         {
+            if (_relay == null)
+            {
+                return;
+            }
+            
             CachedPost = post;
             if (post is TopLevelPost topLevelPost)
             {
@@ -82,14 +87,14 @@ namespace OutLoop.UI
 
             if (_displayNameAndUserName != null)
             {
-                _displayNameAndUserName.text = post.RootPost.Author.DisplayNameAndUsernameStyled;
+                _displayNameAndUserName.SetText(post.RootPost.Author.DisplayNameAndUsernameStyled);
             }
 
             if (_bodyText != null)
             {
                 if (_relay != null)
                 {
-                    _bodyText.text = post.RootPost.FormattedText(_relay.State());
+                    _bodyText.SetText(post.RootPost.RawText);
                 }
             }
 
@@ -116,6 +121,11 @@ namespace OutLoop.UI
                 if (post.RootPost.LinkedPost != null)
                 {
                     _linkedPost.Populate(post.RootPost.LinkedPost, false);
+                    _linkedPost.gameObject.SetActive(true);
+                }
+                else
+                {
+                    _linkedPost.gameObject.SetActive(false);
                 }
             }
 

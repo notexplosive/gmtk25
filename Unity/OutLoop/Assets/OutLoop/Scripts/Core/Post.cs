@@ -35,7 +35,7 @@ namespace OutLoop.Core
 
         public string FormattedText(LoopData state)
         {
-            return OutloopHelpers.AddHyperlinks(RawText, state);
+            return OutloopHelpers.FormatWithHyperlinks(RawText, state);
         }
     }
 }

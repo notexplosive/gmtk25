@@ -14,14 +14,31 @@ namespace OutLoop.UI
         private LoopDataRelay? _relay;
 
         private readonly CachedComponent<TMP_Text> _textMesh = new();
+        private string _rawText = string.Empty;
+
+        private void OnEnable()
+        {
+            if (_relay != null)
+            {
+                _relay.State().WordAddedToBank += OnWordAdded;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (_relay != null)
+            {
+                _relay.State().WordAddedToBank -= OnWordAdded;
+            }
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            var tmpText = _textMesh.Get(this);
-            var linkIndex = TMP_TextUtilities.FindIntersectingLink(tmpText, eventData.position, null);
+            var textMeshPro = _textMesh.Get(this);
+            var linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, eventData.position, null);
             if (linkIndex != -1)
             {
-                var linkInfo = tmpText.textInfo.linkInfo[linkIndex];
+                var linkInfo = textMeshPro.textInfo.linkInfo[linkIndex];
                 var linkText = linkInfo.GetLinkID();
                 var linkTextNoPrefix = linkText.Remove(0, 1);
                 if (linkText.StartsWith("@"))
@@ -29,7 +46,8 @@ namespace OutLoop.UI
                     if (_relay != null)
                     {
                         var state = _relay.State();
-                        var account = state.AllAccounts().FirstOrDefault(a => a.UserName == linkTextNoPrefix) ?? new Account();
+                        var account = state.AllAccounts().FirstOrDefault(a => a.UserName == linkTextNoPrefix) ??
+                                      new Account();
                         state.RequestProfileModal(account);
                         state.AddToNameBank(account);
                     }
@@ -39,9 +57,11 @@ namespace OutLoop.UI
                     if (_relay != null)
                     {
                         var state = _relay.State();
-                        state.AddToWordBank(linkTextNoPrefix);
+                        state.AddToWordBank(linkText);
                     }
                 }
+
+                ReRunFormatter();
             }
             else
             {
@@ -50,12 +70,32 @@ namespace OutLoop.UI
                     var parentController = GetComponentInParent<PostBaseController>();
                     if (parentController != null)
                     {
-                        if (parentController.CachedPost is TopLevelPost post)
+                        var post = _relay.State().GetTopLevelOfPost(parentController.CachedPost);
+                        if (post != null)
                         {
                             parentController.OpenComments(post);
                         }
                     }
                 }
+            }
+        }
+
+        private void OnWordAdded(string word)
+        {
+            ReRunFormatter();
+        }
+
+        public void SetText(string rawText)
+        {
+            _rawText = rawText;
+            ReRunFormatter();
+        }
+
+        private void ReRunFormatter()
+        {
+            if (_relay != null)
+            {
+                _textMesh.Get(this).text = OutloopHelpers.FormatWithHyperlinks(_rawText, _relay.State());
             }
         }
     }

@@ -13,10 +13,11 @@ namespace OutLoop.Core
         private readonly List<IPost> _bookmarkedPosts = new();
         private readonly List<DirectMessage> _messages = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
-        private readonly List<TopLevelPost> _timelinePosts = new();
-        private PageType _currentPage;
         private readonly List<string> _seenHashtags = new();
         private readonly List<string> _seenNames = new();
+        private readonly List<TopLevelPost> _timelinePosts = new();
+        private PageType _currentPage;
+        private readonly Dictionary<IPost, TopLevelPost> _postToOwner = new();
 
         public LoopData()
         {
@@ -71,6 +72,14 @@ namespace OutLoop.Core
             foreach (var postId in timelinePostIds)
             {
                 _timelinePosts.Add(topLevelPostById[postId]);
+            }
+
+            foreach (var topLevelPost in _allTopLevelPosts)
+            {
+                foreach (var childPost in topLevelPost.AllChildPosts())
+                {
+                    _postToOwner[childPost] = topLevelPost;
+                }
             }
         }
 
@@ -180,6 +189,7 @@ namespace OutLoop.Core
         public event Action<TopLevelPost>? CommentsModalRequested;
         public event Action<Account>? ConversationModalRequested;
         public event Action<Account>? ProfileModalRequested;
+        public event Action<string>? WordAddedToBank;
 
         public bool HasSeenKeyword(string keyword)
         {
@@ -196,14 +206,32 @@ namespace OutLoop.Core
             return false;
         }
 
-        public void AddToWordBank(string linkTextNoPrefix)
+        public void AddToWordBank(string text)
         {
-            _seenHashtags.Add(linkTextNoPrefix);
+            _seenHashtags.Add(text);
+            WordAddedToBank?.Invoke(text);
         }
 
         public void AddToNameBank(Account account)
         {
-            _seenNames.Add(account.UserName);
+            var text = account.UserNameWithAt;
+            _seenNames.Add(text);
+            WordAddedToBank?.Invoke(text);
+        }
+
+        public TopLevelPost? GetTopLevelOfPost(IPost? post)
+        {
+            if (post == null)
+            {
+                return null;
+            }
+
+            if (post is TopLevelPost topLevelPost)
+            {
+                return topLevelPost;
+            }
+
+            return _postToOwner.GetValueOrDefault(post.RootPost);
         }
     }
 }

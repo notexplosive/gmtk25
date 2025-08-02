@@ -60,7 +60,7 @@ namespace OutLoop.Core
             return number.ToString();
         }
 
-        public static string AddHyperlinks(string rawText, LoopData state)
+        public static string FormatWithHyperlinks(string rawText, LoopData state)
         {
             var phase1 = Regex.Replace(rawText, @"@\w+", a=> BecomeHyperlink(a, state));
             var phase2 = Regex.Replace(phase1, @"#\w+", a=> BecomeHyperlink(a, state));

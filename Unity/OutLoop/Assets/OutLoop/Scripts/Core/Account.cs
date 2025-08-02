@@ -63,7 +63,7 @@ namespace OutLoop.Core
                     return "<style=System>(Account Corrupted)</style>";
                 }
 
-                return $"{DisplayName} <style=Username>{UserNameWithAt}</style>";
+                return $"<b>{DisplayName}</b> {UserNameWithAt}";
             }
         }
     }

@@ -9,10 +9,10 @@ namespace OutLoop.UI
     public class ProfileModalController : ModalController
     {
         [SerializeField]
-        private TMP_Text? _nameTextMesh;
+        private TextMeshWithHyperlinks? _nameTextMesh;
         
         [SerializeField]
-        private TMP_Text? _bioTextMesh;
+        private TextMeshWithHyperlinks? _bioTextMesh;
         
         [SerializeField]
         private TMP_Text? _followerCountTextMesh;
@@ -63,12 +63,12 @@ namespace OutLoop.UI
 
             if (_nameTextMesh != null)
             {
-                _nameTextMesh.text = account.DisplayNameAndUsernameStyled;
+                _nameTextMesh.SetText(account.DisplayNameAndUsernameStyled);
             }
 
             if (_bioTextMesh != null)
             {
-                _bioTextMesh.text = account.Bio;
+                _bioTextMesh.SetText(account.Bio);
             }
 
             if (_followerCountTextMesh != null)

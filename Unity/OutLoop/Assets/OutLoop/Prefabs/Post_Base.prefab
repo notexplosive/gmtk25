@@ -224,7 +224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1188436706277949410
@@ -950,6 +950,7 @@ GameObject:
   - component: {fileID: 4795015919054281938}
   - component: {fileID: 3106710689688916448}
   - component: {fileID: 8227594377800564261}
+  - component: {fileID: 1124715678610371318}
   m_Layer: 5
   m_Name: ProfileName
   m_TagString: Untagged
@@ -1095,6 +1096,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1124715678610371318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912404889569357212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738f13a2bcbd4ecb81f96195944b9c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _relay: {fileID: 11400000, guid: 6aed0919bda2dcc4480d15247a080c41, type: 2}
 --- !u!1 &7015046118726404413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,8 +1139,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4466079527294717279}
   - {fileID: 1279554426683971760}
+  - {fileID: 4466079527294717279}
   - {fileID: 771496190106974485}
   - {fileID: 2745537849347587060}
   m_Father: {fileID: 6418297710427101726}
@@ -1298,8 +1312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _relay: {fileID: 11400000, guid: 6aed0919bda2dcc4480d15247a080c41, type: 2}
   _profilePicture: {fileID: 1645283931868495415}
-  _displayNameAndUserName: {fileID: 3106710689688916448}
-  _bodyText: {fileID: 8495804367875214007}
+  _displayNameAndUserName: {fileID: 1124715678610371318}
+  _bodyText: {fileID: 8663746072012704048}
   _media: {fileID: 3904573765680069948}
   _contextHeader: {fileID: 1701798456133374727}
   _profileButton: {fileID: 3878610819136075491}
