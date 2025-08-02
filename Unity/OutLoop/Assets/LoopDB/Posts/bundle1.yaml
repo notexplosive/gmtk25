@@ -108,6 +108,7 @@
 - original_post:
     author: catcradler
     text: potato
+    post_id: potato_cradler
     image: potato_cradler
   comments:
     - text: potato
@@ -201,21 +202,14 @@
     - text: hyyyype!
     - text: Swolus sawhamis!
     - author: justice_leek
-      text: Wow. Supporting a fictional language from a pracleophobic tv show while real languages such as Levitian still aren't supported.
+      text: "Wow. Supporting a fictional language from a pracleophobic tv show while real languages such as Levitian still aren't supported. #Cancelled"
 
 - original_post:
     author: HavitOfficial
     text: 'We promise we won''t kill off your OTP #VasDef Watch Maxwell''s Demon on Havit ALL <link>'
   comments:
     - text: lol y'all are so real for this
-    - author: ToneDefont
-      text: ooh @VasylinFan have you seen this?
-    - author: VasylinFan
-      text: "@ToneDefont I can't afford another streaming service \U0001F62D"
-    - author: ToneDefont
-      text: 'girl the #NubiBoycott! cancel that swaz!'
-    - author: VasylinFan
-      text: hmmm
+    - text: 'Are you going to cancel this one after one season like you #Cancelled all the other shows?'
 - original_post:
     author: HavitOfficial
     text: 'Want food that doesn''t spontaneously combust? Switch to Havit Foodbaby today: <link>'
@@ -244,7 +238,7 @@
       text: "BREAKING: further analysis revealed trace amounts of E. coli across a wide range of Nubi Go products. Recall incoming."
 - original_post:
     author: reportergirl7
-    text: 'My latest for Tech Hub: Swazzle or Scam-zle? New allegations of financial fraud at Healing Hearts Society'
+    text: 'My latest for Tech Hub: #swazzle or #scam? New allegations of financial fraud at Healing Hearts Society'
   comments:
     - author: JackGerard43
       text: '@TronixLive has done more in a week than you have your entire life lady'
@@ -298,7 +292,7 @@
     author: TruePatriot
     text: "@SwoleBrian I ordered your supplements three weeks ago but they havent arrived yet please help!"
   comments:
-    - text: lol you got scammed my dude
+    - text: "lol that was a #scam my dude"
 
 - original_post:
     author: TruthRevealed
@@ -506,4 +500,4 @@
     - author: SusanneSmith
       text: Cute!
     - author: justice_leek
-      text: this is EXTREMELY problematic.
+      text: "this is EXTREMELY problematic. #Cancelled"

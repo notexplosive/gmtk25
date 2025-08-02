@@ -1,15 +1,5 @@
 - original_post:
     author: VasylinFan
-    text: 'OMG #MaxwellsDemon is SO GOOD'
-  comments:
-    - author: ToneDefont
-      text: haha you still have your old username
-    - author: VasylinFan
-      text: Ughhh I can't change it for some reason! stupid site.
-    - author: JennyK
-      linked_post_id: loop_outage
-- original_post:
-    author: VasylinFan
     text: 'GAHHH I''M SO EXCITED'
     linked_post_id: coa_announcement
 
@@ -45,7 +35,7 @@
 - original_post:
     author: justice_leek
     post_id: justice_leek_nubi_boycott
-    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott'
+    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott #Cancelled'
     #image: "TODO informatic about all Nubi products to boycott"
   comments:
     - text: YESSSS
@@ -89,7 +79,7 @@
     - text: potato
 - original_post:
     author: justice_leek
-    text: cannot BELIEVE people are still supporting condors of avalon they are supporting CANNIBALISM
+    text: "cannot BELIEVE people are still supporting condors of avalon they are supporting CANNIBALISM #Cancelled"
   comments:
     - text: what is this freak going on about?
     - text: this account has to be a troll
@@ -147,6 +137,10 @@
 
 - original_post:
     author: HealingHeartsSociety
+    text: Thank you so much @TronixLive!
+    linked_post_id: tronix_50k
+- original_post:
+    author: HealingHeartsSociety
     text: If you are having a heart attack, call your local emergency line. Remember, the signs are chest discomfort, pain in the upper body, shortness of breath, sweating, nausea, and dizziness.
 - original_post:
     author: HealingHeartsSociety
@@ -192,6 +186,7 @@
 - original_post:
     author: TronixLive
     text: 'We hit $50k donated to @HealingHeartsSociety. You guys are AMAZING!'
+    post_id: tronix_50k
 - original_post:
     author: TronixLive
     text: Am I the only person who liked the last Condors of Avalon episode?
@@ -460,7 +455,7 @@
       text: "I surfaced concerns with the lack of Levitian support to @Loop MONTHS ago. But instead they went off chasing popular trends. @luclferd has blood on his hands."
 - original_post:
     author: fred_the_communist
-    text: hah! this is the same swaz who named one of his scam companies after Davort. to think such a revolutionary thinker would have his name appropriated by this capitalist scum... serves him right.
+    text: "hah! this is the same swaz who named one of his #scam companies after Davort. to think such a revolutionary thinker would have his name appropriated by this capitalist scum... serves him right."
     linked_post_id: reporter_lee_fired
 - original_post:
     author: fred_the_communist
@@ -480,6 +475,7 @@
     author: fred_the_communist
     text: potato
     image: potato_fred
+    linked_post_id: potato_cradler
   comments:
     - text: potato
     - author: catcradler
@@ -555,6 +551,7 @@
       text: Helen you are a TRUE PATRIOT!
     - author: ProfEricsson
       text: You have a good heart, Helen.
+    - author: 'helen no!! healing hearts is a #scam!!'
 - original_post:
     author: helenloveslatte
     text: "I am partnering with @Nubi Shop to bring new Divini Women's Health Supplements. Find Your Feminine Divine #Sponsored #Ad"
