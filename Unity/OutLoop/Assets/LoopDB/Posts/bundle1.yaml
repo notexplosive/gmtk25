@@ -835,7 +835,7 @@
     author: catboyslim
     text: potato
     linked_post_id: exploding_potato
-  thread:
+  comments:
     - author: catcradler
       text: noooo slim you werent supposed to link to the original take
     - author: catboyslim
@@ -987,13 +987,13 @@
 - original_post:
     author: fred_the_communist
     text: potato
-    comments:
-      - author: catcradler
-        text: YES!
-      - author: catboyslim
-        text: ?
-      - author: catcradler
-        text: haha slim ill dm you
+  comments:
+    - author: catcradler
+      text: YES!
+    - author: catboyslim
+      text: ?
+    - author: catcradler
+      text: haha slim ill dm you
 - original_post:
     author: fred_the_communist
     text: "A lot of Davort's analysis is applicable to social media. Fame and power, no matter how small or illusory, infects with the entitlement of the bourgeoisie. If not identified and cast aside, it spreads like a virus, throwing away all class solidarity and making one slave to the chains of greed."
