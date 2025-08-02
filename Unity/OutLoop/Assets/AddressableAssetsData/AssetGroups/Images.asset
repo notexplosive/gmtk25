@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: ProfilePictures
+  m_Name: Images
   m_EditorClassIdentifier: 
-  m_GroupName: ProfilePictures
+  m_GroupName: Images
   m_GUID: 94f41af8b3d380e4ba2f70c6049e1ec6
   m_SerializeEntries:
   - m_GUID: 794719972da4c634f9b4b1eb5a4396fc
     m_Address: ProfilePictures
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eac1910cd9edf724a8bc270268f1477e
+    m_Address: Images
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
