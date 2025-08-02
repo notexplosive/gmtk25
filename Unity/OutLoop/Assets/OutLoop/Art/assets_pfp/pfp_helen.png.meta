@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b5429d5efb9387b4cb9a2f09d4ccc40c
+guid: 2324f3dfa55ac2848837167af015c5ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8707217249334774281
-    second: notes_app_apology_0
+      213: 8712866676327754870
+    second: pfp_helen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: notes_app_apology_0
+      name: pfp_helen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 1730
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90ac0c894ff36d870800000000000000
-      internalID: 8707217249334774281
+      spriteID: 67caad154125ae870800000000000000
+      internalID: 8712866676327754870
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      notes_app_apology_0: 8707217249334774281
+      pfp_helen_0: 8712866676327754870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

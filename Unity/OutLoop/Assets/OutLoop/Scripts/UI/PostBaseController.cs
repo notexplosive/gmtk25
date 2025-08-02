@@ -87,12 +87,23 @@ namespace OutLoop.UI
 
             if (_bodyText != null)
             {
-                _bodyText.text = post.RootPost.FormattedText;
+                if (_relay != null)
+                {
+                    _bodyText.text = post.RootPost.FormattedText(_relay.State());
+                }
             }
 
             if (_media != null)
             {
-                _media.sprite = post.RootPost.AttachedImage.ForceLoadNow(this);
+                if (post.RootPost.AttachedImage != null)
+                {
+                    _media.sprite = post.RootPost.AttachedImage.ForceLoadNow(this);
+                    _media.gameObject.SetActive(true);
+                }
+                else
+                {
+                    _media.gameObject.SetActive(false);
+                }
             }
 
             if (_contextHeader != null)

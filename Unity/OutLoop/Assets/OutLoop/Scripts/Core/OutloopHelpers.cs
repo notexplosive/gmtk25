@@ -60,9 +60,22 @@ namespace OutLoop.Core
             return number.ToString();
         }
 
-        public static string FormatPost(string rawText)
+        public static string AddHyperlinks(string rawText, LoopData state)
         {
-            return Regex.Replace(rawText, @"@\w+", m=> $"<link=\"{m}\"><style=UserLink>{m}</style></link>");
+            var phase1 = Regex.Replace(rawText, @"@\w+", a=> BecomeHyperlink(a, state));
+            var phase2 = Regex.Replace(phase1, @"#\w+", a=> BecomeHyperlink(a, state));
+            return phase2;
+        }
+
+        private static string BecomeHyperlink(Match match, LoopData state)
+        {
+            var styleName = "Hyperlink";
+            if (state.HasSeenKeyword(match.Value))
+            {
+                styleName = "HyperlinkSeen";
+            }
+
+            return $"<link=\"{match}\"><style={styleName}>{match}</style></link>";
         }
     }
 }

@@ -15,6 +15,8 @@ namespace OutLoop.Core
         private readonly HashSet<DirectMessage> _readMessages = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
         private PageType _currentPage;
+        private readonly List<string> _seenHashtags = new();
+        private readonly List<string> _seenNames = new();
 
         public LoopData()
         {
@@ -178,5 +180,30 @@ namespace OutLoop.Core
         public event Action<TopLevelPost>? CommentsModalRequested;
         public event Action<Account>? ConversationModalRequested;
         public event Action<Account>? ProfileModalRequested;
+
+        public bool HasSeenKeyword(string keyword)
+        {
+            if (keyword.StartsWith("#"))
+            {
+                return _seenHashtags.Contains(keyword);
+            }
+
+            if (keyword.StartsWith("@"))
+            {
+                return _seenNames.Contains(keyword);
+            }
+
+            return false;
+        }
+
+        public void AddToWordBank(string linkTextNoPrefix)
+        {
+            _seenHashtags.Add(linkTextNoPrefix);
+        }
+
+        public void AddToNameBank(Account account)
+        {
+            _seenNames.Add(account.UserName);
+        }
     }
 }

@@ -11,15 +11,17 @@ namespace OutLoop.Core
         {
             Id = postData.PostId;
             OriginalData = postData;
+            RawText = postData.Text;
             SearchableText = postData.Text;
-            FormattedText = OutloopHelpers.FormatPost(postData.Text);
             Author = postData.AuthorUsername == null ? new Account() : accountTable[postData.AuthorUsername];
-            Likes = OutloopHelpers.CalculateLikes(postData.LikesMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
-            Reposts = OutloopHelpers.CalculateReposts(postData.RepostsMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
-            AttachedImage = new Addressable<Sprite>(postData.ImagePath ?? string.Empty);
+            Likes = OutloopHelpers.CalculateLikes(postData.LikesMagnitude ??
+                                                  Author.OriginalData.FollowerCountMagnitude);
+            Reposts = OutloopHelpers.CalculateReposts(postData.RepostsMagnitude ??
+                                                      Author.OriginalData.FollowerCountMagnitude);
+            AttachedImage = string.IsNullOrWhiteSpace(postData.ImagePath) ? null : new Addressable<Sprite>($"Media/{postData.ImagePath}.png");
         }
 
-        public string FormattedText { get; }
+        public string RawText { get; }
         public int Reposts { get; set; }
         public int Likes { get; set; }
         public string LikesFormatted => OutloopHelpers.FormatNumberAsString(Likes);
@@ -27,8 +29,13 @@ namespace OutLoop.Core
         public string SearchableText { get; }
         public PostData OriginalData { get; }
         public string? Id { get; }
-        public Addressable<Sprite> AttachedImage { get; }
+        public Addressable<Sprite>? AttachedImage { get; }
         public Post? LinkedPost { get; set; }
         public Post RootPost => this;
+
+        public string FormattedText(LoopData state)
+        {
+            return OutloopHelpers.AddHyperlinks(RawText, state);
+        }
     }
 }

@@ -627,7 +627,7 @@
     post_id: exploding_potato
     text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge"
     likes: 6
-    # TODO <<photo of nubi potatoes exploded in microwave>>
+    image: exploding_potato
   thread:
     - author: potatolover23
       text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. its that new nubi go meal prep thing"

@@ -22,15 +22,24 @@ namespace OutLoop.UI
             if (linkIndex != -1)
             {
                 var linkInfo = tmpText.textInfo.linkInfo[linkIndex];
-                var username = linkInfo.GetLinkID();
-                if (username.StartsWith("@"))
+                var linkText = linkInfo.GetLinkID();
+                var linkTextNoPrefix = linkText.Remove(0, 1);
+                if (linkText.StartsWith("@"))
                 {
-                    username = username.Remove(0, 1);
                     if (_relay != null)
                     {
                         var state = _relay.State();
-                        var account = state.AllAccounts().FirstOrDefault(a => a.UserName == username) ?? new Account();
+                        var account = state.AllAccounts().FirstOrDefault(a => a.UserName == linkTextNoPrefix) ?? new Account();
                         state.RequestProfileModal(account);
+                        state.AddToNameBank(account);
+                    }
+                }
+                else if (linkText.StartsWith("#"))
+                {
+                    if (_relay != null)
+                    {
+                        var state = _relay.State();
+                        state.AddToWordBank(linkTextNoPrefix);
                     }
                 }
             }
