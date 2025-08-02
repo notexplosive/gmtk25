@@ -14,12 +14,13 @@
 - original_post:
     text: "Swolo saharo, swole samae, swolus sawhamis! #CondorsOfAvalon #Condorese"
   comments:
-    text: "Swole samhanis, divanii!"
+    - text: "Swole samhanis, divanii!"
 - original_post:
     text: "Tamu fisali hastaina! #CondorsOfAvalon #Condorese"
 - original_post:
     text: OMG you can set your @Loop language settings to Condorese @luclferd this is so awesome!
   comments:
-    - author: @luclferd
+    - author: luclferd
       text: "Just a little treat for our fellow #CondorsOfAvalon fans >;)"
-    - fred_the_communist: "still no Levitian support?"
+    - author: fred_the_communist
+      text: "still no Levitian support?"
