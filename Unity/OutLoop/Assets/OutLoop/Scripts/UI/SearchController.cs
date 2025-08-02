@@ -69,7 +69,7 @@ namespace OutLoop.UI
 
             foreach (var post in _loopDataRelay.State().AllTopLevelPostsSorted)
             {
-                var match = Regex.Match(post.RootPost.Text, @$"\b({_currentSearchQuery})\b", RegexOptions.IgnoreCase);
+                var match = Regex.Match(post.RootPost.SearchableText, @$"\b({_currentSearchQuery})\b", RegexOptions.IgnoreCase);
                 if (match.Length > 0)
                 {
                     resultCount++;

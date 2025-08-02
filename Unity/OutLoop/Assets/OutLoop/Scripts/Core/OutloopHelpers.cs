@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace OutLoop.Core
 {
@@ -46,6 +47,11 @@ namespace OutLoop.Core
         public static string FormatNumberAsString(int number)
         {
             return number.ToString();
+        }
+
+        public static string FormatPost(string rawText)
+        {
+            return Regex.Replace(rawText, @"@\w+", m=> $"<link=\"{m}\"><style=UserLink>{m}</style></link>");
         }
     }
 }

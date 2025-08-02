@@ -1,5 +1,6 @@
 ﻿using OutLoop.Core;
 using OutLoop.Data;
+using SecretPlan.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,11 @@ namespace OutLoop.UI
 {
     public class PostBaseController : MonoBehaviour
     {
+        [Header("Data")]
+        [SerializeField]
+        private LoopDataRelay? _relay;
+        
+        [Header("Base Post")]
         [SerializeField]
         private Image? _profilePicture;
 
@@ -24,18 +30,46 @@ namespace OutLoop.UI
         private TMP_Text? _contextHeader;
 
         [SerializeField]
+        private SecretButton? _profileButton;
+        
+        [SerializeField]
+        private SecretButton? _textButton;
+        
+        [Header("Normal Post")]
+        
+        [SerializeField]
         private PostBaseController? _linkedPost;
-
+        
         [SerializeField]
         private PostButtonRowController? _buttons;
 
         [SerializeField]
         private GameObject? _threadIndicator;
 
+        public IPost? CachedPost { get; private set; }
+
         public void Populate(IPost post, bool isPartOfThread)
         {
-            var topLevelPost = post as TopLevelPost;
-            
+            CachedPost = post;
+            if (post is TopLevelPost topLevelPost)
+            {
+                if (_textButton != null)
+                {
+                    _textButton.Clicked += () => { OpenComments(topLevelPost); };
+                }
+            }
+
+            if (_profileButton != null)
+            {
+                _profileButton.Clicked += () =>
+                {
+                    if (_relay != null)
+                    {
+                        _relay.State().RequestProfileModal(post.RootPost.Author);
+                    }
+                };
+            }
+
             if (_threadIndicator != null)
             {
                 _threadIndicator.SetActive(isPartOfThread);
@@ -53,7 +87,7 @@ namespace OutLoop.UI
 
             if (_bodyText != null)
             {
-                _bodyText.text = post.RootPost.Text;
+                _bodyText.text = post.RootPost.FormattedText;
             }
 
             if (_media != null)
@@ -77,6 +111,14 @@ namespace OutLoop.UI
             if (_buttons != null)
             {
                 _buttons.Setup(post);
+            }
+        }
+
+        public void OpenComments(TopLevelPost post)
+        {
+            if (_relay != null)
+            {
+                _relay.State().RequestCommentsModal(post);
             }
         }
     }
