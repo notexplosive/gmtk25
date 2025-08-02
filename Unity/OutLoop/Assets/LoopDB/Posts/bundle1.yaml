@@ -339,13 +339,13 @@
       text: Thank you Rep. Jackson!
     - text: lame
     - text: swazzle challenge has officially jumped the shark, we had a good run boys
- - original_post:
+- original_post:
     author: RepLorettaJackson
     text: 'Access to free speech is a right to all Americans, which is why the recent reports of censorship at @Loop are of deep concern to me. My colleagues and I are keeping a close eye on the situation.'
   comments:
     - text: Finally a congresswoman who gets it!
-    - author: @TruePatriot
-      text: @RepLorettaJackson is a TRUE PATRIOT!
+    - author: TruePatriot
+      text: '@RepLorettaJackson is a TRUE PATRIOT!'
     - text: Yes! Sanctions on Levitia!
     - text: Anyone else notice how her takes are all the same? @RepLorettaJackson I think you need to fire your social media intern.
 - original_post:
@@ -707,12 +707,13 @@
 - original_post:
     author: JosephLeeVC
     text: 'My book "The Serial Founder: 12 Steps to Success" is now available on Nubi Books: <broken link>'
-    - text: Buying now!
-    - text: Buying now!
-    - text: Buying now!
-    - text: Buying now!
-    - text: Buying now!
     likes: 3
+  comments:
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
+    - text: Buying now!
 - original_post:
     author: JosephLeeVC
     text: 'Interesting XRDs for Q3 this year. Many FFs, but ACNHs and BOTCs point towards a GMTK market this year.'
@@ -736,7 +737,10 @@
     author: JosephLeeVC
     text: 'Why do the #SwazzleChallenge when you can do the #StartupChallenge? instead? Found 12 startups in 12 months! #grindset'
   comments:
-    - text: 
+    - text: Hilarious!
+    - text: So funny!
+    - text: So true!
+    - text: Hilarious!
 - original_post:
     author: JosephLeeVC
     text: 'Lord DeFontaigne has the makings of a true leader. Bold. Brave. Fearless. We need more leaders like him in the startup world. #CondorsOfAvalon'
