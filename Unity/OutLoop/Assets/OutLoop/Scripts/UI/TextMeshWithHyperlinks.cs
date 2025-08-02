@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using OutLoop.Core;
+using OutLoop.Data;
 using SecretPlan.Core;
 using TMPro;
 using UnityEngine;
@@ -21,6 +22,7 @@ namespace OutLoop.UI
             if (_relay != null)
             {
                 _relay.State().WordAddedToBank += OnWordAdded;
+                ReRunFormatter();
             }
         }
 
@@ -80,7 +82,7 @@ namespace OutLoop.UI
             }
         }
 
-        private void OnWordAdded(string word)
+        private void OnWordAdded(AnswerType answerType, string word)
         {
             ReRunFormatter();
         }

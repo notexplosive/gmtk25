@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Data;
+using UnityEngine;
 
 namespace OutLoop.Core
 {
@@ -12,12 +13,12 @@ namespace OutLoop.Core
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
         private readonly List<IPost> _bookmarkedPosts = new();
         private readonly List<DirectMessage> _messages = new();
+        private readonly Dictionary<IPost, TopLevelPost> _postToOwner = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
         private readonly List<string> _seenHashtags = new();
         private readonly List<string> _seenNames = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
         private PageType _currentPage;
-        private readonly Dictionary<IPost, TopLevelPost> _postToOwner = new();
 
         public LoopData()
         {
@@ -189,7 +190,7 @@ namespace OutLoop.Core
         public event Action<TopLevelPost>? CommentsModalRequested;
         public event Action<Account>? ConversationModalRequested;
         public event Action<Account>? ProfileModalRequested;
-        public event Action<string>? WordAddedToBank;
+        public event Action<AnswerType, string>? WordAddedToBank;
 
         public bool HasSeenKeyword(string keyword)
         {
@@ -209,14 +210,14 @@ namespace OutLoop.Core
         public void AddToWordBank(string text)
         {
             _seenHashtags.Add(text);
-            WordAddedToBank?.Invoke(text);
+            WordAddedToBank?.Invoke(AnswerType.Hashtag, text);
         }
 
         public void AddToNameBank(Account account)
         {
             var text = account.UserNameWithAt;
             _seenNames.Add(text);
-            WordAddedToBank?.Invoke(text);
+            WordAddedToBank?.Invoke(AnswerType.Username, text);
         }
 
         public TopLevelPost? GetTopLevelOfPost(IPost? post)
@@ -232,6 +233,24 @@ namespace OutLoop.Core
             }
 
             return _postToOwner.GetValueOrDefault(post.RootPost);
+        }
+
+        public void OnSelectedBankWord(string text)
+        {
+            Debug.Log($"Clicked on text {text}");
+        }
+
+        public List<string> GetWordsFromBank(AnswerType bankType)
+        {
+            switch (bankType)
+            {
+                case AnswerType.Username:
+                    return _seenNames.ToList();
+                case AnswerType.Hashtag:
+                    return _seenHashtags.ToList();
+                default:
+                    return new List<string>();
+            }
         }
     }
 }

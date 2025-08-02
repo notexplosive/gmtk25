@@ -12,7 +12,7 @@ namespace OutLoop.Core
         public Account()
         {
             _isUnavailableAccount = true;
-            UserName = "";
+            UserName = "null";
             DisplayName = "";
             Bio = "";
             ProfilePicture = new Addressable<Sprite>("ProfilePictures/pfp_grey.png");
@@ -60,7 +60,7 @@ namespace OutLoop.Core
             {
                 if (_isUnavailableAccount)
                 {
-                    return "<style=System>(Account Corrupted)</style>";
+                    return $"<style=System>(Account Corrupted)</style> {UserNameWithAt}";
                 }
 
                 return $"<b>{DisplayName}</b> {UserNameWithAt}";

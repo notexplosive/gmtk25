@@ -43,9 +43,11 @@ namespace OutLoop.UI
 
         public void FlyIn(int direction)
         {
+            
             TweenService.Instance.ClearChannelAndSet("AppPagingIn", new SequenceTween()
                 .Add(new CallbackTween(Show))
                 .Add(transform.GetTweenableLocalPositionX().CallbackSetTo(OutsideXPosition() * direction))
+                .Add(transform.GetTweenableLocalPositionY().CallbackSetTo(0))
                 .Add(transform.GetTweenableLocalPositionX()
                     .TweenTo(0, _pageOverSpeed, _easeFunction))
             );
