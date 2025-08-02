@@ -7,6 +7,11 @@ namespace OutLoop.UI
 {
     public class PostButtonRowController : MonoBehaviour
     {
+        [Header("Data")]
+        [SerializeField]
+        private LoopDataRelay? _relay;
+
+        [Header("Internal")]
         [SerializeField]
         private SecretButton? _comment;
 
@@ -25,7 +30,7 @@ namespace OutLoop.UI
             {
                 _like.Setup(post);
             }
-            
+
             if (_repost != null)
             {
                 _repost.Setup(post);
@@ -36,6 +41,17 @@ namespace OutLoop.UI
                 if (_commentCount != null)
                 {
                     _commentCount.text = topLevelPost.CommentCount().ToString();
+                }
+
+                if (_comment != null)
+                {
+                    _comment.Clicked += () =>
+                    {
+                        if (_relay != null)
+                        {
+                            _relay.State().RequestCommentsModal(topLevelPost);
+                        }
+                    };
                 }
             }
             else

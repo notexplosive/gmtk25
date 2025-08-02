@@ -10,10 +10,10 @@ namespace OutLoop.Core
         private readonly List<Account> _allAccounts = new();
         private readonly List<Puzzle> _allPuzzles = new();
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
+        private readonly List<IPost> _bookmarkedPosts = new();
         private readonly List<DirectMessage> _messages = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
-        private readonly List<IPost> _bookmarkedPosts = new();
         private PageType _currentPage;
 
         public LoopData()
@@ -148,7 +148,7 @@ namespace OutLoop.Core
             _bookmarkedPosts.Add(post);
             BookmarkAdded?.Invoke(post);
         }
-        
+
         public void RemoveBookmark(IPost post)
         {
             _bookmarkedPosts.Remove(post);
@@ -159,5 +159,24 @@ namespace OutLoop.Core
         {
             return _bookmarkedPosts.Contains(post);
         }
+
+        public void RequestCommentsModal(TopLevelPost post)
+        {
+            CommentsModalRequested?.Invoke(post);
+        }
+
+        public void RequestConversationModal(Account account)
+        {
+            ConversationModalRequested?.Invoke(account);
+        }
+
+        public void RequestProfileModal(Account account)
+        {
+            ProfileModalRequested?.Invoke(account);
+        }
+
+        public event Action<TopLevelPost>? CommentsModalRequested;
+        public event Action<Account>? ConversationModalRequested;
+        public event Action<Account>? ProfileModalRequested;
     }
 }

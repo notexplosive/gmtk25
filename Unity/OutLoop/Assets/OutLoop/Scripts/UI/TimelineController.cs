@@ -14,8 +14,7 @@ namespace OutLoop.UI
 
         [SerializeField]
         private PostBaseController? _postPrefab;
-
-
+        
         public void Awake()
         {
             if (_contentRoot == null)

@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733d1541c4c5448d89b8947695e76fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _relay: {fileID: 11400000, guid: 6aed0919bda2dcc4480d15247a080c41, type: 2}
   _comment: {fileID: 7991670024177775100}
   _repost: {fileID: 7150420891073253464}
   _like: {fileID: 7942309089807603637}

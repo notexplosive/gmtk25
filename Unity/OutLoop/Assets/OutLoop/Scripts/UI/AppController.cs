@@ -16,7 +16,17 @@ namespace OutLoop.UI
 
         [SerializeField]
         private LoopDataRelay? _relay;
-        
+
+
+        [SerializeField]
+        private CommentsModalController? _commentsPrefab;
+
+        [SerializeField]
+        private ProfileModalController? _profilePrefab;
+
+        [SerializeField]
+        private ConversationModalController? _conversationPrefab;
+
         private AppPage? _currentPage;
 
         private void Awake()
@@ -34,7 +44,7 @@ namespace OutLoop.UI
             }
 
             _currentPage = _pages.First();
-            
+
             foreach (var page in _pages)
             {
                 if (page != _currentPage)
@@ -62,6 +72,18 @@ namespace OutLoop.UI
             {
                 _appButtonRow.FavoritesButton.Clicked += CreatePageToEvent(_pages[3]);
             }
+
+            if (_relay != null)
+            {
+                _relay.State().CommentsModalRequested += (post) =>
+                {
+                    var commentsModal = _currentPage.OpenModal(_commentsPrefab);
+                    if (commentsModal != null)
+                    {
+                        commentsModal.PopulateForPost(post);
+                    }
+                };
+            }
         }
 
         private Action CreatePageToEvent(AppPage page)
@@ -86,7 +108,7 @@ namespace OutLoop.UI
             var targetPageIndex = _pages.IndexOf(page);
             var currentPageIndex = _pages.IndexOf(_currentPage);
             var direction = Math.Sign(targetPageIndex - currentPageIndex);
-            
+
             _currentPage.FlyOut(direction);
             page.FlyIn(direction);
             _currentPage = page;
