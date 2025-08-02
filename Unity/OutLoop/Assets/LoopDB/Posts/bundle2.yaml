@@ -325,6 +325,7 @@
 - original_post:
     author: catboyslim
     text: potato
+    image: potato_catboy
     linked_post_id: exploding_potato
   comments:
     - author: catcradler
@@ -478,9 +479,16 @@
 - original_post:
     author: fred_the_communist
     text: potato
+    image: potato_fred
   comments:
+    - text: potato
     - author: catcradler
       text: YES!
+    - author: catcradler
+      text: you actually got it tattooed?
+    - author: fred_the_communist
+      text: yeah!
+    - text: the meme has broken out of the loop
     - author: catboyslim
       text: '?'
     - author: catcradler
