@@ -13,8 +13,8 @@ namespace OutLoop.Core
             OriginalData = postData;
             Text = postData.Text;
             Author = postData.AuthorUsername == null ? new Account() : accountTable[postData.AuthorUsername];
-            Likes = Constants.CalculateLikes(postData.LikesMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
-            Reposts = Constants.CalculateReposts(postData.RepostsMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
+            Likes = OutloopHelpers.CalculateLikes(postData.LikesMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
+            Reposts = OutloopHelpers.CalculateReposts(postData.RepostsMagnitude ?? Author.OriginalData.FollowerCountMagnitude);
             AttachedImage = new Addressable<Sprite>(postData.ImagePath ?? string.Empty);
         }
 

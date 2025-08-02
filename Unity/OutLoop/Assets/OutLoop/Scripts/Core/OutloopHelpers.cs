@@ -2,7 +2,7 @@
 
 namespace OutLoop.Core
 {
-    public static class Constants
+    public static class OutloopHelpers
     {
         public static int CalculateFollowers(int followerCountMagnitude)
         {
@@ -41,6 +41,11 @@ namespace OutLoop.Core
             }
 
             return baseFollowerCount + extraFollowerCount;
+        }
+
+        public static string FormatNumberAsString(int number)
+        {
+            return number.ToString();
         }
     }
 }

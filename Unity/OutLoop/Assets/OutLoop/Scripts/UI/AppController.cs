@@ -83,6 +83,15 @@ namespace OutLoop.UI
                         commentsModal.PopulateForPost(post);
                     }
                 };
+
+                _relay.State().ProfileModalRequested += (account) =>
+                {
+                    var profileModal = _currentPage.OpenModal(_profilePrefab);
+                    if (profileModal != null)
+                    {
+                        profileModal.PopulateWithProfile(account);
+                    }
+                };
             }
         }
 
