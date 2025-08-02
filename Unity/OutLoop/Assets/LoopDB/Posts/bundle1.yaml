@@ -29,6 +29,7 @@
     author: Loop
     post_id: loop_outage
     text: "Hi folks! We're currently experiencing some in-app outages. Certain features may be unavailable for a fraction of users but we're working hard on fixing them! \U0001F528"
+    likes: 3
   comments:
     - text: 'okay but can you explain *which* features aren''t working?'
     - author: catcradler
@@ -509,13 +510,12 @@
     - text: 'duuuude @potatolover23 you''re famous now'
     - author: potatolover23
       text: AHHHHHH TRONIX I LOVE YOUR CONTENT
-    - text: 'did something happen? this doesn''t come up when i search ''potato'''
+    - text: 'did something happen? this doesn''t come up any more when i search ''potato'''
     - text: loop censorship strikes again
     - text: '@null maybe it''s because potato is like one of the most common words in the english language?'
-    - author: JennyK
-      text: 'There''s an outage:'
-      linked_post_id: loop_outage
-    - text: '@JennyK nahhh definitely potato-phobia'
+    - text: 'it''s not censorship this app is just absolute garbage #LoopOutage'
+      linked_post_id: catcradler_outage
+    - text: '@null nahhh definitely potato-phobia'
 - original_post:
     author: potatolover23
     text: anyone who says potato salad is their favorite form of the potato needs therapy
