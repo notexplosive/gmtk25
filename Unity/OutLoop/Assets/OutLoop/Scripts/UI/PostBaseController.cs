@@ -1,4 +1,5 @@
 ﻿using OutLoop.Core;
+using OutLoop.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,8 +32,10 @@ namespace OutLoop.UI
         [SerializeField]
         private GameObject? _threadIndicator;
 
-        public void Populate(Post post, bool isPartOfThread, int comments)
+        public void Populate(IPost post, bool isPartOfThread)
         {
+            var topLevelPost = post as TopLevelPost;
+            
             if (_threadIndicator != null)
             {
                 _threadIndicator.SetActive(isPartOfThread);
@@ -40,22 +43,22 @@ namespace OutLoop.UI
 
             if (_profilePicture != null)
             {
-                _profilePicture.sprite = post.Author.ProfilePicture.ForceLoadNow(this);
+                _profilePicture.sprite = post.RootPost.Author.ProfilePicture.ForceLoadNow(this);
             }
 
             if (_displayNameAndUserName != null)
             {
-                _displayNameAndUserName.text = post.Author.DisplayNameAndUsernameStyled;
+                _displayNameAndUserName.text = post.RootPost.Author.DisplayNameAndUsernameStyled;
             }
 
             if (_bodyText != null)
             {
-                _bodyText.text = post.Text;
+                _bodyText.text = post.RootPost.Text;
             }
 
             if (_media != null)
             {
-                _media.sprite = post.AttachedImage.ForceLoadNow(this);
+                _media.sprite = post.RootPost.AttachedImage.ForceLoadNow(this);
             }
 
             if (_contextHeader != null)
@@ -65,15 +68,15 @@ namespace OutLoop.UI
 
             if (_linkedPost != null)
             {
-                if (post.LinkedPost != null)
+                if (post.RootPost.LinkedPost != null)
                 {
-                    _linkedPost.Populate(post.LinkedPost, false, 0);
+                    _linkedPost.Populate(post.RootPost.LinkedPost, false);
                 }
             }
 
             if (_buttons != null)
             {
-                _buttons.DisplayStats(post.Likes, post.Reposts, comments);
+                _buttons.Setup(post);
             }
         }
     }

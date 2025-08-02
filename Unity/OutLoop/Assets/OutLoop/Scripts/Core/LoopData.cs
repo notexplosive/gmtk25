@@ -13,6 +13,7 @@ namespace OutLoop.Core
         private readonly List<DirectMessage> _messages = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
+        private readonly List<IPost> _bookmarkedPosts = new();
         private PageType _currentPage;
 
         public LoopData()
@@ -25,7 +26,7 @@ namespace OutLoop.Core
             var accountTable = BuildAccounts(accountDataList);
 
             var topLevelPostById = new Dictionary<string, TopLevelPost>();
-            
+
             foreach (var topLevelPostData in topLevelPostList)
             {
                 var topLevelPost = new TopLevelPost(topLevelPostData, accountTable);
@@ -84,6 +85,9 @@ namespace OutLoop.Core
         public IEnumerable<TopLevelPost> AllTopLevelPosts => _allTopLevelPosts;
         public IEnumerable<TopLevelPost> AllTopLevelPostsSorted => _allTopLevelPosts; // todo: algo sort
         public IEnumerable<TopLevelPost> TimelinePosts => _timelinePosts;
+        public IEnumerable<IPost> BookmarkedPosts => _bookmarkedPosts;
+        public event Action<IPost>? BookmarkAdded;
+        public event Action<IPost>? BookmarkRemoved;
 
         public void ReceiveMessage(DirectMessage message)
         {
@@ -137,6 +141,23 @@ namespace OutLoop.Core
         public IEnumerable<Account> AllAccounts()
         {
             return _allAccounts;
+        }
+
+        public void AddBookmark(IPost post)
+        {
+            _bookmarkedPosts.Add(post);
+            BookmarkAdded?.Invoke(post);
+        }
+        
+        public void RemoveBookmark(IPost post)
+        {
+            _bookmarkedPosts.Remove(post);
+            BookmarkRemoved?.Invoke(post);
+        }
+
+        public bool HasBookmark(IPost post)
+        {
+            return _bookmarkedPosts.Contains(post);
         }
     }
 }

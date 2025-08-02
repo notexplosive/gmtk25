@@ -11,6 +11,8 @@ namespace SecretPlan.UI
         public event Action? Clicked;
 
         private CachedComponent<Navigable> _navigable = new();
+
+        public Navigable Navigable => _navigable.Get(this);
         
         private void Awake()
         {

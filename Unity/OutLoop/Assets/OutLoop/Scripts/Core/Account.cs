@@ -60,7 +60,7 @@ namespace OutLoop.Core
             {
                 if (_isUnavailableAccount)
                 {
-                    return "<style=System>(Account Unavailable)</style>";
+                    return "<style=System>(Account Corrupted)</style>";
                 }
 
                 return $"{DisplayName} <style=Username>{UserNameWithAt}</style>";

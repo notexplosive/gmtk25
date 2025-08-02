@@ -99,7 +99,7 @@ namespace OutLoop.UI
             if (_topLevelPostPrefab != null)
             {
                 var instance = SpawnUtility.Spawn(_topLevelPostPrefab, new InstantiateParameters() { parent = _searchResultsRoot });
-                instance.Populate(post.RootPost, false, post.CommentCount());
+                instance.Populate(post, false);
             }
         }
 

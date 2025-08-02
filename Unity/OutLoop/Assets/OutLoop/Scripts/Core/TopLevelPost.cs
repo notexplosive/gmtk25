@@ -3,7 +3,7 @@ using OutLoop.Data;
 
 namespace OutLoop.Core
 {
-    public class TopLevelPost
+    public class TopLevelPost : IPost
     {
         public TopLevelPost(TopLevelPostData data, Dictionary<string, Account> accountTable)
         {

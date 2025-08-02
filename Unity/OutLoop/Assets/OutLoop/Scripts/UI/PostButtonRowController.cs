@@ -1,4 +1,5 @@
-﻿using SecretPlan.UI;
+﻿using OutLoop.Core;
+using SecretPlan.UI;
 using TMPro;
 using UnityEngine;
 
@@ -8,37 +9,41 @@ namespace OutLoop.UI
     {
         [SerializeField]
         private SecretButton? _comment;
-        
+
         [SerializeField]
-        private SecretButton? _repost;
-        
+        private RepostButtonController? _repost;
+
         [SerializeField]
-        private SecretButton? _like;
-        
+        private LikeButtonController? _like;
+
         [SerializeField]
         private TMP_Text? _commentCount;
-        
-        [SerializeField]
-        private TMP_Text? _repostCount;
-        
-        [SerializeField]
-        private TMP_Text? _likeCount;
 
-        public void DisplayStats(int likes, int reposts, int comments)
+        public void Setup(IPost post)
         {
-            if (_likeCount != null)
+            if (_like != null)
             {
-                _likeCount.text = likes.ToString();
+                _like.Setup(post);
             }
             
-            if (_repostCount != null)
+            if (_repost != null)
             {
-                _repostCount.text = reposts.ToString();
+                _repost.Setup(post);
             }
-            
-            if (_commentCount != null)
+
+            if (post is TopLevelPost topLevelPost)
             {
-                _commentCount.text = comments.ToString();
+                if (_commentCount != null)
+                {
+                    _commentCount.text = topLevelPost.CommentCount().ToString();
+                }
+            }
+            else
+            {
+                if (_comment != null)
+                {
+                    _comment.gameObject.SetActive(false);
+                }
             }
         }
     }

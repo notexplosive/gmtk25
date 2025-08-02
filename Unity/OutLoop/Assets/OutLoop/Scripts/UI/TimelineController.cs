@@ -15,6 +15,7 @@ namespace OutLoop.UI
         [SerializeField]
         private PostBaseController? _postPrefab;
 
+
         public void Awake()
         {
             if (_contentRoot == null)
@@ -41,7 +42,7 @@ namespace OutLoop.UI
             foreach (var topLevelPost in loopData.TimelinePosts)
             {
                 var spawned = SpawnUtility.Spawn(_postPrefab, new InstantiateParameters { parent = _contentRoot });
-                spawned.Populate(topLevelPost.RootPost, false, topLevelPost.CommentCount());
+                spawned.Populate(topLevelPost, false);
             }
         }
     }

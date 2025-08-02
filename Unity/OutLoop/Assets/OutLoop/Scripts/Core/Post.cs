@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace OutLoop.Core
 {
-    public class Post
+    public class Post : IPost
     {
         public Post(PostData postData, Dictionary<string, Account> accountTable)
         {
@@ -18,13 +18,14 @@ namespace OutLoop.Core
             AttachedImage = new Addressable<Sprite>(postData.ImagePath ?? string.Empty);
         }
 
-        public int Reposts { get; }
-        public int Likes { get; }
+        public int Reposts { get; set; }
+        public int Likes { get; set; }
         public Account Author { get; }
         public string Text { get; }
         public PostData OriginalData { get; }
         public string? Id { get; }
         public Addressable<Sprite> AttachedImage { get; }
         public Post? LinkedPost { get; set; }
+        public Post RootPost => this;
     }
 }
