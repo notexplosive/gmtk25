@@ -484,6 +484,10 @@
     text: 'Are there any other #SocialInformatics academics on @Loop? I''d like to build up the community!'
   comments: []
 - original_post:
+    author: ProfEricsson
+    text: 'How does the topology of social networks affect the way information is processed? #SocialInformatics is a new interdisciplinary field that supplements our understanding of the modern world.'
+
+- original_post:
     author: MildredJones
     text: I am worried about my daughter
   comments: []
@@ -703,8 +707,12 @@
     text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of @CondorsOfAvalon! Read here: <broken link>'
     # TODO peter smalls profile with tabloid stuff on it
   comments:
+    - text: lol such a diva
+    - text: "I heard he's awful to work with"
+    - text: 'Darn good actor though.'
+    - text: 'Have you seen his account? Dude talks like a psycho.'
     - author: SirPeterSmalls
-      text: You will be hearing from my lawyer.
+      text: '@TheInkubus You will be hearing from my lawyers.'
 - original_post:
     author: TheInkubus
     text: 'Inside Nubi''s EXPLOSIVE new meal service! Read here: <broken link>'
