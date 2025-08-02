@@ -53,7 +53,7 @@ namespace OutLoop.UI
         {
             if (_counter != null)
             {
-                _counter.text = post.RootPost.Likes.ToString();
+                _counter.text = post.RootPost.LikesFormatted;
             }
         }
     }

@@ -22,6 +22,7 @@ namespace OutLoop.Core
         public string FormattedText { get; }
         public int Reposts { get; set; }
         public int Likes { get; set; }
+        public string LikesFormatted => OutloopHelpers.FormatNumberAsString(Likes);
         public Account Author { get; }
         public string SearchableText { get; }
         public PostData OriginalData { get; }
