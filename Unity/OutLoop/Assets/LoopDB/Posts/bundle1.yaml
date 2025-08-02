@@ -231,6 +231,9 @@
     text: "My latest for Tech Hub: Tamu founder Joseph Lee under fire for employee misclassification; reports of ''toxic workplace environment'': <broken link>"
 - original_post:
     author: reportergirl7
+    text: "My latest for Tech Hub: 'Alternative Masculinity' influencer Swole Brian's self-proclaimed 'Bicep Supplements' banned from @Nubi Shop: <broken link>"
+- original_post:
+    author: reportergirl7
     text: 'OMG #CondorsOfAvalon you cannot do this to me!! #VasDef #Spoilers'
   comments: []
 - original_post:
@@ -262,6 +265,11 @@
     - text: where is that
     - author: JennyK
       text: It's in Northern Europe
+- original_post:
+    author: TruePatriot
+    text: "@SwoleBrian I ordered your supplements three weeks ago but they havent arrived yet please help!"
+  comments:
+    - text: lol you got scammed my dude
 
 - original_post:
     author: TruthRevealed
@@ -586,6 +594,8 @@
 - original_post:
     author: TronixLive
     text: Any content creators I should collab with?
+  comments:
+    - text: "@SwoleBrian please!!"
 - original_post:
     author: TronixLive
     text: 'Scrolling through the #SwazzleChallenge videos and you guys are INSANE! I''ve seen people blow up their TV, a jar of pickles, and even a couch?? KEEP THEM COMING'
@@ -645,13 +655,14 @@
       text: okay jenny this is actually kind of cool
 
 - original_post:
-    author: InkubusMag
+    author: TheInkubus
     post_id: inkubus_tronix
     likes: 6
     text: 'TRONIX CANCELLED?? Read here: <broken link>'
     # TODO just tronix profile with the world CANCELLED on it
   comments:
     - text: Not tronix \U0001F62D!
+    - text: first swole brian now tronix!?
     - text: I KNEW IT
     - text: I never liked that guy.
     - text: good riddance.
@@ -661,7 +672,7 @@
     - text: 'This is defamation! @TronixLive you need to sue!'
     - text: '@null lol parasocial much?'
 - original_post:
-    author: InkubusMag
+    author: TheInkubus
     likes: 5
     text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of @CondorsOfAvalon! Read here: <broken link>'
     # TODO peter smalls profile with tabloid stuff on it
@@ -669,18 +680,22 @@
     - author: SirPeterSmalls
       text: You will be hearing from my lawyer.
 - original_post:
-    author: InkubusMag
+    author: TheInkubus
     text: 'Inside Nubi''s EXPLOSIVE new meal service! Read here: <broken link>'
     likes: 4
     # TODO just the potato image again
   comments:
     - text: ew gross!
     - text: yo can you at least credit @potatolover23?
+    - text: is this like that swole brian thing?
 - original_post:
-    author: InkubusMag
-    text: 'YOU WON''T BELIEVE! Read here <broken link>'
-    likes: 7
+    author: TheInkubus
+    text: 'YOU WON''T BELIEVE! Read here: <broken link>'
+    likes: 8
     # broken image
+- original_post:
+    author: TheInkubus
+    text: 'EXCLUSIVE! Our Interview With #AltMasc leader @SwoleBrian: <broken link>'
 
 - original_post:
     author: catboyslim
@@ -751,3 +766,50 @@
     - text: Such a brilliant insight.
     - text: Good insight.
     - text: lol still think that after the recent episode?
+- original_post:
+    author: JosephLeeVC
+    text: "While I disagree with some of his opinions, @SwoleBrian has cracked the code on engaging young men, and that is something to respect."
+    likes: 3
+  comments:
+    - text: Fascinating.
+    - text: interesting.
+    - text: interesting...
+    - text: Interesting.
+    - text: Fascinating.
+
+- original_post:
+    author: SwoleBrian
+    text: "Swole Brian's Bicep Supplements Out Now on Havit Market @HavitOfficial: <broken link>"
+- original_post:
+    author: SwoleBrian
+    text: 'My Top 10 Workout Tips While Driving: <broken link>'
+- original_post:
+    author: SwoleBrian
+    text: "Okay finally checking out #CondorsOfAvalon let's see what this is about"
+  thread:
+    - author: SwoleBrian
+      text: "Ughh lame ass music"
+    - author: SwoleBrian
+      text: Not gonna lie, this vaselin chick is kinda hot.
+    - author: SwoleBrian
+      text: I really don't understand what's going on.
+    - author: SwoleBrian
+      text: So are the Condors like pets or something?
+    - author: SwoleBrian
+      text: "You know at first I didn't think much of this Lord Fat Tony or whatever his name is his actor is really good. Could be a good #AltMasc model."
+    - author: SwoleBrian
+      text: THEY ATE THE CONDOR!!!
+    - author: SwoleBrian
+      text: Wow. What an incredible finale. Great perfomances all around.
+- original_post:
+    author: SwoleBrian
+    text: "Swole Brian's Bicep Supplements Out Now on @Nubi Shop: <broken link>"
+- original_post:
+    author: SwoleBrian
+    text: "I'd rather die than watch that nancy-pancy Condors of Avalon swaz"
+  comments:
+    - text: "@SwoleBrian you should give it a shot! I think it's actually pretty relevant for the #AltMasc crowd."
+    - text: 'Hell yeah brother its really good'
+    - text: The main chick is SMOKIN
+    - author: SwoleBrian
+      text: hmm.

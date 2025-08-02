@@ -150,8 +150,13 @@ JennyK:
     display_name: Jenny
     bio: Infrastructure Engineer at @null
     profile_picture: pfp_jennyk
-InkubusMag:
-    user_name: InkubusMag
+TheInkubus:
+    user_name: TheInkubus
     display_name: Inkubus
     bio: 'For the latest in online gossip. Join now: <broken link>'
     profile_picture: pfp_inkubus
+SwoleBrian:
+    user_name: SwoleBrian
+    display_name: BICEP SUPPLEMENTS AVAILABLE ON HAVIT MARKET
+    bio: "Not for crybabies. Bicep Supplements Available Now on Havit Market @HavitOfficial #AltMasc #AlternativeMasculinity"
+    profile_picture: pfp_swole_brian
