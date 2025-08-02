@@ -16,6 +16,7 @@ HeckinPuppers:
     user_name: HeckinPuppers
     display_name: ""
     bio: awf! i just a liwwl pupper!
+    profile_picture: pfp_pupper
 JackGerard43:
     user_name: JackGerard43
     display_name: ""
@@ -42,6 +43,7 @@ ProfEricsson:
     user_name: ProfEricsson
     display_name: ""
     bio: Professor of Social Informatics at Faustlin University. Yes, that is my real name.
+    profile_picture: pfp_professor
 RepLorretaJackson:
     user_name: RepLorretaJackson
     display_name: ""
@@ -50,6 +52,7 @@ SallysKitchen:
     user_name: SallysKitchen
     display_name: ""
     bio: Simple meals in under 30 minutes <broken link>
+    profile_picture: pfp_sallyskitchen
 SirPeterSmalls:
     user_name: SirPeterSmalls
     display_name: ""
@@ -119,6 +122,7 @@ potatolover23:
     user_name: potatolover23
     display_name: antony
     bio: the biggest potato fan. waffle fry supremacy
+    profile_picture: pfp_potato
 HealingHeartsSociety:
     user_name: HealingHeartsSociety
     display_name: Healing Hearts Society
