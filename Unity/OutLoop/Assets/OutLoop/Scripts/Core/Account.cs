@@ -22,7 +22,7 @@ namespace OutLoop.Core
         public Account(AccountData data)
         {
             UserName = data.UserName;
-            DisplayName = string.IsNullOrEmpty(DisplayName) ? data.UserName : data.DisplayName;
+            DisplayName = string.IsNullOrEmpty(data.DisplayName) ? data.UserName : data.DisplayName;
             if (data.IsFakeProfile)
             {
                 Bio = "<style=System>This profile cannot be loaded at this time.</style>";
