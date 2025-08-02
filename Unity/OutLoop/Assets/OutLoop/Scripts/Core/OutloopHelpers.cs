@@ -46,6 +46,17 @@ namespace OutLoop.Core
 
         public static string FormatNumberAsString(int number)
         {
+            var millions = (int)Math.Round(number/1000000f);
+            var thousands = (int)Math.Round(number/1000f);
+
+            if(millions > 0)
+            {
+                return millions.ToString() + "M";
+            }
+            else if(thousands > 0)
+            {
+                return thousands.ToString() + "K";
+            }
             return number.ToString();
         }
 
