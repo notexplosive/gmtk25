@@ -66,6 +66,7 @@ SusanneSmith:
     user_name: SusanneSmith
     display_name: "Susanne"
     bio: ""
+    profile_picture: "pfp_susanne"
 ToneDefont:
     user_name: ToneDefont
     display_name: ""
