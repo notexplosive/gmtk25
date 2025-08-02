@@ -82,6 +82,8 @@ namespace OutLoop.UI
                 _profilePicture.sprite = account.ProfilePicture.ForceLoadNow(this);
             }
             
+            
+            _loopDataRelay.State().AddToNameBank(account);
         }
     }
 }

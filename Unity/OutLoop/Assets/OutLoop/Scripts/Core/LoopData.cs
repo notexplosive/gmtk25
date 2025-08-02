@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using OutLoop.Data;
 using UnityEngine;
 
@@ -8,15 +9,15 @@ namespace OutLoop.Core
 {
     public class LoopData
     {
+        private readonly Dictionary<string, bool> _accountSeenStatus = new();
         private readonly List<Account> _allAccounts = new();
         private readonly List<Puzzle> _allPuzzles = new();
         private readonly List<TopLevelPost> _allTopLevelPosts = new();
         private readonly List<IPost> _bookmarkedPosts = new();
+        private readonly Dictionary<string, bool> _hashTagSeenStatus = new();
         private readonly List<DirectMessage> _messages = new();
         private readonly Dictionary<IPost, TopLevelPost> _postToOwner = new();
         private readonly HashSet<DirectMessage> _readMessages = new();
-        private readonly List<string> _seenHashtags = new();
-        private readonly List<string> _seenNames = new();
         private readonly List<TopLevelPost> _timelinePosts = new();
         private PageType _currentPage;
 
@@ -80,8 +81,20 @@ namespace OutLoop.Core
                 foreach (var childPost in topLevelPost.AllChildPosts())
                 {
                     _postToOwner[childPost] = topLevelPost;
+                    var hashTagMatches = Regex.Matches(childPost.RawText, @"#\w+");
+                    foreach (var match in hashTagMatches)
+                    {
+                        _hashTagSeenStatus[match.ToString()] = false;
+                    }
                 }
             }
+
+            foreach (var account in _allAccounts)
+            {
+                _accountSeenStatus.Add(account.UserNameWithAt, false);
+            }
+
+            _accountSeenStatus.Add(new Account().UserNameWithAt, false);
         }
 
         public PageType CurrentPage
@@ -196,12 +209,12 @@ namespace OutLoop.Core
         {
             if (keyword.StartsWith("#"))
             {
-                return _seenHashtags.Contains(keyword);
+                return _hashTagSeenStatus.GetValueOrDefault(keyword);
             }
 
             if (keyword.StartsWith("@"))
             {
-                return _seenNames.Contains(keyword);
+                return _accountSeenStatus.GetValueOrDefault(keyword);
             }
 
             return false;
@@ -209,14 +222,14 @@ namespace OutLoop.Core
 
         public void AddToWordBank(string text)
         {
-            _seenHashtags.Add(text);
+            _hashTagSeenStatus[text] = true;
             WordAddedToBank?.Invoke(AnswerType.Hashtag, text);
         }
 
         public void AddToNameBank(Account account)
         {
             var text = account.UserNameWithAt;
-            _seenNames.Add(text);
+            _accountSeenStatus[text] = true;
             WordAddedToBank?.Invoke(AnswerType.Username, text);
         }
 
@@ -245,11 +258,37 @@ namespace OutLoop.Core
             switch (bankType)
             {
                 case AnswerType.Username:
-                    return _seenNames.ToList();
+                    return _accountSeenStatus.Where(a => a.Value).Select(a => a.Key).ToList();
                 case AnswerType.Hashtag:
-                    return _seenHashtags.ToList();
+                    return _hashTagSeenStatus.Where(a => a.Value).Select(a => a.Key).ToList();
                 default:
                     return new List<string>();
+            }
+        }
+
+        public int FoundBankCount(AnswerType bankType)
+        {
+            switch (bankType)
+            {
+                case AnswerType.Username:
+                    return _accountSeenStatus.Count(a => a.Value);
+                case AnswerType.Hashtag:
+                    return _hashTagSeenStatus.Count(a => a.Value);
+                default:
+                    return 0;
+            }
+        }
+
+        public int TotalBankCount(AnswerType bankType)
+        {
+            switch (bankType)
+            {
+                case AnswerType.Username:
+                    return _accountSeenStatus.Count();
+                case AnswerType.Hashtag:
+                    return _hashTagSeenStatus.Count();
+                default:
+                    return 0;
             }
         }
     }

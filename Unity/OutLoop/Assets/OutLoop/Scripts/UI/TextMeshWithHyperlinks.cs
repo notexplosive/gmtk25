@@ -51,7 +51,7 @@ namespace OutLoop.UI
                         var account = state.AllAccounts().FirstOrDefault(a => a.UserName == linkTextNoPrefix) ??
                                       new Account();
                         state.RequestProfileModal(account);
-                        state.AddToNameBank(account);
+                        // state.AddToNameBank(account);
                     }
                 }
                 else if (linkText.StartsWith("#"))

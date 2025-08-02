@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace OutLoop.Core
@@ -62,17 +63,26 @@ namespace OutLoop.Core
 
         public static string FormatWithHyperlinks(string rawText, LoopData state)
         {
-            var phase1 = Regex.Replace(rawText, @"@\w+", a=> BecomeHyperlink(a, state));
-            var phase2 = Regex.Replace(phase1, @"#\w+", a=> BecomeHyperlink(a, state));
+            var phase1 = Regex.Replace(rawText, @"@\w+", match=>
+            {
+                var account = state.AllAccounts().FirstOrDefault(a => a.UserNameWithAt == match.Value);
+                return BecomeHyperlink(match, state, account != null);
+            });
+            var phase2 = Regex.Replace(phase1, @"#\w+", match=> BecomeHyperlink(match, state, true));
             return phase2;
         }
 
-        private static string BecomeHyperlink(Match match, LoopData state)
+        private static string BecomeHyperlink(Match match, LoopData state, bool isRealLink)
         {
             var styleName = "Hyperlink";
             if (state.HasSeenKeyword(match.Value))
             {
                 styleName = "HyperlinkSeen";
+            }
+
+            if (!isRealLink)
+            {
+                styleName = "HyperlinkBroken";
             }
 
             return $"<link=\"{match}\"><style={styleName}>{match}</style></link>";

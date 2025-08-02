@@ -40,6 +40,11 @@ namespace OutLoop.UI
 
         private void AppendToBank(AnswerType answerType, string word)
         {
+            if (_titleText != null)
+            {
+                _titleText.text = GetTitleForBankType();
+            }
+            
             if (answerType != _bankType)
             {
                 return;
@@ -63,12 +68,12 @@ namespace OutLoop.UI
             
             if (_bankType == AnswerType.Hashtag)
             {
-                return "#tags (0/10)";
+                return $"#tags ({_relay.State().FoundBankCount(AnswerType.Hashtag)}/{_relay.State().TotalBankCount(AnswerType.Hashtag)})";
             }
 
             if (_bankType == AnswerType.Username)
             {
-                return "@users (0/10)";
+                return $"@users ({_relay.State().FoundBankCount(AnswerType.Username)}/{_relay.State().TotalBankCount(AnswerType.Username)})";
             }
 
             return "???";

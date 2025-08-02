@@ -42,6 +42,7 @@ namespace OutLoop.UI
             }
 
             var words = _relay.State().GetWordsFromBank(bankType);
+            words.Sort();
             _textMesh.Get(this).text = string.Join("  ", words.Select(text => $"<link={text}>" + text + "</link>"));
         }
     }
