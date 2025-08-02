@@ -28,20 +28,20 @@
 - original_post:
     author: Loop
     post_id: loop_outage
-    text: "Hi folks! We're currently experiencing some in-app outages. Some features currently aren't working right now but we're working hard on fixing them! \U0001F528"
+    text: "Hi folks! We're currently experiencing some in-app outages. Certain features may be unavailable for a fraction of users but we're working hard on fixing them! \U0001F528"
   comments:
+    - text: 'okay but can you explain *which* features aren''t working?'
     - author: catcradler
       text: lol trash app
     - author: SusanneSmith
       text: Thank you for all your hard work!
     - text: hi please can i have 600$ i have a rare heart condition, please donate
-    - author: JackGerard43
-      text: why did you darn tronix??
     - author: JennyK
       text: 'Looking at the ping request cache it seems like there has been a massive spike in requests in the past 8 hours:'
       linked_post_id: jennyk_info
+    - text: '@JennyK who asked you?'
     - author: VasylinFan
-      text: 'LOL we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
+      text: 'LOL @ToneDefont we fangirled so hard we crashed the site #VasDef #CondorsOfAvalon #COA'
 - original_post:
     author: Loop
     text: In accordance with new regulations from some of our target markets, users will no longer be able to post certain words on Loop. Starting Monday, prohibited words will be marked with stars (****). Please abide by the new rules and continue to make our community the hottest place to stay In The Loop!
@@ -77,21 +77,24 @@
 
 - original_post:
     author: catcradler
-    text: 'lol so right now with with the ''''outage'''':
+    post_id: catcradler_outage
+    text: 'DAHAHAAA so right now with with the #LoopOutage:
     
-      - posting completely disabled
+      - posting is COMPLETELY disabled
       - ALL external links broken
       - search only returns top 5 results
-      - profiles/images broken for like half of all users
+      - profiles and images broken for like half of all users
 
-      i love this hellsite'
+      i love this app'
+    likes: 4
   comments:
     - author: catboyslim
       text: wait @catcradler how are *you* able to post
     - author: catcradler
       text: '@catboyslim secret :3'
     - author: JennyK
-      text: '@catboyslim it''s a rolling outage. @MarkKassowitz was able to post until 5 min ago'
+      text: '@catboyslim it''s a rolling outage. The official @Loop post has more documentation:'
+      linked_post_id: loop_outage
     - author: catboyslim
       text: '@JennyK oooh makes sense.'
     - author: catcradler
@@ -179,8 +182,13 @@
     post_id: coa_announcement
     text: 'On the next Condors of Avalon: DeFontaigne faces his greatest foe. Vasylin makes a difficult choice. M''rkrk''yk rides south. Watch now on @Nubi TV: <broken link>'
   comments:
-    - author: VasylinFan
+    - author: ToneDefont
       text: AHHHHHHHHHH
+    - text: I'm so excited!
+    - text: this show jumped the shark in season 6
+    - text: Is it true @SirPeterSmalls walked off set?
+    - text: is anyone having trouble posting rn?
+    - text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
 
 - original_post:
     author: HavitOfficial
@@ -468,8 +476,8 @@
     - author: JennyK
       text: there's an outage
     - author: JennyK
-      text: "more information here"
-      linked_post_id: jennyk_info
+      text: 'more information here:'
+      linked_post_id: loop_outage
 
 - original_post:
     author: potatolover23
@@ -485,17 +493,29 @@
 - original_post:
     author: potatolover23
     post_id: exploding_potato
-    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge @TronixLive"
+    text: "just wanted to enjoy my lunch and this happened?? accidental #SwazzleChallenge"
+    likes: 6
     # TODO <<photo of nubi potatoes exploded in microwave>>
   thread:
     - author: potatolover23
       text: "for those asking, i didn''t put anything that would explode in this. i literally just put my food in the microwave. its that new nubi go meal prep thing"
   comments:
-    - author: TronixLive
-      text: this video is SICK!!!
     - text: not surprised this is nubi
     - text: this is crazy wtf is in our food
     - text: LMAOOOOO
+    - author: TronixLive
+      text: this video is SICK!!!
+    - text: OMG @TronixLive!!
+    - text: 'duuuude @potatolover23 you''re famous now'
+    - author: potatolover23
+      text: AHHHHHH TRONIX I LOVE YOUR CONTENT
+    - text: 'did something happen? this doesn''t come up when i search ''potato'''
+    - text: loop censorship strikes again
+    - text: '@null maybe it''s because potato is like one of the most common words in the english language?'
+    - author: JennyK
+      text: 'There''s an outage:'
+      linked_post_id: loop_outage
+    - text: '@JennyK nahhh definitely potato-phobia'
 - original_post:
     author: potatolover23
     text: anyone who says potato salad is their favorite form of the potato needs therapy
@@ -592,3 +612,41 @@
     - text: is this legal?
     - author: catcradler
       text: okay jenny this is actually kind of cool
+
+- original_post:
+    author: InkubusMag
+    post_id: inkubus_tronix
+    likes: 6
+    text: 'TRONIX CANCELLED?? Read here: <broken link>'
+    # TODO just tronix profile with the world CANCELLED on it
+  comments:
+    - text: Not tronix \U0001F62D!
+    - text: I KNEW IT
+    - text: I never liked that guy.
+    - text: good riddance.
+    - text: lol
+    - text: Are there any GOOD celebrities left??
+    - text: i hate the world
+    - text: 'This is defamation! @TronixLive you need to sue!'
+    - text: '@null lol parasocial much?'
+- original_post:
+    author: InkubusMag
+    likes: 5
+    text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of @CondorsOfAvalon! Read here: <broken link>'
+    # TODO peter smalls profile with tabloid stuff on it
+  comments:
+    - author: SirPeterSmalls
+      text: You will be hearing from my lawyer.
+- original_post:
+    author: InkubusMag
+    text: 'Inside Nubi''s EXPLOSIVE new meal service! Read here: <broken link>'
+    likes: 4
+    # TODO just the potato image again
+  comments:
+    - text: ew gross!
+    - text: yo can you at least credit @potatolover23?
+- original_post:
+    author: InkubusMag
+    text: 'YOU WON''T BELIEVE! Read here <broken link>'
+    likes: 7
+    # broken image

@@ -121,7 +121,6 @@ HealingHeartsSociety:
     user_name: HealingHeartsSociety
     display_name: Healing Hearts Society
     bio: 'Healing hearts since 2021. Let''s make the world healthier.'
-
 TronixLive:
     user_name: TronixLive
     display_name: Tronix
@@ -135,8 +134,11 @@ heleny:
     user_name: heleny
     display_name: ""
     bio: ""
-
 JennyK:
     user_name: JennyK
     display_name: Jenny
     bio: Infrastructure Engineer at @null
+InkubusMag:
+    user_name: InkubusMag
+    display_name: Inkubus
+    bio: 'For the latest in online gossip. Join now: <broken link>'
