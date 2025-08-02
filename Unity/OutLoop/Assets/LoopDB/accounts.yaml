@@ -84,7 +84,8 @@ VasylinFan:
 catboyslim:
     user_name: catboyslim
     display_name: ""
-    bio: ""
+    bio: Berlin-based DJ and catboy. he/they
+    profile_picture: pfp_catboy
 catcradler:
     user_name: catcradler
     display_name: ""
@@ -150,3 +151,4 @@ InkubusMag:
     user_name: InkubusMag
     display_name: Inkubus
     bio: 'For the latest in online gossip. Join now: <broken link>'
+    profile_picture: pfp_inkubus
