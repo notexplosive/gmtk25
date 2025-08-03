@@ -127,6 +127,7 @@ HealingHeartsSociety:
     user_name: HealingHeartsSociety
     display_name: Healing Hearts Society
     bio: 'Healing hearts since 2021. Let''s make the world healthier.'
+    profile_picture: pfp_healingheartssociety
 TronixLive:
     user_name: TronixLive
     display_name: Tronix
