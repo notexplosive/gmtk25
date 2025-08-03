@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using OutLoop.Data;
+using UnityEngine;
 
 namespace OutLoop.Core
 {
@@ -39,8 +41,32 @@ namespace OutLoop.Core
 
         private IEnumerable<IPuzzleWord> PuzzleWords(string finalAnswerText)
         {
-            var tokens = finalAnswerText.Split();
+            var splitAnswer = finalAnswerText.Split();
+
+            var tokens = new List<string>();
+            Regex regex = new Regex(@"\b\w+\b");
+
+            foreach (var word in splitAnswer)
+            {
+                if (word.StartsWith("@") || word.StartsWith("#"))
+                {
+                    var justLetters = regex.Match(word).Value;
+                    tokens.Add(word[0] + justLetters);
+
+                    var extra = word.Remove(0,1).Replace(justLetters, "");
+                    if (!string.IsNullOrWhiteSpace(extra))
+                    {
+                        tokens.Add(extra);
+                    }
+                }
+                else
+                {
+                    tokens.Add(word);
+                }
+            }
+
             var index = 0;
+            Debug.Log(string.Join(" ", tokens));
 
             foreach (var token in tokens)
             {
@@ -101,7 +127,7 @@ namespace OutLoop.Core
 
         public bool AllBlanksFilled()
         {
-            return Blanks.Count(a=>a.GivenAnswer == null) == 0;
+            return Blanks.Count(a => a.GivenAnswer == null) == 0;
         }
     }
 }
