@@ -122,12 +122,6 @@
     - text: 'duuuude @potatolover23 you''re famous now'
     - author: potatolover23
       text: AHHHHHH TRONIX I LOVE YOUR CONTENT
-    - text: 'did something happen? this doesn''t come up any more when i search ''potato'''
-    - text: loop censorship strikes again
-    - text: '@null maybe it''s because potato is like one of the most common words in the english language?'
-    - text: 'it''s not censorship this app is just absolute garbage #LoopOutage'
-      linked_post_id: catcradler_outage
-    - text: '@null nahhh definitely potato-phobia'
 - original_post:
     author: potatolover23
     text: anyone who says potato salad is their favorite form of the potato needs therapy
@@ -292,13 +286,18 @@
       text: '@TheInkubus You will be hearing from my lawyers.'
 - original_post:
     author: TheInkubus
-    text: 'Inside Nubi''s EXPLOSIVE new meal service! Read here: <broken link>'
+    text: 'Inside Nubi''s EXPLOSIVE new #MealPrep service! Read here: <broken link>'
     likes: 4
     # TODO just the potato image again
   comments:
     - text: ew gross!
+    - text: that's nasty!
     - text: yo can you at least credit @potatolover23?
     - text: is this like that swole brian thing?
+    - text: "I'm tired of these companies thinking they can do what they want. It's time to #BoycottNubi"
+    - text: "@null yeah!"
+    - text: "Goodbye Nubi!"
+    - text: "@justice_leek have you seen this?"
 - original_post:
     author: TheInkubus
     text: 'YOU WON''T BELIEVE! Read here: <broken link>'
@@ -574,10 +573,10 @@
     - text: potato
     - text: potato
     - text: potato
-    - text: potato
+    - text: "#potato"
     - text: potato
     - text: This one wins.
-    - text: potato
+    - text: "#potato"
     - text: potato
     - text: literally deep fried
     - text: potato
