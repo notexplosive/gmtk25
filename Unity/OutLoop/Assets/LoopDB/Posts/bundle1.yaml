@@ -216,6 +216,10 @@
       text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
 - original_post:
     author: COA_Official
+    text: "Check out @ChristinaMcPheeTV's exclusive interview on @Nubi Style: <broken link>"
+    post_id: coa_interview
+- original_post:
+    author: COA_Official
     text: "Swole samae! Condorese is now a supported language on @Nubi Learn! <broken link>"
   comments:
     - text: hyyyype!
@@ -440,6 +444,9 @@
       text: Thank you Christina!
     - author: helenloveslatte
       text: "It was nice to see you there Christina! Let's get coffee sometime."
+- original_post:
+    author: ChristinaMcPheeTV
+    linked_post_id: coa_interview 
 - original_post:
     author: ChristinaMcPheeTV
     text: 'Levitia is beautiful this time of year #filming #CondorsOfAvalon #Levitia'
