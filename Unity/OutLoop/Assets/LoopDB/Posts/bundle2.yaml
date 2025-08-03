@@ -53,7 +53,6 @@
     post_id: justice_leek_nubi_boycott
     text: 'REMEMBER TO BOYCOTT @Nubi! #BoycottNubi #Cancelled'
     image: boycottnubi
-    #image: "TODO informatic about all Nubi products to boycott"
   comments:
     - text: YESSSS
     - text: doing my part!
@@ -189,7 +188,7 @@
 - original_post:
     author: TronixLive
     text: An apology
-    # TODO: notes app apology
+    image: notes_app_apology
   comments:
     - text: "I''m really disappointed. People have been saying for days that the swazzle challenge is dangerous, and you''ve said nothing until now"
     - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
@@ -268,11 +267,11 @@
     author: JennyK
     post_id: jennyk_info
     text: 'Looking at the DNS data, the #LoopOutage seems to be caused by a large influx of posts from the last three hours. In other words, it''s a massive unintentional DDOS.'
-    # TODO image: graph with a large spike
+    image: better_graph
   thread:
     - author: JennyK
       text: "Checking the Trends API it seems these are the major contributors to the spike:"
-      # TODO word cloud with "condors of avalon", "nubi" "tronix" "#swazzlechallenge" and other keywords in it
+      image: missing_image
   comments:
     - text: Wow! This is so interesting!
     - text: is this legal?

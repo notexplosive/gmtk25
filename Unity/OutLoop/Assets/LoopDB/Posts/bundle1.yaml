@@ -159,7 +159,7 @@
 - original_post:
     author: Nubi
     text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Fresh. Five minutes in your microwave. Sign up now <broken link>' 
-    ##image: "TODO: promotional image of a woman eating a salad"
+    image: "woman eating salad"
   comments:
     - author: SusanneSmith
       text: Wow! So convenient. My husband and I currently use Foodbaby but I'll talk to him to see if we can switch.
@@ -171,7 +171,7 @@
 - original_post:
     author: COA_Official
     text: "What did you all think of the new Condors of Avalon episode? #SeasonFinale \U0001F633"
-    #image: "TODO: a promotional still"
+    image: coa_1
   comments:
     - author: VasylinFan
       text: "#LordDeFontaigne \U0001F62D\U0001F62D\U0001F62D#VasDef #COA"
@@ -455,7 +455,7 @@
       text: My daughter visiting there next week!
     - author: SusanneSmith
       text: '@MildredJones I hope she has fun! We went there last year and it was gorgeous!'
-      #image: <pictures of landscapes>
+      image: missing_image
     - author: SusanneSmith
       text: Just be careful though! There is flooding this time of year.
 
@@ -527,7 +527,7 @@
 - original_post:
     author: HeckinPuppers
     text: swazzew chawwen? how about snuggle chawwen?
-    # image: TODO (picture of the most disgustingly cute dog)
+    image: cute doggo
   comments:
     - author: SusanneSmith
       text: Cute!
