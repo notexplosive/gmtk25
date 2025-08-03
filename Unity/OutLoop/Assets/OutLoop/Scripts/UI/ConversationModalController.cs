@@ -126,23 +126,30 @@ namespace OutLoop.UI
 
         private void OnBlankFilled(Puzzle puzzle)
         {
+            CheckSolution(puzzle);
+        }
+
+        private void CheckSolution(Puzzle puzzle)
+        {
             if (_relay == null)
             {
                 return;
             }
 
-            if (puzzle.AllBlanksFilled())
+            if (!puzzle.AllBlanksFilled())
             {
-                if (puzzle.NumberIncorrect() <= 2)
-                {
-                    SetHintText("<color=yellow>Close!</color> There are 1-2 things wrong.");
-                }
-                else
-                {
-                    SetHintText("<color=red>Incorrect!</color> Try again.");
-                }
+                return;
             }
             
+            if (puzzle.NumberIncorrect() <= 2)
+            {
+                SetHintText("<color=yellow>Close!</color> 2 or fewer answers incorrect.");
+            }
+            else
+            {
+                SetHintText("<color=red>Incorrect!</color> Try again.");
+            }
+
             if (puzzle.IsSolved())
             {
                 SetHintText("<color=green>Solved!</color>");
@@ -181,13 +188,18 @@ namespace OutLoop.UI
             }
 
             var currentPuzzle = _relay.State().InProgressPuzzles.FirstOrDefault(a => a.Sender == Sender);
-            if (_puzzlePhraseTextController != null)
+            if (_puzzlePhraseTextController == null)
             {
-                if (currentPuzzle != null)
-                {
-                    _puzzlePhraseTextController.SetText(currentPuzzle);
-                }
+                return;
             }
+
+            if (currentPuzzle == null)
+            {
+                return;
+            }
+
+            _puzzlePhraseTextController.SetText(currentPuzzle);
+            CheckSolution(currentPuzzle);
         }
     }
 }
