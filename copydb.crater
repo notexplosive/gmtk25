@@ -1,0 +1,1 @@
+files.copy("Unity/OutLoop/Assets/LoopDB", "Unity/OutLoop/.build/test/Out Of The Loop_Data/LoopDB")
