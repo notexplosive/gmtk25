@@ -25,8 +25,8 @@
     - author: HealingHeartsSociety
       text: "We can't wait to see your #SwazzleChallenge!"
     - text: '@luclferd I can''t believe you would support this nonsense.'
-    - author: SusanneSmith
-      text: What is ''Swazzle''?
+    - author: MildredJones
+      text: What is Swazzle
 
 - original_post:
     author: Loop
@@ -133,12 +133,10 @@
       text: '@catcradler i''m not calling them that'
 - original_post:
     author: catcradler
-    text: it's so **** up–oh I'm sorry–*hecked* up you can't even swear on this app. look what it's doing to us. ''shut the heck up''. ''no swaz''. we sound like a bunch of oldies.
+    text: it's so **** up–oh I'm sorry–*hecked* up you can't even swear on this app. look what it's doing to us. ''shut the heck up''. ''no swaz''. we sound like a bunch of OLDIES.
   comments:
     - author: MildredJones
       text: as an ''oldies'' i think this is rude!
-    - author: catcradler
-      text: lol @catboyslim how did your grandma find my account
 
 - original_post:
     author: Nubi
@@ -153,7 +151,11 @@
     - text: does NOT explain why your food sucks
 - original_post:
     author: Nubi
+    text: "Watch now only on Nubi TV:"
     linked_post_id: coa_announcement
+- original_post:
+    author: Nubi
+    text: NEXT WEEK ONLY all books 50% off on Nubi Books!
 - original_post:
     author: Nubi
     text: 'Introducing Nubi Go, the new meal preparation service built for you. Fast. Fresh. Five minutes in your microwave. Sign up now <broken link>' 
@@ -177,6 +179,23 @@
       text: Too violent for me! But my husband loves it.
     - author: MildredJones
       text: How do I watch
+    - author: SusanneSmith
+      text: "@MildredJones are you the Mildred Jones that taught at Santa Omela Elementary in 1966?"
+    - author: MildredJones
+      text: "Yes"
+    - author: SusanneSmith
+      text: "It's me! Susanne Braun!"
+    - author: MildredJones
+      text: Susanne! I remember you now. You were such a bright young girl. HOw are you
+    - author: SusanneSmith
+      text: "I'm doing well! I'm married now, as you can tell by the name. I have a son, Jack. He just got his driver license!"
+    - author: MildredJones
+      text: How wonderful
+    - text: you know you oldies can just DM each other instead of yapping here
+    - author: MildredJones
+      text: What is DM
+    - author: SusanneSmith
+      text: I'll show you!
 - original_post:
     author: COA_Official
     post_id: coa_announcement
@@ -187,9 +206,14 @@
     - text: I'm so excited!
     - text: this show jumped the shark in season 6
     - text: '#BoycottNubi'
-    - text: Is it true @SirPeterSmalls walked off set?
+    - text: Is it true @SirPeterSmalls stormed off set?
+    - text: "@null where did you hear that?"
+    - text: "@TheInkubus"
+      linked_post_id: inkubus_smalls
+    - text: You can't trust that rag!
     - text: is anyone having trouble posting rn?
-    - text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
+    - author: VasylinFan
+      text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
 - original_post:
     author: COA_Official
     text: "Swole samae! Condorese is now a supported language on @Nubi Learn! <broken link>"
@@ -226,7 +250,7 @@
 
 - original_post:
     author: reportergirl7
-    text: 'My latest for Tech Hub: @RepLorretaJackson heads Congressional inquiry into Nubi Go food packets: <broken link>'
+    text: 'My latest for Tech Hub: @RepLorettaJackson heads Congressional inquiry into Nubi Go food packets: <broken link>'
   thread:
     - author: reportergirl7
       text: "UPDATE: FDA researchers unable to reproduce initial 'explosion'. Further chemical analysis to be done."
@@ -318,7 +342,10 @@
 - original_post:
     author: TruthRevealed
     text: Nubi = ''New Babylon''. Condors of Avalon = COA = Christ Of Anti = Anti-Christ! Evil walks among us!
-  comments: []
+  comments:
+    - author: MildredJones
+      text: Where am I
+
 - original_post:
     author: SallysKitchen
     text: '@Loop I don''t like to do this but could you tell me why external links are broken? External links are a necessity for independent food writers such as myself. What do you have against women entrepreneurs?'
@@ -327,6 +354,7 @@
 - original_post:
     author: SallysKitchen
     text: 'You don''t need to do the #SwazzleChallenge to Heal your Heart. Check out 10 Heart Healthy recipes here: <broken link>'
+    post_id: sally_swazzle
   comments:
     - author: MildredJones
       text: Can not click link.
@@ -498,3 +526,53 @@
       text: Cute!
     - author: justice_leek
       text: "this is EXTREMELY problematic. #Cancelled"
+
+- original_post:
+    author: SusanneSmith
+    text: "Does anyone know what this #SwazzleChallenge thing is? Is it dangerous?"
+    linked_post_id: sally_swazzle
+  comments:
+    - author: JennyK 
+      linked_post_id: tronix_swazzle
+    - author: SusanneSmith
+      text: I don't like it!
+- original_post:
+    author: SusanneSmith
+    text: My son @JackGerard43 just got his driver's license! They grow up so fast!
+  comments:
+    - author: JackGerard43
+      text: MOM! I told you not to talk to me online!
+
+- original_post:
+    author: JackGerard43
+    text: tronix man... not you too...
+  comments:
+    - author: SusanneSmith
+      text: Everything okay sweetie?
+    - author: JackGerard43
+      text: MOM I TOLD YOU NOT TO TALK TO ME ONLINE
+    - author: JackGerard43
+      text: im sorry
+    - author: JackGerard43
+      text: just goin thru a lot rn
+    - author: JackGerard43
+      text: guy i really looked up to turned out to be a jerk
+    - author: SusanneSmith
+      text: Your father and I love you very much. We may not know what you are going through but we will always lend an ear if you need it. I'm sorry if I can be a bit overprotective at times. I'll try to be more respectful of your boundaries. Mom.
+    - author: SusanneSmith
+      text: Dinner is ready if you want it.
+    - author: JackGerard43
+      text: ok
+- original_post:
+    author: JackGerard43
+    text: "@TronixLive let's goooo! You deserve it!"
+    linked_post_id: tronix_5m
+- original_post:
+    author: JackGerard43
+    text: 'still cookin up my #SwazzleChallenge haha think @TronixLive will see it?'
+- original_post:
+    author: JackGerard43
+    text: man one day I wanna do as much good for the world as @TronixLive
+- original_post:
+    author: JackGerard43
+    text: "JUST GOT MY DRIVER'S LICENSE LET'S GOOOOO"

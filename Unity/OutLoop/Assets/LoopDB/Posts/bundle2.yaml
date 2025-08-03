@@ -35,7 +35,7 @@
 - original_post:
     author: justice_leek
     post_id: justice_leek_nubi_boycott
-    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott #Cancelled'
+    text: 'REMEMBER TO BOYCOTT @Nubi! #BoycottNubi #Cancelled'
     image: boycottnubi
     #image: "TODO informatic about all Nubi products to boycott"
   comments:
@@ -177,12 +177,15 @@
   comments:
     - text: "I''m really disappointed. People have been saying for days that the swazzle challenge is dangerous, and you''ve said nothing until now"
     - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
+    - author: JackGerard43
+      text: hey tronix, this aint real right?
     - text: 'you aren''t sorry for what you did. you''re sorry you got caught.'
     - text: 'Thank you for apologizing. Everyone makes mistakes. What''s important is you learn and do better in the future.'
     - text: '@TronixLive real name Bartholomew Joseph Sampson birthday April 3 address 742 Conifer Dr Springfield IL 62766'
 - original_post:
     author: TronixLive
     text: Thank you for 5 million subscribers <3 Tronix Troop is the best
+    post_id: tronix_5m
 - original_post:
     author: TronixLive
     text: 'I''ve been working 12 hours every day the last month, no weekends off, just filming. It''s been tiring but the next few videos are going to be the best yet.'
@@ -197,7 +200,8 @@
   comments:
     - text: "LET'S F'ING GOOO"
     - text: tronix hyyyyyyype
-    - text: Terrific Radical Outstanding Nice Impressive Xylophone
+    - author: JackGerard43
+      text: telling all my friends!
 - original_post:
     author: TronixLive
     text: 'Scrolling through the #SwazzleChallenge videos and you guys are INSANE! I''ve seen people blow up their TV, a jar of pickles, and even a couch?? KEEP THEM COMING'
@@ -229,6 +233,7 @@
     author: TronixLive
     text: 'Announcing…the #SwazzleChallenge! I''m partnering with the Healing Hearts Society to raise money for heart health. The rules are simple: Donate to charity, upload your craziest explosion video, and get SWAZZLED!'
     image: thumbnail_swazzle_challenge
+    post_id: tronix_swazzle
   thread:
     - author: TronixLive
       text: 'The best #SwazzleChallenge video and the biggest donator will get flown to Los Angeles and film an epic collab where we blow up a Rolls-Royce! Tronix Troop, you guys got this'
@@ -288,20 +293,20 @@
     # TODO just tronix profile with the world CANCELLED on it
   comments:
     - text: Not tronix \U0001F62D!
-    - text: first swole brian now tronix!?
+    - text: first swole brian now @TronixLive!?
     - text: I KNEW IT
     - text: I never liked that guy.
     - text: good riddance.
     - text: lol
     - text: Are there any GOOD celebrities left??
-    - text: i hate the world
     - text: 'This is defamation! @TronixLive you need to sue!'
+    - text: i hate the world
     - text: '@null lol parasocial much?'
 - original_post:
     author: TheInkubus
     likes: 5
     text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of #CondorsOfAvalon! Read here: <broken link>'
-    # TODO peter smalls profile with tabloid stuff on it
+    post_id: inkubus_smalls
   comments:
     - text: lol such a diva
     - text: "I heard he's awful to work with"
@@ -386,6 +391,16 @@
     - text: Buying now!
 - original_post:
     author: JosephLeeVC
+    text: Never stop surpassing your limits. At Haloom we had 10 BBs per quarter. At Dutu, it was 17. Now at Globi, we have more than 33 BPs per WEEK.
+  comments:
+    - text: Wow!
+    - text: wow.
+    - author: helenloveslatte
+      text: hey :)
+    - author: MildredJones
+      text: Hello
+- original_post:
+    author: JosephLeeVC
     text: 'Interesting XRDs for Q3 this year. Many FFs, but ACNHs and BOTCs point towards a GMTK market this year.'
     likes: 3
   comments:
@@ -459,6 +474,9 @@
 - original_post:
     author: SwoleBrian
     text: "Swole Brian's Bicep Supplements Out Now on @Nubi Shop: <broken link>"
+  comments:
+    - author: MildredJones
+      text: Cannot buy
 - original_post:
     author: SwoleBrian
     text: "I'd rather die than watch that nancy-pancy Condors of Avalon swaz"
@@ -546,6 +564,8 @@
       text: "🔥🔥🔥"
     - author: helenloveslatte
       text: "Thank you @JosephLeeVC!"
+    - author: SusanneSmith
+      text: Miss Helen, I am writing as a concerned mother and a woman. You are an inspiration to young girls everywhere. Do you think this is appropriate? What if my son sees this?
 - original_post:
     author: helenloveslatte
     text: 'Levitia. #vacation #europe #summer'
