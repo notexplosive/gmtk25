@@ -599,6 +599,7 @@
     - text: potato
     - text: "#potato"
     - text: potato
+      author: catcradler
     - text: This one wins.
     - text: "#potato"
     - text: potato

@@ -115,7 +115,7 @@ trolled_daal:
 COA_Official:
     user_name: COA_Official
     display_name: Condors of Avalon
-    bio: It's time to leave the nest. Watch now on @Nubi TV
+    bio: "It's time to leave the nest. Watch #CondorsOfAvalon now on @Nubi TV"
 potatolover23:
     user_name: potatolover23
     display_name: antony
@@ -154,6 +154,27 @@ SwoleBrian:
 bestfriendo477:
     user_name: bestfriendo477
     bio: "i don't really go on here much"
-extremely_offline:
-    user_name: extremely_offline
-    bio: "Touching grass"
+ExtremelyOffline:
+    user_name: ExtremelyOffline
+    bio: "I'm just here to lurk"
+grass_toucher:
+    user_name: grass_toucher
+    bio: "Mmmm, grass! I love grass!"
+thing_understander:
+    user_name: thing_understander
+    bio: "makes sense to me"
+iForgor:
+    user_name: iForgor
+    bio: "Nevermind I just remembered"
+rootysnooty:
+    user_name: rootysnooty
+    bio: "Americans when they call talky-circles 'Social Media'"
+grungo:
+    user_name: grungo
+    bio: "Cuidado: piso mojado"
+# salt_peter:
+#     user_name: salt_peter
+#     bio: Because pepper_pete was taken
+WholeLottaBirds:
+    user_name: WholeLottaBirds
+    bio: CAWWW!!!
