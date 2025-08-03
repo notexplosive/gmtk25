@@ -11,7 +11,7 @@
   comments: []
 - original_post:
     author: luclferd
-    text: All this vitriol towards @Nubi is uncalled for. I've known CEO @GabrielVilacruzNubi for years and he has always been a kind, thoughtful, and brilliant man. Nubi is one of the most innovative companies in the startup space. We need more people like Gabriel, not less.
+    text: All this vitriol towards @Nubi is uncalled for. I've known CEO Gabrial Vilacruz (@null) for years and he has always been a kind, thoughtful, and brilliant man. Nubi is one of the most innovative companies in the startup space. We need more people like Gabriel, not less.
   comments:
     - text: thank you sir
     - author: JosephLeeVC
@@ -19,8 +19,11 @@
 - original_post:
     author: luclferd
     text: 'The #SwazzleChallenge is what I love about the @Loop community. So many people pitching in for a good cause. Thank you @HealingHeartsSociety and thank you @TronixLive! '
+    post_id: loop_swazzle
   comments:
     - text: LETT'S GOOOOO @TronixLive mention
+    - author: HealingHeartsSociety
+      text: "We can't wait to see your #SwazzleChallenge!"
     - text: '@luclferd I can''t believe you would support this nonsense.'
     - author: SusanneSmith
       text: What is ''Swazzle''?
@@ -390,6 +393,7 @@
 - original_post:
     author: ChristinaMcPheeTV
     text: 'Excited to be doing the #SwazzleChallenge for the @HealingHeartsSociety! Now let''s see some condors explode! Next up: I nominate @SirPeterSmalls!'
+    post_id: christina_swazzle
   comments:
     - author: HealingHeartsSociety
       text: Thank you Christina!
