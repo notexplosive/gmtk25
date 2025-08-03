@@ -13,7 +13,7 @@ namespace OutLoop.Core
             {
                 var factor = (int)MathF.Pow(10, curMag);
                 var val = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
-                res += (factor * val)
+                res += (factor * val);
             }
 
             return res;
