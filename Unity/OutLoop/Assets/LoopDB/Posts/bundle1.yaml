@@ -25,8 +25,8 @@
     - author: HealingHeartsSociety
       text: "We can't wait to see your #SwazzleChallenge!"
     - text: '@luclferd I can''t believe you would support this nonsense.'
-    - author: SusanneSmith
-      text: What is ''Swazzle''?
+    - author: MildredJones
+      text: What is Swazzle
 
 - original_post:
     author: Loop
@@ -177,6 +177,23 @@
       text: Too violent for me! But my husband loves it.
     - author: MildredJones
       text: How do I watch
+    - author: SusanneSmith
+      text: "@MildredJones are you the Mildred Jones that taught at Santa Omela Elementary in 1966?"
+    - author: MildredJones
+      text: "Yes"
+    - author: SusanneSmith
+      text: "It's me! Susanne Braun!"
+    - author: MildredJones
+      text: Susanne! I remember you now. You were such a bright young girl. HOw are you
+    - author: SusanneSmith
+      text: "I'm doing well! I'm married now, as you can tell by the name. I have a son, Jack. He just got his driver license!"
+    - author: MildredJones
+      text: How wonderful
+    - text: you know you oldies can just DM each other instead of yapping here
+    - author: MildredJones
+      text: What is DM
+    - author: SusanneSmith
+      text: I'll show you!
 - original_post:
     author: COA_Official
     post_id: coa_announcement
@@ -187,9 +204,14 @@
     - text: I'm so excited!
     - text: this show jumped the shark in season 6
     - text: '#BoycottNubi'
-    - text: Is it true @SirPeterSmalls walked off set?
+    - text: Is it true @SirPeterSmalls stormed off set?
+    - text: "@null where did you hear that?"
+    - text: "@TheInkubus"
+      linked_post_id: inkubus_smalls
+    - text: You can't trust that rag!
     - text: is anyone having trouble posting rn?
-    - text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
+    - author: VasylinFan
+      text: 'WE FANGIRLED SO HARD WE BROKE THE SITE #LoopOutage #VasDef!'
 - original_post:
     author: COA_Official
     text: "Swole samae! Condorese is now a supported language on @Nubi Learn! <broken link>"
@@ -318,7 +340,10 @@
 - original_post:
     author: TruthRevealed
     text: Nubi = ''New Babylon''. Condors of Avalon = COA = Christ Of Anti = Anti-Christ! Evil walks among us!
-  comments: []
+  comments:
+    - author: MildredJones
+      text: Where am I
+
 - original_post:
     author: SallysKitchen
     text: '@Loop I don''t like to do this but could you tell me why external links are broken? External links are a necessity for independent food writers such as myself. What do you have against women entrepreneurs?'
@@ -327,6 +352,7 @@
 - original_post:
     author: SallysKitchen
     text: 'You don''t need to do the #SwazzleChallenge to Heal your Heart. Check out 10 Heart Healthy recipes here: <broken link>'
+    post_id: sally_swazzle
   comments:
     - author: MildredJones
       text: Can not click link.
@@ -498,3 +524,19 @@
       text: Cute!
     - author: justice_leek
       text: "this is EXTREMELY problematic. #Cancelled"
+
+- original_post:
+    author: SusanneSmith
+    text: "Does anyone know what this #SwazzleChallenge thing is? Is it dangerous?"
+    linked_post_id: sally_swazzle
+  comments:
+    - author: JennyK 
+      linked_post_id: tronix_swazzle
+    - author: SusanneSmith
+      text: I don't like it!
+- original_post:
+    author: SusanneSmith
+    text: My son @JackGerard43 just got his driver's license! They grow up so fast!
+  comments:
+    - author: JackGerard43
+      text: MOM! I told you not to talk to me online!
