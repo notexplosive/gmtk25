@@ -74,6 +74,14 @@ namespace OutLoop.UI
             return instance;
         }
 
+        public void CloseAllModals()
+        {
+            while (_openModals.Count > 0)
+            {
+                CloseTopModal();
+            }
+        }
+        
         public void CloseTopModal()
         {
             if (_openModals.Count == 0)

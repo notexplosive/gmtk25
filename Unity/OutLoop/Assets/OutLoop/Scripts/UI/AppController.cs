@@ -151,6 +151,7 @@ namespace OutLoop.UI
         {
             if (_currentPage == page)
             {
+                _currentPage.CloseAllModals();
                 return;
             }
 
