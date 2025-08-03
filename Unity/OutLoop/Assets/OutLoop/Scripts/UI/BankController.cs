@@ -2,6 +2,7 @@
 using ExTween.Unity;
 using OutLoop.Core;
 using OutLoop.Data;
+using SecretPlan.UI;
 using TMPro;
 using UnityEngine;
 
@@ -24,10 +25,24 @@ namespace OutLoop.UI
         [SerializeField]
         private RectTransform? _highlightIndicator;
 
+        [SerializeField]
+        private GameObject? _pageNavigationRoot;
+
+        [SerializeField]
+        private SecretButton? _previousButton;
+
+        [SerializeField]
+        private SecretButton? _nextButton;
+
         private readonly SequenceTween _tween = new();
 
         private void Awake()
         {
+            if (_bankText != null)
+            {
+                _bankText.Setup(_bankType);
+            }
+
             if (_highlightIndicator != null)
             {
                 _highlightIndicator.gameObject.SetActive(false);
@@ -35,12 +50,12 @@ namespace OutLoop.UI
 
             if (_titleText != null)
             {
-                _titleText.text = GetTitleForBankType();
+                _titleText.text = GetTitleForBankTypeIncludingCount();
             }
 
             if (_relay != null)
             {
-                _relay.State().WordAddedToBank += AppendToBank;
+                _relay.State().WordAddedToBank += OnAddedToBank;
 
                 if (_relay.State().GetWordsFromBank(_bankType).Count == 0)
                 {
@@ -48,12 +63,57 @@ namespace OutLoop.UI
                 }
 
                 _relay.State().PendingBlankSet += OnPendingBlankSet;
+
+                if (_previousButton != null)
+                {
+                    _previousButton.Clicked += () => PageOver(-1);
+                }
+
+                if (_nextButton != null)
+                {
+                    _nextButton.Clicked += () => PageOver(1);
+                }
+            }
+
+            if (_pageNavigationRoot != null)
+            {
+                _pageNavigationRoot.SetActive(false);
             }
         }
 
         private void Update()
         {
             _tween.Update(Time.deltaTime);
+        }
+
+        private void PageOver(int offset)
+        {
+            if (_relay == null)
+            {
+                return;
+            }
+
+            if (_bankText == null)
+            {
+                return;
+            }
+
+            var state = _relay.State();
+
+            var desiredPageNumber = _bankText.PageNumber + offset;
+            if (desiredPageNumber < 0)
+            {
+                return;
+            }
+            
+            var startingIndexOnDesiredPage = BankTextContent.PageSize * desiredPageNumber;
+
+            if (startingIndexOnDesiredPage >= state.FoundBankCount(_bankType))
+            {
+                return;
+            }
+            
+            _bankText.PageNumber = desiredPageNumber;
         }
 
         private void OnPendingBlankSet(PuzzleBlank? puzzleBlank)
@@ -98,11 +158,12 @@ namespace OutLoop.UI
                 ;
         }
 
-        private void AppendToBank(AnswerType answerType, string word)
+        private void OnAddedToBank(AnswerType answerType, string word)
         {
             if (_titleText != null)
             {
-                _titleText.text = GetTitleForBankType();
+                // update count
+                _titleText.text = GetTitleForBankTypeIncludingCount();
             }
 
             if (answerType != _bankType)
@@ -116,10 +177,22 @@ namespace OutLoop.UI
             }
 
             gameObject.SetActive(true);
-            _bankText.Add(_bankType, word);
+
+            _bankText.UpdateText();
+            
+            if (_relay != null)
+            {
+                if (_relay.State().FoundBankCount(_bankType) > BankTextContent.PageSize)
+                {
+                    if (_pageNavigationRoot != null)
+                    {
+                        _pageNavigationRoot.SetActive(true);
+                    }
+                }
+            }
         }
 
-        private string GetTitleForBankType()
+        private string GetTitleForBankTypeIncludingCount()
         {
             if (_relay == null)
             {

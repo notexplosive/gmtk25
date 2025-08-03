@@ -97,7 +97,7 @@ namespace OutLoop.UI
         {
             if (_relay != null)
             {
-                _textMesh.Get(this).text = OutloopHelpers.FormatWithHyperlinks(_rawText, _relay.State());
+                _textMesh.Get(this).text = OutLoopHelpers.FormatWithHyperlinks(_rawText, _relay.State());
             }
         }
     }

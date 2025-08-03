@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
 using NaughtyAttributes;
 using OutLoop.Data;
+using OutLoop.UI;
 using SecretPlan.Core;
-using SecretPlan.UI;
 using UnityEngine;
 using YamlDotNet.Serialization;
 
@@ -51,16 +50,16 @@ namespace OutLoop.Core
                 var postData = deserializer.Deserialize<List<TopLevelPostData>>(File.ReadAllText(postFile.FullName));
                 posts.AddRange(postData);
             }
-            
+
             var puzzlesYamlFile = loopDbDirectory.GetFiles("puzzles.yaml").FirstOrDefault();
             if (puzzlesYamlFile == null)
             {
                 Debug.LogError("Could not find puzzles yaml");
                 return new LoopData();
             }
-            
+
             var puzzles = deserializer.Deserialize<List<PuzzleData>>(File.ReadAllText(puzzlesYamlFile.FullName));
-            
+
             var timelineYamlFile = loopDbDirectory.GetFiles("timeline.yaml").FirstOrDefault();
 
             if (timelineYamlFile == null)
@@ -68,7 +67,7 @@ namespace OutLoop.Core
                 Debug.LogError("Could not find timeline yaml");
                 return new LoopData();
             }
-            
+
             var timelineIds = deserializer.Deserialize<List<string>>(File.ReadAllText(timelineYamlFile.FullName));
 
             return new LoopData(accounts.Values.ToList(), puzzles, posts, timelineIds);
@@ -80,7 +79,40 @@ namespace OutLoop.Core
         {
             var loopData = State();
             var rng = new NoiseBasedRng((int)Time.time);
-            loopData.ReceiveMessage(new DirectMessage(rng.GetRandomElement(loopData.AllAccounts().ToList()), rng.NextInt().ToString()));
+            loopData.ReceiveMessage(new DirectMessage(rng.GetRandomElement(loopData.AllAccounts().ToList()),
+                rng.NextInt().ToString()));
+        }
+
+        [UsedImplicitly]
+        [Button]
+        private void FillBank()
+        {
+            foreach (var word in State().AllBankWords())
+            {
+                State().AddToWordBank(word);
+            }
+
+            foreach (var account in State().AllAccounts())
+            {
+                State().AddToNameBank(account);
+            }
+        }
+
+        [UsedImplicitly]
+        [Button]
+        private void FillBankWithOnePage()
+        {
+            var count = 0;
+            foreach (var word in State().AllBankWords())
+            {
+                State().AddToWordBank(word);
+                count++;
+                Debug.Log($"Added {word} {count}");
+                if (count >= BankTextContent.PageSize)
+                {
+                    return;
+                }
+            }
         }
     }
 }

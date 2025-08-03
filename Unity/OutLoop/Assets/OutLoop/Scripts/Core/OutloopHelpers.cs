@@ -4,71 +4,66 @@ using System.Text.RegularExpressions;
 
 namespace OutLoop.Core
 {
-    public static class OutloopHelpers
+    public static class OutLoopHelpers
     {
         public static int CalculateFollowers(int followerCountMagnitude)
         {
-            var res = 0;
-            for(var curMag = 0; curMag < followerCountMagnitude+1;curMag++)
-            {
-                res *= 10;
-                var val = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
-                res += val;
-            }
-
-            return res;
+            return BasicMagnitude(followerCountMagnitude);
         }
 
         public static int CalculateReposts(int repostMagnitude)
         {
-            var baseFollowerCount = (int)MathF.Pow(10, repostMagnitude);
-            var extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() %
-                                     (int)MathF.Pow(10, repostMagnitude - 1);
-            if (repostMagnitude <= 2)
-            {
-                extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
-            }
-
-            return baseFollowerCount + extraFollowerCount;
+            return BasicMagnitude(repostMagnitude);
         }
 
         public static int CalculateLikes(int likeMagnitude)
         {
-            var baseFollowerCount = (int)MathF.Pow(10, likeMagnitude);
-            var extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() %
-                                     (int)MathF.Pow(10, likeMagnitude - 1);
-            if (likeMagnitude <= 2)
+            return BasicMagnitude(likeMagnitude);
+        }
+
+        private static int BasicMagnitude(int magnitude)
+        {
+            if (magnitude == 0)
             {
-                extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
+                return 0;
+            }
+            
+            var baseValue = (int)MathF.Pow(10, magnitude);
+            var extraValue = ClientRandom.CleanSeeded.NextPositiveInt() % baseValue;
+            if (magnitude <= 2)
+            {
+                extraValue = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
             }
 
-            return baseFollowerCount + extraFollowerCount;
+            return baseValue + extraValue;
         }
 
         public static string FormatNumberAsString(int number)
         {
-            var millions = (int)Math.Round(number/1000000f);
-            var thousands = (int)Math.Round(number/1000f);
+            var millions = (int)Math.Round(number / 1000000f);
+            var thousands = (int)Math.Round(number / 1000f);
 
-            if(millions > 0)
+            if (millions > 0)
             {
-                return millions.ToString() + "M";
+                return millions + "M";
             }
-            else if(thousands > 0)
+
+            if (thousands > 0)
             {
-                return thousands.ToString() + "K";
+                return thousands + "K";
             }
+
             return number.ToString();
         }
 
         public static string FormatWithHyperlinks(string rawText, LoopData state)
         {
-            var phase1 = Regex.Replace(rawText, @"@\w+", match=>
+            var phase1 = Regex.Replace(rawText, @"@\w+", match =>
             {
                 var account = state.AllAccounts().FirstOrDefault(a => a.UserNameWithAt == match.Value);
                 return BecomeHyperlink(match, state, account != null);
             });
-            var phase2 = Regex.Replace(phase1, @"#\w+", match=> BecomeHyperlink(match, state, true));
+            var phase2 = Regex.Replace(phase1, @"#\w+", match => BecomeHyperlink(match, state, true));
             return phase2;
         }
 

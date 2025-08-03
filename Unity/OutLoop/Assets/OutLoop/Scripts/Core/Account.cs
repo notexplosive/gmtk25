@@ -39,7 +39,7 @@ namespace OutLoop.Core
                 ProfilePicture = new Addressable<Sprite>($"ProfilePictures/{data.ProfilePicture}.png");
             }
 
-            var followerCount = OutloopHelpers.CalculateFollowers(data.FollowerCountMagnitude);
+            var followerCount = OutLoopHelpers.CalculateFollowers(data.FollowerCountMagnitude);
             FollowerCount = followerCount;
             OriginalData = data;
         }

@@ -14,9 +14,9 @@ namespace OutLoop.Core
             RawText = postData.Text;
             SearchableText = postData.Text;
             Author = postData.AuthorUsername == null ? new Account() : accountTable[postData.AuthorUsername];
-            Likes = OutloopHelpers.CalculateLikes(postData.LikesMagnitude ??
+            Likes = OutLoopHelpers.CalculateLikes(postData.LikesMagnitude ??
                                                   Author.OriginalData.FollowerCountMagnitude);
-            Reposts = OutloopHelpers.CalculateReposts(postData.RepostsMagnitude ??
+            Reposts = OutLoopHelpers.CalculateReposts(postData.RepostsMagnitude ??
                                                       Author.OriginalData.FollowerCountMagnitude);
             AttachedImage = string.IsNullOrWhiteSpace(postData.ImagePath) ? null : new Addressable<Sprite>($"Media/{postData.ImagePath}.png");
         }
@@ -24,7 +24,7 @@ namespace OutLoop.Core
         public string RawText { get; }
         public int Reposts { get; set; }
         public int Likes { get; set; }
-        public string LikesFormatted => OutloopHelpers.FormatNumberAsString(Likes);
+        public string LikesFormatted => OutLoopHelpers.FormatNumberAsString(Likes);
         public Account Author { get; }
         public string SearchableText { get; }
         public PostData OriginalData { get; }
@@ -35,7 +35,7 @@ namespace OutLoop.Core
 
         public string FormattedText(LoopData state)
         {
-            return OutloopHelpers.FormatWithHyperlinks(RawText, state);
+            return OutLoopHelpers.FormatWithHyperlinks(RawText, state);
         }
     }
 }

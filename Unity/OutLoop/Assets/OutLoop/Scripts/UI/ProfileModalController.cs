@@ -75,7 +75,7 @@ namespace OutLoop.UI
 
             if (_followerCountTextMesh != null)
             {
-                var followerCount = OutloopHelpers.FormatNumberAsString(account.FollowerCount);
+                var followerCount = OutLoopHelpers.FormatNumberAsString(account.FollowerCount);
                 _followerCountTextMesh.text = $"<style=Username>{followerCount} Followers</style>";
             }
 

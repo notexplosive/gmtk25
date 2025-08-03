@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using OutLoop.Data;
-using UnityEngine;
 
 namespace OutLoop.Core
 {
@@ -82,7 +80,15 @@ namespace OutLoop.Core
                 foreach (var childPost in topLevelPost.AllChildPosts())
                 {
                     _postToOwner[childPost] = topLevelPost;
-                    var hashTagMatches = Regex.Matches(childPost.RawText, @"#\w+");
+                }
+
+                foreach (var text in topLevelPost.AllChildPosts()
+                             .Select(a => a.RawText)
+                             .Concat(_allAccounts.Select(a => a.Bio))
+                             .Concat(_allAccounts.Select(a => a.DisplayName)
+                             ))
+                {
+                    var hashTagMatches = Regex.Matches(text, @"#\w+");
                     foreach (var match in hashTagMatches)
                     {
                         _hashTagSeenStatus[match.ToString()] = false;
@@ -283,17 +289,17 @@ namespace OutLoop.Core
             if (_pendingBlank != null)
             {
                 _pendingBlank.GivenAnswer = text;
-                
+
                 if (bankType != _pendingBlank.AnswerType)
                 {
                     return;
                 }
-                
+
                 if (_pendingBlank.ParentPuzzle.IsSolved())
                 {
                     SolvedPuzzle?.Invoke(_pendingBlank.ParentPuzzle);
                 }
-                
+
                 BlankFilled?.Invoke(_pendingBlank.ParentPuzzle);
             }
         }
@@ -337,6 +343,14 @@ namespace OutLoop.Core
                     return _hashTagSeenStatus.Count();
                 default:
                     return 0;
+            }
+        }
+
+        public IEnumerable<string> AllBankWords()
+        {
+            foreach (var x in _hashTagSeenStatus.Keys.ToList())
+            {
+                yield return x;
             }
         }
 

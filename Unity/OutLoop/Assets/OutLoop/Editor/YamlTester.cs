@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using OutLoop.Core;
 using OutLoop.Data;
 using UnityEditor;
@@ -9,6 +10,19 @@ namespace OutLoop.Editor.Editor
 {
     public static class YamlTester
     {
+        [MenuItem("OutLoop/TestMagnitudes")]
+        public static void TestMagnitudes()
+        {
+            var stringBuilder = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                stringBuilder.AppendLine($"-- BASE VALUE: {i} --");
+                stringBuilder.AppendLine("Followers: " + OutLoopHelpers.CalculateFollowers(i));
+                stringBuilder.AppendLine("Likes: " + OutLoopHelpers.CalculateLikes(i));
+            }
+            Debug.Log(stringBuilder);
+        }
+        
         [MenuItem("OutLoop/RunYaml")]
         public static void RunYaml()
         {

@@ -11,13 +11,34 @@ namespace OutLoop.UI
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class BankTextContent : MonoBehaviour, IPointerClickHandler
     {
+        public const int PageSize = 10;
+
         [SerializeField]
         private LoopDataRelay? _relay;
+
+        [SerializeField]
+        private TextMeshProUGUI? _pageNumberTextMesh;
 
         private readonly string _rawText = string.Empty;
 
         private readonly CachedComponent<TMP_Text> _textMesh = new();
         private AnswerType _bankType;
+        private int _pageNumber;
+
+        public int PageNumber
+        {
+            get => _pageNumber;
+            set
+            {
+                _pageNumber = value;
+                if (_pageNumberTextMesh != null)
+                {
+                    _pageNumberTextMesh.text = (_pageNumber + 1).ToString();
+                }
+
+                UpdateText();
+            }
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -35,17 +56,29 @@ namespace OutLoop.UI
             }
         }
 
-        public void Add(AnswerType bankType, string word)
+        public void Setup(AnswerType bankType)
+        {
+            _bankType = bankType;
+            UpdateText();
+        }
+
+        public void UpdateText()
         {
             if (_relay == null)
             {
                 return;
             }
 
-            _bankType = bankType;
-            var words = _relay.State().GetWordsFromBank(bankType);
+            var words = _relay.State().GetWordsFromBank(_bankType);
             words.Sort();
-            _textMesh.Get(this).text = string.Join("  ", words.Select(text => $"<link={text}>" + text + "</link>"));
+            if (_pageNumber > 0)
+            {
+                words.RemoveRange(0, PageSize * _pageNumber);
+            }
+
+            _textMesh.Get(this).text =
+                string.Join("  ", words.Take(PageSize).Select(text => $"<link={text}>" + text + "</link>"));
+            _textMesh.Get(this).ForceMeshUpdate();
         }
     }
 }
