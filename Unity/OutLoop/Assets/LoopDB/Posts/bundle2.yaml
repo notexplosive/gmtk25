@@ -205,6 +205,7 @@
 - original_post:
     author: TronixLive
     text: 'Announcing…the #SwazzleChallenge! I''m partnering with the Healing Hearts Society to raise money for heart health. The rules are simple: Donate to charity, upload your craziest explosion video, and get SWAZZLED!'
+    image: thumbnail_swazzle_challenge
   thread:
     - author: TronixLive
       text: 'The best #SwazzleChallenge video and the biggest donator will get flown to Los Angeles and film an epic collab where we blow up a Rolls-Royce! Tronix Troop, you guys got this'
@@ -276,7 +277,7 @@
 - original_post:
     author: TheInkubus
     likes: 5
-    text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of @CondorsOfAvalon! Read here: <broken link>'
+    text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of #CondorsOfAvalon! Read here: <broken link>'
     # TODO peter smalls profile with tabloid stuff on it
   comments:
     - text: lol such a diva
