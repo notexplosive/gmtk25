@@ -132,11 +132,20 @@
 
 - original_post:
     author: HealingHeartsSociety
+    text: We strongly condemn the attacks to our staff and volunteers both online and in-person. Hatred has no place in healing hearts.
+- original_post:
+    author: HealingHeartsSociety
     text: Thank you so much @TronixLive!
     linked_post_id: tronix_50k
 - original_post:
     author: HealingHeartsSociety
+    linked_post_id: sen_swazzle
+- original_post:
+    author: HealingHeartsSociety
     text: If you are having a heart attack, call your local emergency line. Remember, the signs are chest discomfort, pain in the upper body, shortness of breath, sweating, nausea, and dizziness.
+- original_post:
+    author: HealingHeartsSociety
+    linked_post_id: helen_swazzle
 - original_post:
     author: HealingHeartsSociety
     text: 'Keep a healthy heart: exercise regularly, eat nutritious foods, and get 7-8 hours of sleep every night.'
