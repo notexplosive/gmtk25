@@ -6,7 +6,7 @@ namespace OutLoop.Core
     public interface IPuzzleWord
     {
         public string RenderedWordRaw();
-        public string RenderedWordWithFormatting();
+        public string RenderedWordWithFormatting(bool selected);
     }
 
     public class PuzzleWord : IPuzzleWord
@@ -23,7 +23,7 @@ namespace OutLoop.Core
             return Word;
         }
 
-        public string RenderedWordWithFormatting()
+        public string RenderedWordWithFormatting(bool selected)
         {
             return Word;
         }
@@ -68,9 +68,9 @@ namespace OutLoop.Core
             return GivenAnswer;
         }
 
-        public string RenderedWordWithFormatting()
+        public string RenderedWordWithFormatting(bool selected)
         {
-            return $"<link={_index}><b><style=Hyperlink>" + RenderedWordRaw() + "</style></b></link>";
+            return $"<link={_index}><b><style={(selected? "Hyperlink" : "HyperlinkSeen")}>" + RenderedWordRaw() + "</style></b></link>";
         }
 
         public bool IsCorrect()

@@ -73,12 +73,11 @@ namespace OutLoop.UI
                 if (int.TryParse(linkText, out var result))
                 {
                     _relay.State().SetPendingBlank(_puzzle.Blanks[result]);
+                    UpdateText(result);
                 }
-
-                UpdateHighlight(linkInfo);
             }
         }
-
+        
         private void UpdateHighlight(TMP_LinkInfo linkInfo)
         {
             var textMeshPro = _textMesh.Get(this);
@@ -140,10 +139,10 @@ namespace OutLoop.UI
             return null;
         }
 
-        public void SetText(Puzzle puzzle)
+        public void SetupForPuzzle(Puzzle puzzle)
         {
             _puzzle = puzzle;
-            UpdateText(puzzle);
+            UpdateText(null);
 
             if (_relay != null)
             {
@@ -156,7 +155,7 @@ namespace OutLoop.UI
         {
             if (_puzzle != null)
             {
-                UpdateText(_puzzle);
+                UpdateText(null);
             }
 
             if (_relay != null)
@@ -165,9 +164,12 @@ namespace OutLoop.UI
             }
         }
 
-        private void UpdateText(Puzzle puzzle)
+        private void UpdateText(int? selectedIndex)
         {
-            _textMesh.Get(this).text = puzzle.UnsolvedTextFormatted();
+            if (_puzzle != null)
+            {
+                _textMesh.Get(this).text = _puzzle.UnsolvedTextFormatted(selectedIndex);
+            }
         }
     }
 }

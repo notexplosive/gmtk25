@@ -110,9 +110,20 @@ namespace OutLoop.Core
             return string.Join(" ", _words.Select(a => a.RenderedWordRaw()));
         }
 
-        public string UnsolvedTextFormatted()
+        public string UnsolvedTextFormatted(int? selectedIndex)
         {
-            return string.Join(" ", _words.Select(a => a.RenderedWordWithFormatting()));
+            var list = new List<string>();
+            var linkIndex = 0;
+            foreach (var word in _words)
+            {
+                list.Add(word.RenderedWordWithFormatting(linkIndex == selectedIndex));
+                if (word is PuzzleBlank)
+                {
+                    linkIndex++;
+                }
+            }
+
+            return string.Join(" ", list);
         }
 
         public bool IsSolved()

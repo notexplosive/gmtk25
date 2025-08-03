@@ -1,4 +1,5 @@
-﻿using OutLoop.Core;
+﻿using System;
+using OutLoop.Core;
 using SecretPlan.UI;
 using TMPro;
 using UnityEngine;
@@ -23,10 +24,13 @@ namespace OutLoop.UI
         private Image? _profilePicture;
 
         [SerializeField]
-        private GameObject? _unreadBadge;
+        private Image? _unreadBadge;
 
         [SerializeField]
         private SecretButton? _button;
+
+        private bool _isSolved;
+
 
         public void Populate(DirectMessage message)
         {
@@ -45,11 +49,6 @@ namespace OutLoop.UI
                 _profilePicture.sprite = message.Sender.ProfilePicture.ForceLoadNow(this);
             }
 
-            if (_unreadBadge != null && _relay != null)
-            {
-                _unreadBadge.SetActive(_relay.State().IsMessageRead(message));
-            }
-
             if (_relay == null)
             {
                 return;
@@ -58,6 +57,34 @@ namespace OutLoop.UI
             if (_button != null)
             {
                 _button.Clicked += () => _relay.State().RequestConversationModal(message.Sender);
+            }
+            
+            if (_unreadBadge != null && _relay != null)
+            {
+                _relay.State().MessageMarkedAsRead += _ =>
+                {
+                    if (_isSolved)
+                    {
+                        return;
+                    }
+                    
+                    _unreadBadge.gameObject.SetActive(!_relay.State().IsMessageRead(message));
+                };
+                
+                _relay.State().SolvedPuzzle += puzzle =>
+                {
+                    if (puzzle.Sender == message.Sender)
+                    {
+                        _unreadBadge.gameObject.SetActive(true);
+                        _unreadBadge.color = Color.green;
+                        if (ColorUtility.TryParseHtmlString("#9CD7A2", out var color))
+                        {
+                            _unreadBadge.color = color;
+                        }
+
+                        _isSolved = true;
+                    }
+                };
             }
         }
     }

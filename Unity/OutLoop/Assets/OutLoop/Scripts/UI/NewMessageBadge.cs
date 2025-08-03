@@ -76,7 +76,11 @@ namespace OutLoop.UI
             }
 
             var loopData = _relay.State();
-            var unreadMessageCount = loopData.AllMessages().Count(a => !loopData.IsMessageRead(a));
+            var unreadMessageCount = loopData.AllMessages()
+                .Where(a=> !loopData.IsMessageRead(a))
+                .Select(a=>a.Sender)
+                .Distinct()
+                .Count();
             if (unreadMessageCount > 0)
             {
                 if (_number != null)

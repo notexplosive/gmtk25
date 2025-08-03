@@ -152,7 +152,7 @@ namespace OutLoop.UI
 
             if (puzzle.IsSolved())
             {
-                SetHintText("<color=green>Solved!</color>");
+                SetHintText("<color=#75FF82>Solved!</color>");
             }
         }
 
@@ -198,7 +198,7 @@ namespace OutLoop.UI
                 return;
             }
 
-            _puzzlePhraseTextController.SetText(currentPuzzle);
+            _puzzlePhraseTextController.SetupForPuzzle(currentPuzzle);
             CheckSolution(currentPuzzle);
         }
     }

@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 100
+  m_MinWidth: 50
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   _latestMessageTextMesh: {fileID: 5676546354119349915}
   _senderTextMesh: {fileID: 4686863237263909875}
   _profilePicture: {fileID: 7953729883491748023}
-  _unreadBadge: {fileID: 8883441875323617255}
+  _unreadBadge: {fileID: 785993189441987358}
   _button: {fileID: 4331667738113104005}
 --- !u!114 &3088784829167283013
 MonoBehaviour:
