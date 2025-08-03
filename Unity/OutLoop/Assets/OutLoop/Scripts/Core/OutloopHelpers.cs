@@ -8,15 +8,15 @@ namespace OutLoop.Core
     {
         public static int CalculateFollowers(int followerCountMagnitude)
         {
-            var baseFollowerCount = (int)MathF.Pow(10, followerCountMagnitude);
-            var extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() %
-                                     (int)MathF.Pow(10, followerCountMagnitude - 1);
-            if (followerCountMagnitude <= 2)
+            var res = 0;
+            for(var curMag = 0; curMag < followerCountMagnitude+1;curMag++)
             {
-                extraFollowerCount = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
+                var factor = (int)MathF.Pow(10, curMag);
+                var val = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
+                res += (factor * val)
             }
 
-            return baseFollowerCount + extraFollowerCount;
+            return res;
         }
 
         public static int CalculateReposts(int repostMagnitude)
