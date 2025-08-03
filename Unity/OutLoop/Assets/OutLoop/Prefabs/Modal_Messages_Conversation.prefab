@@ -499,6 +499,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 1581925847918980283}
+  _puzzleSolvedSound: {fileID: 8300000, guid: 97dd143219a47914fbe4bad0ce72f332, type: 3}
+  _puzzleAlmostSolvedSound: {fileID: 8300000, guid: 9783a7b2fcba56547bd8778178652fea, type: 3}
+  _puzzleWrongSound: {fileID: 8300000, guid: ec5b2b508da085547ade0ab915836a95, type: 3}
   _relay: {fileID: 11400000, guid: 6aed0919bda2dcc4480d15247a080c41, type: 2}
   _profilePicture: {fileID: 4111748646793278732}
   _usernameTextMesh: {fileID: 7822829303872379703}

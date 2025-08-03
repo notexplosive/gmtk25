@@ -11,6 +11,15 @@ namespace OutLoop.UI
     public class ConversationModalController : ModalController
     {
         [SerializeField]
+        private AudioClip? _puzzleSolvedSound;
+        
+        [SerializeField]
+        private AudioClip? _puzzleAlmostSolvedSound;
+        
+        [SerializeField]
+        private AudioClip? _puzzleWrongSound;
+        
+        [SerializeField]
         private LoopDataRelay? _relay;
 
         [SerializeField]
@@ -144,15 +153,18 @@ namespace OutLoop.UI
             if (puzzle.NumberIncorrect() <= 2)
             {
                 SetHintText("<color=yellow>Close!</color> 2 or fewer answers incorrect.");
+                SoundService.Instance.PlaySound(_puzzleAlmostSolvedSound);
             }
             else
             {
                 SetHintText("<color=red>Incorrect!</color> Try again.");
+                SoundService.Instance.PlaySound(_puzzleWrongSound);
             }
 
             if (puzzle.IsSolved())
             {
                 SetHintText("<color=#75FF82>Solved!</color>");
+                SoundService.Instance.PlaySound(_puzzleSolvedSound);
             }
         }
 

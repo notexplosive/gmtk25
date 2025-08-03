@@ -22,6 +22,12 @@ namespace OutLoop.UI
         private AudioClip? _swipeOver;
 
         [SerializeField]
+        private AudioClip? _blankFilledSound;
+        
+        [SerializeField]
+        private AudioClip? _blankSelectedSound;
+        
+        [SerializeField]
         private AppButtonRow? _appButtonRow;
 
         [SerializeField]
@@ -95,15 +101,28 @@ namespace OutLoop.UI
 
             loopData.WordAddedToBank += (_, _) => { SoundService.Instance.PlaySound(_addClueToBankSound); };
 
+            loopData.MessageReceived += (_) =>
+            {
+                SoundService.Instance.PlaySound(_receiveDmSound);
+            };
+            
+            loopData.BlankFilled += (_) =>
+            {
+                SoundService.Instance.PlaySound(_blankFilledSound);
+            };
+
+            loopData.PendingBlankSet += (_) =>
+            {
+                SoundService.Instance.PlaySound(_blankSelectedSound);
+            };
+            
             loopData.PuzzleTriggered += puzzle =>
             {
                 foreach (var message in puzzle.QuestionMessages)
                 {
                     loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
                 }
-
-                SoundService.Instance.PlaySound(_addClueToBankSound);
-
+                
                 loopData.StartPuzzle(puzzle);
             };
 
