@@ -40,7 +40,7 @@
     - What happened in Condors of Avalon?
   triggers:
     - '#SeasonFinale'
-    - 'CondorsOfAvalon'
+    - '#CondorsOfAvalon'
 # - answer: 'Originally the calls to #BoycottNubi were because of the #potato exploding video. Although that video was later revealed to be #fake, it led to an inquiry into @Nubi Food that discovered E. Coli certain products.'
 #   sender: salt_peter
 #   question:
