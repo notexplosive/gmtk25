@@ -67,10 +67,6 @@ SusanneSmith:
     display_name: "Susanne"
     bio: ""
     profile_picture: "pfp_susanne"
-ToneDefont:
-    user_name: ToneDefont
-    display_name: ""
-    bio: ""
 TruePatriot:
     user_name: TruePatriot
     display_name: "SUPPORT OUR TROOPS"
@@ -82,7 +78,7 @@ TruthRevealed:
     bio: Revealing the pernicious evil that lies in the hearts of man.
 VasylinFan:
     user_name: VasylinFan
-    display_name: "Princess Vasylin x Lord DeFontaigne 4EVER #VasDef"
+    display_name: "#PrincessVasylin x #LordDeFontaigne 4EVER #VasDef"
     bio: "Just a fan of #CondorsOfAvalon"
 catboyslim:
     user_name: catboyslim

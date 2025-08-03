@@ -1,3 +1,21 @@
+- answer: 'Popular influencer Tronix, whose handle is @TronixLive, created the #SwazzleChallenge to raise funds for @HealingHeartsSociety. However, he was #Cancelled when @HealingHeartsSociety was revealed to be a #scam.'
+  sender: SusanneSmith
+  question:
+    - Hello, can you help me understand who is Tronix?
+    - My son is a big fan of him but I heard he might be bad news.
+    - Do you know why he is controversial?
+  triggers:
+    - '@TronixLive'
+    - '#SwazzleChallenge'
+- answer: 'Condors of Avalon is trending because it recently aired its #SeasonFinale. In the episode, the character #LordDeFontaigne, played by @SirPeterSmalls, dies.'
+  sender: JennyK
+  question:
+    - Hello.
+    - Do you know anything about Condors of Avalon?
+    - People are posting about it non stop and I have no idea why.
+  triggers:
+    - '#CondorsOfAvalon'
+    - '@COA_Official'
 - answer: 'There is a #LoopOutage because of @TronixLive'
   sender: 'bestfriendo477'
   question:
