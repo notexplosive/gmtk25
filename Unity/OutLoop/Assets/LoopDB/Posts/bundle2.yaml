@@ -35,7 +35,7 @@
 - original_post:
     author: justice_leek
     post_id: justice_leek_nubi_boycott
-    text: 'REMEMBER TO BOYCOTT @Nubi! #NubiBoycott #Cancelled'
+    text: 'REMEMBER TO BOYCOTT @Nubi! #BoycottNubi #Cancelled'
     image: boycottnubi
     #image: "TODO informatic about all Nubi products to boycott"
   comments:
@@ -229,6 +229,7 @@
     author: TronixLive
     text: 'Announcing…the #SwazzleChallenge! I''m partnering with the Healing Hearts Society to raise money for heart health. The rules are simple: Donate to charity, upload your craziest explosion video, and get SWAZZLED!'
     image: thumbnail_swazzle_challenge
+    post_id: tronix_swazzle
   thread:
     - author: TronixLive
       text: 'The best #SwazzleChallenge video and the biggest donator will get flown to Los Angeles and film an epic collab where we blow up a Rolls-Royce! Tronix Troop, you guys got this'
@@ -301,7 +302,7 @@
     author: TheInkubus
     likes: 5
     text: 'SHOCKING! @SirPeterSmalls THROWS TEMPER TANTRUM ON SET of #CondorsOfAvalon! Read here: <broken link>'
-    # TODO peter smalls profile with tabloid stuff on it
+    post_id: inkubus_smalls
   comments:
     - text: lol such a diva
     - text: "I heard he's awful to work with"
@@ -410,6 +411,8 @@
     - text: Hilarious!
     - text: So funny!
     - text: So true!
+    - author: MildredJones
+      text: Hello
     - text: Hilarious!
 - original_post:
     author: JosephLeeVC
@@ -459,6 +462,9 @@
 - original_post:
     author: SwoleBrian
     text: "Swole Brian's Bicep Supplements Out Now on @Nubi Shop: <broken link>"
+  comments:
+    - author: MildredJones
+      text: Cannot buy
 - original_post:
     author: SwoleBrian
     text: "I'd rather die than watch that nancy-pancy Condors of Avalon swaz"
@@ -546,6 +552,8 @@
       text: "🔥🔥🔥"
     - author: helenloveslatte
       text: "Thank you @JosephLeeVC!"
+    - author: SusanneSmith
+      text: Miss Helen, I am writing as a concerned mother and a woman. You are an inspiration to young girls everywhere. Do you think this is appropriate? What if my son sees this?
 - original_post:
     author: helenloveslatte
     text: 'Levitia. #vacation #europe #summer'
