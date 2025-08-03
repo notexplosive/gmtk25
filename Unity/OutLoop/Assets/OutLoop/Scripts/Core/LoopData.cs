@@ -23,6 +23,7 @@ namespace OutLoop.Core
         private readonly List<TopLevelPost> _timelinePosts = new();
         private readonly List<Puzzle> _untriggeredPuzzles = new();
         private PageType _currentPage;
+        private PuzzleBlank? _pendingBlank;
 
         public LoopData()
         {
@@ -112,7 +113,8 @@ namespace OutLoop.Core
         public IEnumerable<TopLevelPost> TimelinePosts => _timelinePosts;
         public IEnumerable<IPost> BookmarkedPosts => _bookmarkedPosts;
 
-        public List<Puzzle> InProgressPuzzle { get; } = new();
+        public List<Puzzle> InProgressPuzzles { get; } = new();
+        public IEnumerable<Puzzle> AllPuzzles => _allPuzzles;
 
         public event Action<IPost>? BookmarkAdded;
         public event Action<IPost>? BookmarkRemoved;
@@ -276,10 +278,28 @@ namespace OutLoop.Core
             return _postToOwner.GetValueOrDefault(post.RootPost);
         }
 
-        public void OnSelectedBankWord(string text)
+        public void OnSelectedBankWord(AnswerType bankType, string text)
         {
-            Debug.Log($"Clicked on text {text}");
+            if (_pendingBlank != null)
+            {
+                _pendingBlank.GivenAnswer = text;
+                
+                if (bankType != _pendingBlank.AnswerType)
+                {
+                    return;
+                }
+                
+                if (_pendingBlank.ParentPuzzle.IsSolved())
+                {
+                    SolvedPuzzle?.Invoke(_pendingBlank.ParentPuzzle);
+                }
+                
+                BlankFilled?.Invoke(_pendingBlank.ParentPuzzle);
+            }
         }
+
+        public event Action<Puzzle>? SolvedPuzzle;
+        public event Action<Puzzle>? BlankFilled;
 
         public List<string> GetWordsFromBank(AnswerType bankType)
         {
@@ -323,7 +343,7 @@ namespace OutLoop.Core
         public void StartPuzzle(Puzzle puzzle)
         {
             PuzzleStarted?.Invoke(puzzle);
-            InProgressPuzzle.Add(puzzle);
+            InProgressPuzzles.Add(puzzle);
         }
 
         public event Action<Puzzle>? PuzzleStarted;
@@ -331,6 +351,20 @@ namespace OutLoop.Core
         public IEnumerable<DirectMessage> GetDmConversationWith(Account account)
         {
             return AllMessages().Where(a => a.Sender == account);
+        }
+
+        public void SetPendingBlank(PuzzleBlank puzzleBlank)
+        {
+            _pendingBlank = puzzleBlank;
+            PendingBlankSet?.Invoke(puzzleBlank);
+        }
+
+        public event Action<PuzzleBlank?>? PendingBlankSet;
+
+        public void ClearPendingBlank()
+        {
+            _pendingBlank = null;
+            PendingBlankSet?.Invoke(null);
         }
     }
 }

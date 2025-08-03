@@ -17,6 +17,7 @@ namespace OutLoop.UI
         private readonly string _rawText = string.Empty;
 
         private readonly CachedComponent<TMP_Text> _textMesh = new();
+        private AnswerType _bankType;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -29,7 +30,7 @@ namespace OutLoop.UI
 
                 if (_relay != null)
                 {
-                    _relay.State().OnSelectedBankWord(linkText);
+                    _relay.State().OnSelectedBankWord(_bankType, linkText);
                 }
             }
         }
@@ -41,6 +42,7 @@ namespace OutLoop.UI
                 return;
             }
 
+            _bankType = bankType;
             var words = _relay.State().GetWordsFromBank(bankType);
             words.Sort();
             _textMesh.Get(this).text = string.Join("  ", words.Select(text => $"<link={text}>" + text + "</link>"));

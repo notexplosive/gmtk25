@@ -23,18 +23,3 @@
     - I really don't want to give up my Nubi TV subscription :/
   triggers:
     - '#NubiBoycott'
-- answer: 'There is a #LoopOutage because of @TronixLive'
-  sender: 'bestfriendo477'
-  question:
-  - hey
-  - I heard everyone was mad at some influencer for... something??
-  - idk what's going on
-  - can you explain it to me?
-  triggers:
-  - '#LoopOutage'
-- answer: "Some other #puzzle that I'm too #lazy to write"
-  sender: 'extremely_offline'
-  question:
-  - another message
-  triggers:
-  - '@TronixLive'

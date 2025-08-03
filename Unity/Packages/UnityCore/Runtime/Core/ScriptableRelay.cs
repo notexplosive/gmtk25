@@ -30,6 +30,13 @@ namespace SecretPlan.Core
 
         public TState State()
         {
+            if (!Application.isPlaying)
+            {
+                // If we're not currently playing, just return a state
+                // (should also apply if we're in the middle of quitting)
+                return CreateState();
+            }
+            
             if (_proxyObject == null)
             {
                 _cachedState = CreateState();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExTween;
+using ExTween.Unity;
 using OutLoop.Core;
 using OutLoop.Data;
 using TMPro;
@@ -20,8 +21,18 @@ namespace OutLoop.UI
         [SerializeField]
         private BankTextContent? _bankText;
 
+        [SerializeField]
+        private RectTransform? _highlightIndicator;
+
+        private readonly SequenceTween _tween = new();
+
         private void Awake()
         {
+            if (_highlightIndicator != null)
+            {
+                _highlightIndicator.gameObject.SetActive(false);
+            }
+
             if (_titleText != null)
             {
                 _titleText.text = GetTitleForBankType();
@@ -35,7 +46,56 @@ namespace OutLoop.UI
                 {
                     gameObject.SetActive(false);
                 }
+
+                _relay.State().PendingBlankSet += OnPendingBlankSet;
             }
+        }
+
+        private void Update()
+        {
+            _tween.Update(Time.deltaTime);
+        }
+
+        private void OnPendingBlankSet(PuzzleBlank? puzzleBlank)
+        {
+            if (_highlightIndicator == null)
+            {
+                return;
+            }
+
+            if (puzzleBlank == null)
+            {
+                _highlightIndicator.gameObject.SetActive(false);
+                return;
+            }
+
+            if (puzzleBlank.AnswerType == _bankType)
+            {
+                BumpHighlightIndicator();
+            }
+            else
+            {
+                _highlightIndicator.gameObject.SetActive(false);
+            }
+        }
+
+        private void BumpHighlightIndicator()
+        {
+            if (_highlightIndicator == null)
+            {
+                return;
+            }
+
+            _highlightIndicator.gameObject.SetActive(true);
+
+            var scale = _highlightIndicator.transform.GetTweenableLocalScale();
+            _tween
+                .Add(scale.CallbackSetTo(new Vector3(1f, 1f, 1f)))
+                .Add(scale.TweenTo(new Vector3(1.2f, 1.2f, 1.2f), 0.15f, Ease.QuadFastSlow))
+                .Add(scale.TweenTo(new Vector3(1f, 1f, 1f), 0.15f, Ease.QuadSlowFast))
+                .Add(scale.TweenTo(new Vector3(1.1f, 1.1f, 1.1f), 0.10f, Ease.QuadFastSlow))
+                .Add(scale.TweenTo(new Vector3(1f, 1f, 1f), 0.10f, Ease.QuadSlowFast))
+                ;
         }
 
         private void AppendToBank(AnswerType answerType, string word)
@@ -44,7 +104,7 @@ namespace OutLoop.UI
             {
                 _titleText.text = GetTitleForBankType();
             }
-            
+
             if (answerType != _bankType)
             {
                 return;
@@ -56,7 +116,7 @@ namespace OutLoop.UI
             }
 
             gameObject.SetActive(true);
-            _bankText.Add(_bankType,word);
+            _bankText.Add(_bankType, word);
         }
 
         private string GetTitleForBankType()
@@ -65,15 +125,17 @@ namespace OutLoop.UI
             {
                 return "???";
             }
-            
+
             if (_bankType == AnswerType.Hashtag)
             {
-                return $"#tags ({_relay.State().FoundBankCount(AnswerType.Hashtag)}/{_relay.State().TotalBankCount(AnswerType.Hashtag)})";
+                return
+                    $"#tags ({_relay.State().FoundBankCount(AnswerType.Hashtag)}/{_relay.State().TotalBankCount(AnswerType.Hashtag)})";
             }
 
             if (_bankType == AnswerType.Username)
             {
-                return $"@users ({_relay.State().FoundBankCount(AnswerType.Username)}/{_relay.State().TotalBankCount(AnswerType.Username)})";
+                return
+                    $"@users ({_relay.State().FoundBankCount(AnswerType.Username)}/{_relay.State().TotalBankCount(AnswerType.Username)})";
             }
 
             return "???";

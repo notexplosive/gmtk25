@@ -48,6 +48,11 @@ namespace OutLoop.Editor.Editor
 
             var data = LoopDataRelay.CreateLoopDataFromFiles();
             Debug.Log("Finished parsing yaml");
+
+            foreach (var puzzle in data.AllPuzzles)
+            {
+                Debug.Log(puzzle.UnsolvedTextRaw());
+            }
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿using OutLoop.Core;
+﻿using System.Collections;
+using System.Linq;
+using OutLoop.Core;
 using SecretPlan.Core;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +31,35 @@ namespace OutLoop.UI
         [SerializeField]
         private ScrollRect? _scrollRect;
 
+        [SerializeField]
+        private PuzzlePhraseTextController? _puzzlePhraseTextController;
+
+        [SerializeField]
+        private TextMeshProUGUI? _hintTextMesh;
+
+        [SerializeField]
+        private Transform? _hintArea;
+
         public Account? Sender { get; private set; }
+
+        private void OnEnable()
+        {
+            if (_hintArea != null)
+            {
+                _hintArea.gameObject.SetActive(false);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (_relay == null)
+            {
+                return;
+            }
+
+            _relay.State().PuzzleStarted -= OnPuzzleStarted;
+            _relay.State().BlankFilled -= OnBlankFilled;
+        }
 
 
         public void PopulateWithProfile(Account account)
@@ -67,13 +98,95 @@ namespace OutLoop.UI
                     var instance = SpawnUtility.Spawn(_directMessageFromSenderPrefab,
                         new InstantiateParameters { parent = _contentRoot });
                     instance.Populate(message);
+
+                    _relay.State().MarkMessageAsRead(message);
+                }
+            }
+
+
+            // scroll to bottom
+            IEnumerator WaitAFrameAndThenScroll()
+            {
+                Canvas.ForceUpdateCanvases();
+                yield return new WaitForEndOfFrame();
+                Canvas.ForceUpdateCanvases();
+                yield return new WaitForEndOfFrame();
+                if (_scrollRect != null)
+                {
+                    _scrollRect.verticalNormalizedPosition = 0f;
+                }
+            }
+
+            StartCoroutine(WaitAFrameAndThenScroll());
+
+            ShowCurrentPuzzleIfApplicable();
+            _relay.State().PuzzleStarted += OnPuzzleStarted;
+            _relay.State().BlankFilled += OnBlankFilled;
+        }
+
+        private void OnBlankFilled(Puzzle puzzle)
+        {
+            if (_relay == null)
+            {
+                return;
+            }
+
+            if (puzzle.AllBlanksFilled())
+            {
+                if (puzzle.NumberIncorrect() <= 2)
+                {
+                    SetHintText("<color=yellow>Close!</color> There are 1-2 things wrong.");
+                }
+                else
+                {
+                    SetHintText("<color=red>Incorrect!</color> Try again.");
                 }
             }
             
-            // scroll to bottom
-            if (_scrollRect != null)
+            if (puzzle.IsSolved())
             {
-                _scrollRect.verticalNormalizedPosition = 1f;
+                SetHintText("<color=green>Solved!</color>");
+            }
+        }
+
+        private void SetHintText(string text)
+        {
+            if (_hintArea == null)
+            {
+                return;
+            }
+
+            if (_hintTextMesh == null)
+            {
+                return;
+            }
+
+            _hintArea.gameObject.SetActive(true);
+            _hintTextMesh.text = text;
+        }
+
+        private void OnPuzzleStarted(Puzzle puzzle)
+        {
+            if (puzzle.Sender == Sender)
+            {
+                ShowCurrentPuzzleIfApplicable();
+            }
+        }
+
+        private void ShowCurrentPuzzleIfApplicable()
+        {
+            if (_relay == null)
+            {
+                return;
+            }
+
+            var currentPuzzle = _relay.State().InProgressPuzzles.FirstOrDefault(a => a.Sender == Sender);
+            if (_puzzlePhraseTextController != null)
+            {
+                if (currentPuzzle != null)
+                {
+                    _puzzlePhraseTextController.SetText(currentPuzzle);
+                }
             }
         }
     }
