@@ -1,45 +1,46 @@
-- answer: "@luclferd, the CEO of @Loop insists that posts on this app are called ''Takes.''"
+- answer: "@luclferd, the CEO of @Loop insists that posts on this app are called ''takes.''"
   sender: grass_toucher
   question:
     - Hey!! I finally got around to creating a @Loop profile.
-    - Why do people on this app keep saying "take" in this awkward way?
+    - I keep seeing the word "take" -- what's with that?
   triggers: []
 - answer: "There's a #LoopOutage so a bunch of features are broken on the @Loop app."
   sender: ExtremelyOffline
   question:
-    - been a while since i've used this app .. where is the post button??
-    - is the app broken?
+    - hey uhh... been a while since i've been on this app
+    - why can't i post?
   triggers:
   - '@Loop'
-- answer: "@potatolover23 posted a video of a #potato exploding in the microwave. It became viral when influencer @TronixLive shared it."
+- answer: "@potatolover23 posted a video of a #potato exploding in the microwave. Influencer @TronixLive shared it, making it go viral."
   sender: thing_understander
   question:
     - ok... i give up
     - wtf is the deal with all these potato posts?
   triggers:
     - '#potato'
-- answer: '@TronixLive created the #SwazzleChallenge to raise funds for @HealingHeartsSociety. He got cancelled when the organization was exposed as a #scam.'
+- answer: 'He started the #SwazzleChallenge to raise funds for @HealingHeartsSociety, which was exposed as a #scam.'
   sender: iForgor
   question:
-    - I heard that guy got cancelled again lmao.
-    - What did Tronix do this time?
+    - my boy got cancelled again??
+    - what did Tronix do this time?
   triggers:
     - '@TronixLive'
-- answer: '#VasDef is the ship name of #PrincessVasylin (played by Christina McPhee), and #LordDeFontaigne (@SirPeterSmalls) from the show #CondorsOfAvalon.'
+- answer: '#VasDef is the ship name from the show #CondorsOfAvalon. It consists of #PrincessVasylin (Vas) and #LordDeFontaigne (Def).'
   sender: rootysnooty
   question:
     - "i keep seeing #VasDef in my feed"
     - "im afraid to search it"
-    - "what is it?"
+    - "what is it VasDef?"
   triggers:
     - '#LordDeFontaigne'
-- answer: '#CondorsOfAvalon recently aired its #SeasonFinale. In the episode, the character #LordDeFontaigne, played by @SirPeterSmalls, dies.'
+- answer: 'They recently aired the #SeasonFinale in which #LordDeFontaigne, played by @SirPeterSmalls, dies.'
   sender: grungo
   question:
     - I don't watch TV, why is everyone freaking out over that Condor show?
-    - What happened that's such a big deal?
+    - What happened in Condors of Avalon?
   triggers:
     - '#SeasonFinale'
+    - 'CondorsOfAvalon'
 # - answer: 'Originally the calls to #BoycottNubi were because of the #potato exploding video. Although that video was later revealed to be #fake, it led to an inquiry into @Nubi Food that discovered E. Coli certain products.'
 #   sender: salt_peter
 #   question:
@@ -47,11 +48,11 @@
 #     - I thought the video was fake
 #   triggers:
 #     - '#fake'
-- answer: 'Nubi has a lot of services like Streaming and #MealPrep. Their main competitor is @HavitOfficial, but it has its own share of controversies.'
+- answer: '@Nubi has a lot of services like Streaming and #MealPrep. Their main competitor is @HavitOfficial, but it has its own share of controversies.'
   sender: WholeLottaBirds
   question:
-    - I wanna support the boycott but Nubi is like... everywhere.
-    - What should I use instead?
-    - Is Havit any better?
+    - If we're not doing Nubi stuff should we just switch to Havit?
+    - What's an alternative for the boycott?
   triggers:
     - '#BoycottNubi'
+    - '@Nubi'

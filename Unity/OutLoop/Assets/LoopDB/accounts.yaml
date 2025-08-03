@@ -3,31 +3,37 @@ ChristinaMcPheeTV:
     display_name: ""
     bio: '#PrincessVasylin on @Nubi TV''s #CondorsOfAvalon. Stassóni Vassili!'
     profile_picture: pfp_christina
+    follower_count: 7
 HavitOfficial:
     user_name: HavitOfficial
     display_name: "Havit"
     bio: You can Havit all.
     profile_picture: pfp_havit
+    follower_count: 7
 HeckinPuppers:
     user_name: HeckinPuppers
     display_name: "heckin cute puppy pics!"
     bio: awf! i just a liwwl pupper!
     profile_picture: pfp_pupper
+    follower_count: 5
 JackGerard43:
     user_name: JackGerard43
     display_name: "TRONIX IS DA BEST"
     bio: "Tronix plz DM me"
     profile_picture: "pfp_jack_gerard"
+    follower_count: 2
 JosephLeeVC:
     user_name: JosephLeeVC
     display_name: "Joseph Lee"
     bio: "Serial entrepreneur. Founder of Tamu. Previously Globi, Dutu, Haloom, Pagoodo, Wipwap, Pipu, Davort, Pupi, Pottao."
     profile_picture: pfp_vc
+    follower_count: 5
 Loop:
     user_name: Loop
     display_name: Loop Social
     bio: Stay in the loop.
     profile_picture: pfp_loop_corpo
+    follower_count: 6
 MildredJones:
     user_name: MildredJones
     display_name: Mildred Jones
@@ -38,143 +44,173 @@ Nubi:
     display_name: Nubi
     bio: We've got everything.
     profile_picture: pfp_nubi
+    follower_count: 6
 ProfEricsson:
     user_name: ProfEricsson
     display_name: "Eric Ericsson"
     bio: Professor of Social Informatics at Faustlin University. Yes, that is my real name.
     profile_picture: pfp_professor
+    follower_count: 2
 RepLorettaJackson:
     user_name: RepLorettaJackson
     display_name: "Representative Loretta Jackson"
     bio: Proud immigrant and mother representing CA-39.
     profile_picture: pfp_congress
+    follower_count: 5
 SallysKitchen:
     user_name: SallysKitchen
     display_name: "Sally's Kitchen"
     bio: Simple meals in under 30 minutes <broken link>
     profile_picture: pfp_sallyskitchen
+    follower_count: 4
 SirPeterSmalls:
     user_name: SirPeterSmalls
     display_name: "Peter Smalls, OBE"
     bio: 'Shakespearean thespian and scholar. Hamlet at Westgrave London.'
     profile_picture: pfp_sirsmalls
+    follower_count: 5
 SusanneSmith:
     user_name: SusanneSmith
     display_name: "Susanne"
     bio: ""
     profile_picture: "pfp_susanne"
+    follower_count: 1
 TruePatriot:
     user_name: TruePatriot
     display_name: "SUPPORT OUR TROOPS"
     bio: "\U0001F1FA\U0001F1F8AMERICA THE BEAUTIFUL \U0001F1FA\U0001F1F8. WE LOVE OUR TROOPS."
     profile_picture: pfp_patriot
+    follower_count: 1
 TruthRevealed:
     user_name: TruthRevealed
     display_name: "Truth Revealed"
     bio: Revealing the pernicious evil that lies in the hearts of man.
     profile_picture: pfp_truthrevealed
+    follower_count: 3
 VasylinFan:
     user_name: VasylinFan
     display_name: "#PrincessVasylin x #LordDeFontaigne 4EVER #VasDef"
     bio: "Just a fan of #CondorsOfAvalon"
     profile_picture: pfp_coafan
+    follower_count: 3
 catboyslim:
     user_name: catboyslim
     display_name: ""
     bio: Berlin-based DJ and catboy. he/they
     profile_picture: pfp_catboy
+    follower_count: 4
 catcradler:
     user_name: catcradler
     display_name: ""
     bio: i already hacked into ur account :3
     profile_picture: pfp_catcradler
+    follower_count: 5
 fred_the_communist:
     user_name: fred_the_communist
     profile_picture: "pfp_fred_the_communist"
     display_name: ""
     bio: "Davortian Marxist and tattoo artist."
+    follower_count: 3
 justice_leek:
     user_name: justice_leek
     display_name: ""
     bio: Not sorry. Corpos, bootlickers, cannibalism apologists DO NOT ENGAGE
     profile_picture: pfp_justiceleek
+    follower_count: 4
 luclferd:
     user_name: luclferd
     display_name: Lucas L. Ferdinand
     bio: Father. Husband. CEO of @Loop
     profile_picture: pfp_luciferd
+    follower_count: 6
 reportergirl7:
     user_name: reportergirl7
     display_name: Anastasia Phong
     bio: Reporter for @TechHub. Posts not representative of my employer.
+    profile_picture: pfp_reporter
+    follower_count: 5
 trolled_daal:
     user_name: trolled_daal
     display_name: ""
     bio: ""
     profile_picture: pfp_trolled_daal
+    follower_count: 5
 COA_Official:
     user_name: COA_Official
     display_name: Condors of Avalon
     bio: "It's time to leave the nest. Watch #CondorsOfAvalon now on @Nubi TV"
+    profile_picture: pfp_condorsofavalon
+    follower_count: 7
 potatolover23:
     user_name: potatolover23
     display_name: antony
     bio: "the biggest #potato fan. waffle fry supremacy"
     profile_picture: pfp_potato
+    follower_count: 5
 HealingHeartsSociety:
     user_name: HealingHeartsSociety
     display_name: Healing Hearts Society
     bio: 'Healing hearts since 2021. Let''s make the world healthier.'
     profile_picture: pfp_healingheartssociety
+    follower_count: 5
 TronixLive:
     user_name: TronixLive
     display_name: Tronix
     bio: Content creator trying to make the world a better place. Join the Tronix Troop!
     profile_picture: pfp_tronix
+    follower_count: 7
 helenloveslatte:
     user_name: helenloveslatte
     display_name: "Helen ❤️"
     bio: "Adventurous spirit."
     profile_picture: pfp_instagirl
+    follower_count: 5
 JennyK:
     user_name: JennyK
     display_name: Jenny
     bio: Infrastructure Engineer at Haloom
     profile_picture: pfp_jennyk
+    follower_count: 4
 TheInkubus:
     user_name: TheInkubus
     display_name: Inkubus
     bio: 'For the latest in online gossip. Join now: <broken link>'
     profile_picture: pfp_inkubus
+    follower_count: 5
 SwoleBrian:
     user_name: SwoleBrian
     display_name: BICEP SUPPLEMENTS AVAILABLE ON HAVIT MARKET
     bio: "Not for crybabies. Bicep Supplements Available Now on Havit Market @HavitOfficial #AltMasc #AlternativeMasculinity"
     profile_picture: pfp_swole_brian
-bestfriendo477:
-    user_name: bestfriendo477
-    bio: "i don't really go on here much"
+    follower_count: 7
 ExtremelyOffline:
     user_name: ExtremelyOffline
     bio: "I'm just here to lurk"
+    profile_picture: pfp_offline
 grass_toucher:
     user_name: grass_toucher
     bio: "Mmmm, grass! I love grass!"
+    profile_picture: pfp_grass_toucher
 thing_understander:
     user_name: thing_understander
     bio: "makes sense to me"
+    profile_picture: "pfp_thing_understander"
 iForgor:
     user_name: iForgor
     bio: "Nevermind I just remembered"
+    profile_picture: "pfp_iforgor"
 rootysnooty:
     user_name: rootysnooty
     bio: "Americans when they call talky-circles 'Social Media'"
+    profile_picture: "pfp_snooty"
 grungo:
     user_name: grungo
     bio: "Cuidado: piso mojado"
+    profile_picture: "pfp_grungo"
 # salt_peter:
 #     user_name: salt_peter
 #     bio: Because pepper_pete was taken
 WholeLottaBirds:
     user_name: WholeLottaBirds
     bio: CAWWW!!!
+    profile_picture: "pfp_birds"
