@@ -11,9 +11,9 @@ namespace OutLoop.Core
             var res = 0;
             for(var curMag = 0; curMag < followerCountMagnitude+1;curMag++)
             {
-                var factor = (int)MathF.Pow(10, curMag);
+                res *= 10;
                 var val = ClientRandom.CleanSeeded.NextPositiveInt() % 10;
-                res += (factor * val);
+                res += val;
             }
 
             return res;
