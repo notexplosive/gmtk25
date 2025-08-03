@@ -21,6 +21,8 @@
   question:
     - Hey do you know what's going on with Nubi?
     - I really don't want to give up my Nubi TV subscription :/
+  triggers:
+    - '#NubiBoycott'
 - answer: 'There is a #LoopOutage because of @TronixLive'
   sender: 'bestfriendo477'
   question:
