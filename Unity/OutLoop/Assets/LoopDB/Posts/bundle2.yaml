@@ -177,12 +177,15 @@
   comments:
     - text: "I''m really disappointed. People have been saying for days that the swazzle challenge is dangerous, and you''ve said nothing until now"
     - text: '"safety is a personal responsibility" dude you told your fans to create explosions?? how about the #accountabilitychallenge?'
+    - author: JackGerard43
+      text: hey tronix, this aint real right?
     - text: 'you aren''t sorry for what you did. you''re sorry you got caught.'
     - text: 'Thank you for apologizing. Everyone makes mistakes. What''s important is you learn and do better in the future.'
     - text: '@TronixLive real name Bartholomew Joseph Sampson birthday April 3 address 742 Conifer Dr Springfield IL 62766'
 - original_post:
     author: TronixLive
     text: Thank you for 5 million subscribers <3 Tronix Troop is the best
+    post_id: tronix_5m
 - original_post:
     author: TronixLive
     text: 'I''ve been working 12 hours every day the last month, no weekends off, just filming. It''s been tiring but the next few videos are going to be the best yet.'
@@ -197,7 +200,8 @@
   comments:
     - text: "LET'S F'ING GOOO"
     - text: tronix hyyyyyyype
-    - text: Terrific Radical Outstanding Nice Impressive Xylophone
+    - author: JackGerard43
+      text: telling all my friends!
 - original_post:
     author: TronixLive
     text: 'Scrolling through the #SwazzleChallenge videos and you guys are INSANE! I''ve seen people blow up their TV, a jar of pickles, and even a couch?? KEEP THEM COMING'
