@@ -49,6 +49,9 @@ namespace OutLoop.UI
         [SerializeField]
         private Transform? _hintArea;
 
+        [SerializeField]
+        private Transform? _puzzleRoot;
+
         public Account? Sender { get; private set; }
 
         private void OnEnable()
@@ -68,6 +71,7 @@ namespace OutLoop.UI
 
             _relay.State().PuzzleStarted -= OnPuzzleStarted;
             _relay.State().BlankFilled -= OnBlankFilled;
+            _relay.State().MessageReceived -= OnMessageReceived;
         }
 
 
@@ -104,11 +108,7 @@ namespace OutLoop.UI
             {
                 if (_directMessageFromSenderPrefab != null)
                 {
-                    var instance = SpawnUtility.Spawn(_directMessageFromSenderPrefab,
-                        new InstantiateParameters { parent = _contentRoot });
-                    instance.Populate(message);
-
-                    _relay.State().MarkMessageAsRead(message);
+                    SpawnMessage(message);
                 }
             }
 
@@ -131,6 +131,34 @@ namespace OutLoop.UI
             ShowCurrentPuzzleIfApplicable();
             _relay.State().PuzzleStarted += OnPuzzleStarted;
             _relay.State().BlankFilled += OnBlankFilled;
+            _relay.State().MessageReceived += OnMessageReceived;
+        }
+
+        private void OnMessageReceived(DirectMessage message)
+        {
+            if (message.Sender == Sender)
+            {
+                SpawnMessage(message);
+            }
+        }
+
+        private void SpawnMessage(DirectMessage message)
+        {
+            if (_directMessageFromSenderPrefab == null)
+            {
+                return;
+            }
+
+            if (_relay == null)
+            {
+                return;
+            }
+
+            var instance = SpawnUtility.Spawn(_directMessageFromSenderPrefab,
+                new InstantiateParameters { parent = _contentRoot });
+            instance.Populate(message);
+
+            _relay.State().MarkMessageAsRead(message);
         }
 
         private void OnBlankFilled(Puzzle puzzle)
@@ -199,6 +227,11 @@ namespace OutLoop.UI
                 return;
             }
 
+            if (_puzzleRoot == null)
+            {
+                return;
+            }
+
             var currentPuzzle = _relay.State().InProgressPuzzles.FirstOrDefault(a => a.Sender == Sender);
             if (_puzzlePhraseTextController == null)
             {
@@ -207,9 +240,11 @@ namespace OutLoop.UI
 
             if (currentPuzzle == null)
             {
+                _puzzleRoot.gameObject.SetActive(false);
                 return;
             }
 
+            _puzzleRoot.gameObject.SetActive(true);
             _puzzlePhraseTextController.SetupForPuzzle(currentPuzzle);
             CheckSolution(currentPuzzle);
         }

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Core;
+using OutLoop.Data;
 using SecretPlan.Core;
 using UnityEngine;
 
@@ -47,6 +49,7 @@ namespace OutLoop.UI
         private ConversationModalController? _conversationPrefab;
 
         private AppPage? _currentPage;
+        private bool _hasTriggeredEnding;
 
         private void Awake()
         {
@@ -98,6 +101,20 @@ namespace OutLoop.UI
             }
 
             var loopData = _relay.State();
+
+            loopData.SolvedPuzzle += _ =>
+            {
+                if (_hasTriggeredEnding)
+                {
+                    return;
+                }
+                
+                if (loopData.AllPuzzles.All(a => a.IsSolved()))
+                {
+                    _hasTriggeredEnding = true;
+                    StartCoroutine(Ending(loopData));
+                }
+            };
 
             loopData.WordAddedToBank += (_, _) => { SoundService.Instance.PlaySound(_addClueToBankSound); };
 
@@ -188,6 +205,35 @@ namespace OutLoop.UI
                     profileModal.PopulateWithProfile(account);
                 }
             };
+        }
+
+        private IEnumerator Ending(LoopData loopData)
+        {
+            var account = new Account(new AccountData()
+            {
+                Bio = "Programmer",
+                DisplayName = "Potatoes Are Not Explosive",
+                FollowerCountMagnitude = 3,
+                UserName = "notexplosive",
+                ProfilePicture = "pfp_notexplosive"
+            });
+                
+            loopData.ReceiveMessage(new DirectMessage(account, "Thanks for playing!"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "This game was made in 4 days for GMTK Jam 2025"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "Game Design by NotExplosive and Tesseralis"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "Art by SonderingEmily KaeOnline, Tesseralis"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "Additional profile picture art by NotExplosive and isoymetric"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "Music and Sound Design by Quarkimo"));
+            yield return new WaitForSeconds(0.5f);
+            loopData.ReceiveMessage(new DirectMessage(account, "Programming by NotExplosive"));
+            yield return new WaitForSeconds(1f);
+            loopData.ReceiveMessage(new DirectMessage(account,
+                "If you're enjoying your time here, feel free to keep exploring. There's lots more to see!"));
         }
 
         private Action CreatePageToEvent(AppPage page)

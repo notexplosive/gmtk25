@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
@@ -87,15 +88,22 @@ namespace OutLoop.Core
         [Button]
         private void FillBank()
         {
-            foreach (var word in State().AllBankWords())
+            IEnumerator Coroutine()
             {
-                State().AddToWordBank(word);
-            }
+                foreach (var word in State().AllBankWords())
+                {
+                    State().AddToWordBank(word);
+                    yield return new WaitForSeconds(0.1f);
+                }
 
-            foreach (var account in State().AllAccounts())
-            {
-                State().AddToNameBank(account);
+                foreach (var account in State().AllAccounts())
+                {
+                    State().AddToNameBank(account);
+                    yield return new WaitForSeconds(0.1f);
+                }
             }
+            
+            CoroutineSpawner.Run("bank cheat", true, Coroutine());
         }
 
         [UsedImplicitly]
@@ -113,6 +121,22 @@ namespace OutLoop.Core
                     return;
                 }
             }
+        }
+
+        [UsedImplicitly]
+        [Button]
+        private void SolveAllPuzzles()
+        {
+            foreach (var puzzle in State().AllPuzzles)
+            {
+                foreach (var blank in puzzle.Blanks)
+                {
+                    blank.GivenAnswer = blank.CorrectAnswers.First();
+                }
+            }
+
+            // unsolve the very end of the very last puzzle
+            State().AllPuzzles.Last().Blanks.Last().GivenAnswer = null;
         }
     }
 }

@@ -297,6 +297,7 @@ namespace OutLoop.Core
         {
             if (_pendingBlank != null)
             {
+                var wasSolved = _pendingBlank.ParentPuzzle.IsSolved();
                 _pendingBlank.GivenAnswer = text;
 
                 if (bankType != _pendingBlank.AnswerType)
@@ -306,7 +307,10 @@ namespace OutLoop.Core
 
                 if (_pendingBlank.ParentPuzzle.IsSolved())
                 {
-                    SolvedPuzzle?.Invoke(_pendingBlank.ParentPuzzle);
+                    if (!wasSolved)
+                    {
+                        SolvedPuzzle?.Invoke(_pendingBlank.ParentPuzzle);
+                    }
                 }
 
                 BlankFilled?.Invoke(_pendingBlank.ParentPuzzle);

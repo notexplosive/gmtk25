@@ -512,6 +512,7 @@ MonoBehaviour:
   _puzzlePhraseTextController: {fileID: 6338980669716634628}
   _hintTextMesh: {fileID: 4969897570913378252}
   _hintArea: {fileID: 6831499395329827140}
+  _puzzleRoot: {fileID: 2196687895183423245}
 --- !u!114 &1219783117497859630
 MonoBehaviour:
   m_ObjectHideFlags: 0
