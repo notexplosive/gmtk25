@@ -1,6 +1,7 @@
 ﻿using ExTween;
 using ExTween.Unity;
 using NaughtyAttributes;
+using SecretPlan.Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ namespace OutLoop.UI
 {
     public class IntroSequence : MonoBehaviour
     {
+        [SerializeField]
+        private AudioClip? _startupSound;
+        
         [SerializeField]
         private RectTransform? _root;
 
@@ -103,7 +107,10 @@ namespace OutLoop.UI
                 .Add(tweenableY.TweenTo(rootStartingPosition, 0.5f, Ease.QuadFastSlow))
                 .Add(imageScale.CallbackSetTo(new Vector3(2f, 2f, 1)))
                 .Add(textPositionX.CallbackSetTo(textStartPosition + 800))
-                // todo play sound
+                .Add(new CallbackTween(() =>
+                {
+                    SoundService.Instance.PlaySound(_startupSound);
+                }))
                 .Add(new MultiplexTween()
                     .Add(new SequenceTween()
                         .Add(imageScale.TweenTo(new Vector3(0.8f, 0.8f, 1), beatLength / 2f, Ease.QuadFastSlow))
@@ -115,10 +122,6 @@ namespace OutLoop.UI
                         .Add(imageOpacity.TweenTo(1f, beatLength * 0.7f, Ease.Linear))
                     )
                 )
-                .Add(new CallbackTween(() =>
-                {
-                    // todo: sound cue
-                }))
                 .Add(
                     new MultiplexTween()
                         .Add(textOpacity.TweenTo(1f, beatLength/2, Ease.Linear))

@@ -34,6 +34,9 @@ namespace OutLoop.UI
         [SerializeField]
         private SecretButton? _nextButton;
 
+        [SerializeField]
+        private RectTransform? _animationRoot;
+        
         private readonly SequenceTween _tween = new();
 
         private void Awake()
@@ -63,6 +66,7 @@ namespace OutLoop.UI
                 }
 
                 _relay.State().PendingBlankSet += OnPendingBlankSet;
+                _relay.State().BlankFilled += OnBlankFilled;
 
                 if (_previousButton != null)
                 {
@@ -79,6 +83,30 @@ namespace OutLoop.UI
             {
                 _pageNavigationRoot.SetActive(false);
             }
+        }
+
+        private void OnBlankFilled(Puzzle obj, AnswerType answerType)
+        {
+            if (answerType != _bankType)
+            {
+                return;
+            }
+
+            var smallBeat = 0.07f;
+            _tween.Clear();
+            _tween
+                .Add(new SequenceTween()
+                    .Add(transform.GetTweenableLocalScale()
+                        .TweenTo(new Vector3(0.7f, 0.7f, 1f), smallBeat, Ease.QuadFastSlow))
+                    .Add(transform.GetTweenableLocalScale()
+                        .TweenTo(new Vector3(1.3f, 1.3f, 1f), smallBeat, Ease.QuadFastSlow))
+                    .Add(transform.GetTweenableLocalScale()
+                        .TweenTo(new Vector3(0.9f, 0.9f, 1f), smallBeat, Ease.QuadFastSlow))
+                    .Add(transform.GetTweenableLocalScale()
+                        .TweenTo(new Vector3(1.1f, 1.1f, 1f), smallBeat, Ease.QuadFastSlow))
+                    .Add(transform.GetTweenableLocalScale()
+                        .TweenTo(new Vector3(1f, 1f, 1f), smallBeat * 2, Ease.QuadFastSlow))
+                );
         }
 
         private void Update()
@@ -190,6 +218,32 @@ namespace OutLoop.UI
                     }
                 }
             }
+            
+            _tween.Clear();
+            var smallBeat = 0.05f;
+            var medBeat = 0.12f;
+            _tween
+                .Add(
+                    new MultiplexTween()
+                        .Add(new SequenceTween()
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(1.3f, 1.3f, 1f), smallBeat, Ease.QuadFastSlow))
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(0.7f, 0.7f, 1f), smallBeat, Ease.QuadFastSlow))
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(1.2f, 1.2f, 1f), smallBeat, Ease.QuadFastSlow))
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(0.9f, 0.9f, 1f), smallBeat, Ease.QuadFastSlow))
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(1.1f, 1.1f, 1f), smallBeat, Ease.QuadFastSlow))
+                            .Add(transform.GetTweenableLocalScale().TweenTo(new Vector3(1f, 1f, 1f), smallBeat*2, Ease.QuadFastSlow))
+                        )
+                        .Add(
+                            new SequenceTween()
+                                .Add(transform.GetTweenableRotation().TweenTo(Quaternion.Euler(0,0,-15), medBeat, Ease.Linear))
+                                .Add(transform.GetTweenableRotation().TweenTo(Quaternion.Euler(0,0,15), medBeat, Ease.Linear))
+                                .Add(transform.GetTweenableRotation().TweenTo(Quaternion.Euler(0,0,-5), medBeat, Ease.Linear))
+                                .Add(transform.GetTweenableRotation().TweenTo(Quaternion.Euler(0,0,5), medBeat, Ease.Linear))
+                                .Add(transform.GetTweenableRotation().TweenTo(Quaternion.Euler(0,0,0), medBeat, Ease.Linear))
+                            )
+                    )
+                
+                ;
         }
 
         private string GetTitleForBankTypeIncludingCount()

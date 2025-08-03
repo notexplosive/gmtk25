@@ -313,12 +313,12 @@ namespace OutLoop.Core
                     }
                 }
 
-                BlankFilled?.Invoke(_pendingBlank.ParentPuzzle);
+                BlankFilled?.Invoke(_pendingBlank.ParentPuzzle, bankType);
             }
         }
 
         public event Action<Puzzle>? SolvedPuzzle;
-        public event Action<Puzzle>? BlankFilled;
+        public event Action<Puzzle, AnswerType>? BlankFilled;
 
         public List<string> GetWordsFromBank(AnswerType bankType)
         {

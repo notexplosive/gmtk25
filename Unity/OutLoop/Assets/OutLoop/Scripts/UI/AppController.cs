@@ -124,7 +124,7 @@ namespace OutLoop.UI
                 SoundService.Instance.PlaySound(_receiveDmSound, 0.45f);
             };
             
-            loopData.BlankFilled += (clue) =>
+            loopData.BlankFilled += (_, _) =>
             {
                 SoundService.Instance.PlaySound(_blankFilledSound);
             };

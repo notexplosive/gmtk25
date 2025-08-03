@@ -1,5 +1,6 @@
 ﻿using System;
 using OutLoop.Core;
+using OutLoop.Data;
 using SecretPlan.Core;
 using TMPro;
 using UnityEngine;
@@ -156,7 +157,7 @@ namespace OutLoop.UI
             }
         }
 
-        private void OnBlankFilled(Puzzle puzzle)
+        private void OnBlankFilled(Puzzle puzzle, AnswerType answerType)
         {
             if (_puzzle != null)
             {

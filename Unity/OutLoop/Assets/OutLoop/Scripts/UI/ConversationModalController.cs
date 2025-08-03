@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using OutLoop.Core;
+using OutLoop.Data;
 using SecretPlan.Core;
 using TMPro;
 using UnityEngine;
@@ -173,7 +174,7 @@ namespace OutLoop.UI
             _relay.State().MarkMessageAsRead(message);
         }
 
-        private void OnBlankFilled(Puzzle puzzle)
+        private void OnBlankFilled(Puzzle puzzle, AnswerType answerType)
         {
             CheckSolution(puzzle);
         }
