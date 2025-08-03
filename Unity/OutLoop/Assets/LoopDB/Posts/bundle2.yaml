@@ -538,7 +538,7 @@
     author: helenloveslatte
     text: 'Fireworks. #charity #healing #heart'
     post_id: helen_swazzle
-    # TODO generic fireworks image
+    image: helen_fireworks
   comments:
     - text: 'Wait is this the #SwazzleChallenge??'
     - text: 'Only helen could make #SwazzleChallenge this classy!'
@@ -550,7 +550,6 @@
       text: Helen you are a TRUE PATRIOT!
     - author: ProfEricsson
       text: You have a good heart, Helen.
-    - author: 'helen no!! healing hearts is a #scam!!'
 - original_post:
     author: helenloveslatte
     text: "I am partnering with @Nubi Shop to bring new Divini Women's Health Supplements. Find Your Feminine Divine #Sponsored #Ad"
