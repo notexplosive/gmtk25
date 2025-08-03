@@ -37,7 +37,7 @@ namespace OutLoop.UI
 
             if (_senderTextMesh != null)
             {
-                _senderTextMesh.text = message.Sender.DisplayNameAndUsernameStyled;
+                _senderTextMesh.text = "<style=Username>"+message.Sender.DisplayName+"</style>";
             }
 
             if (_profilePicture != null)
