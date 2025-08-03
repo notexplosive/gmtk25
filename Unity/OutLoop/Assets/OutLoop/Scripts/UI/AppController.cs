@@ -50,6 +50,7 @@ namespace OutLoop.UI
 
         private AppPage? _currentPage;
         private bool _hasTriggeredEnding;
+        private readonly HashSet<Puzzle> _triggeredPuzzles = new();
 
         private void Awake()
         {
@@ -120,7 +121,7 @@ namespace OutLoop.UI
 
             loopData.MessageReceived += (_) =>
             {
-                SoundService.Instance.PlaySound(_receiveDmSound);
+                SoundService.Instance.PlaySound(_receiveDmSound, 0.45f);
             };
             
             loopData.BlankFilled += (clue) =>
@@ -140,12 +141,26 @@ namespace OutLoop.UI
             
             loopData.PuzzleTriggered += puzzle =>
             {
-                foreach (var message in puzzle.QuestionMessages)
+                if (_triggeredPuzzles.Contains(puzzle))
                 {
-                    loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
+                    return;
                 }
                 
-                loopData.StartPuzzle(puzzle);
+                _triggeredPuzzles.Add(puzzle);
+
+                IEnumerator Coroutine()
+                {
+                    loopData.StartPuzzle(puzzle);
+
+                    yield return new WaitForSeconds(1.25f);
+                    foreach (var message in puzzle.QuestionMessages)
+                    {
+                        loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
+                        yield return new WaitForSeconds(0.25f);
+                    }
+                }
+
+                StartCoroutine(Coroutine());
             };
 
             loopData.CommentsModalRequested += post =>

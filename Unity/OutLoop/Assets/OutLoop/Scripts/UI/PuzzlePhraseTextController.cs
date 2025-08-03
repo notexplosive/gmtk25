@@ -30,6 +30,11 @@ namespace OutLoop.UI
             }
         }
 
+        private void OnDisable()
+        {
+            UpdateText(null);
+        }
+
         private void OnPendingBlankSet(PuzzleBlank? obj)
         {
             if (obj == null)

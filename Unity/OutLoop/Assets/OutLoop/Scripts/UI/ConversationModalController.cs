@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using OutLoop.Core;
 using SecretPlan.Core;
@@ -60,6 +61,17 @@ namespace OutLoop.UI
             {
                 _hintArea.gameObject.SetActive(false);
             }
+            
+            
+        }
+
+        private void OnDisable()
+        {
+            if (_relay == null)
+            {
+                return;
+            }
+            _relay.State().ClearPendingBlank();
         }
 
         private void OnDestroy()

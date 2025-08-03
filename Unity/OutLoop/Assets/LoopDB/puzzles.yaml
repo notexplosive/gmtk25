@@ -33,11 +33,11 @@
     - "what is it VasDef?"
   triggers:
     - '#LordDeFontaigne'
-- answer: 'They recently aired the #SeasonFinale in which #LordDeFontaigne, played by @SirPeterSmalls, dies.'
+- answer: 'They recently aired the #SeasonFinale in which beloved character #LordDeFontaigne, played by @SirPeterSmalls, dies.'
   sender: grungo
   question:
-    - I don't watch TV, why is everyone freaking out over that Condor show?
-    - What happened in Condors of Avalon?
+    - i'm not a Nubi subscriber and i don't intend to be
+    - why is everyone freaking out over that Condor show?
   triggers:
     - '#SeasonFinale'
     - '#CondorsOfAvalon'
