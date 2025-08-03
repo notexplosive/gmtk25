@@ -61,7 +61,7 @@ SirPeterSmalls:
     user_name: SirPeterSmalls
     display_name: "Peter Smalls, OBE"
     bio: 'Shakespearean thespian and scholar. Hamlet at Westgrave London.'
-    profile_picture: pfp_peter
+    profile_picture: pfp_sirsmalls
 SusanneSmith:
     user_name: SusanneSmith
     display_name: "Susanne"
