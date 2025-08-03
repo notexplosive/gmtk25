@@ -157,7 +157,7 @@ namespace OutLoop.UI
             }
             else
             {
-                SetHintText("<color=red>Incorrect!</color> Try again.");
+                SetHintText("<color=yellow>Incorrect!</color> Try again.");
                 SoundService.Instance.PlaySound(_puzzleWrongSound);
             }
 

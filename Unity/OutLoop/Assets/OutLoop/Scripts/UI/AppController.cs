@@ -106,13 +106,18 @@ namespace OutLoop.UI
                 SoundService.Instance.PlaySound(_receiveDmSound);
             };
             
-            loopData.BlankFilled += (_) =>
+            loopData.BlankFilled += (clue) =>
             {
                 SoundService.Instance.PlaySound(_blankFilledSound);
             };
 
-            loopData.PendingBlankSet += (_) =>
+            loopData.PendingBlankSet += (blank) =>
             {
+                if (blank == null)
+                {
+                    return;
+                }
+
                 SoundService.Instance.PlaySound(_blankSelectedSound);
             };
             

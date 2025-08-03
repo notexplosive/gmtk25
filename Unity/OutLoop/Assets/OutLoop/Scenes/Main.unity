@@ -1864,8 +1864,8 @@ MonoBehaviour:
   _addClueToBankSound: {fileID: 8300000, guid: 92a4c53d382edaf4b8026adfcabf7826, type: 3}
   _openModalSound: {fileID: 8300000, guid: bc8e6e680719fa446b4bdac814bb0795, type: 3}
   _swipeOver: {fileID: 8300000, guid: a856e03a7a6a2414090b6a743ce8f262, type: 3}
-  _blankFilledSound: {fileID: 8300000, guid: 9783a7b2fcba56547bd8778178652fea, type: 3}
-  _blankSelectedSound: {fileID: 8300000, guid: 6e439d60bdd4d1d4b924850c9d572aa8, type: 3}
+  _blankFilledSound: {fileID: 8300000, guid: 6e439d60bdd4d1d4b924850c9d572aa8, type: 3}
+  _blankSelectedSound: {fileID: 8300000, guid: f03e2ac6f81c4f2439018147dcac15c1, type: 3}
   _appButtonRow: {fileID: 797474578}
   _pages:
   - {fileID: 803487111}
