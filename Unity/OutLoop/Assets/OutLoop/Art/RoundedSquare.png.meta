@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: fab8edd59325f784f85c4fe8ecbb7aad
+guid: 2d08f78974d071f4684e158b92d1382a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4325076472638487306
-    second: logo_loop_0
-  - first:
-      213: 2722704574824484571
-    second: logo_loop_1
-  - first:
-      213: -2693286915950246179
-    second: logo_loop_2
-  - first:
-      213: 6548779280774356266
-    second: logo_loop_3
+      213: 644935044907405540
+    second: RoundedSquare_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: logo_loop_0
+      name: RoundedSquare_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1268
-        height: 390
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0b340af222c50c30800000000000000
-      internalID: 4325076472638487306
+      spriteID: 4e018ee910543f800800000000000000
+      internalID: 644935044907405540
       vertices: []
       indices: 
       edges: []
@@ -134,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1fd0fc4b396fcf74e9a43c711f65827c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -144,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      logo_loop_0: 4325076472638487306
-      logo_loop_1: 2722704574824484571
-      logo_loop_2: -2693286915950246179
-      logo_loop_3: 6548779280774356266
+      RoundedSquare_0: 644935044907405540
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
