@@ -33,7 +33,7 @@
     - "what is it?"
   triggers:
     - '#LordDeFontaigne'
-- answer: '#CondorsofAvalon recently aired its #SeasonFinale. In the episode, the character #LordDeFontaigne, played by @SirPeterSmalls, dies.'
+- answer: '#CondorsOfAvalon recently aired its #SeasonFinale. In the episode, the character #LordDeFontaigne, played by @SirPeterSmalls, dies.'
   sender: grungo
   question:
     - I don't watch TV, why is everyone freaking out over that Condor show?
