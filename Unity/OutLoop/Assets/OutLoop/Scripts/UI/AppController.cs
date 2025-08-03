@@ -2,12 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using OutLoop.Core;
+using SecretPlan.Core;
 using UnityEngine;
 
 namespace OutLoop.UI
 {
     public class AppController : MonoBehaviour
     {
+        [SerializeField]
+        private AudioClip? _receiveDmSound;
+
+        [SerializeField]
+        private AudioClip? _addClueToBankSound;
+
+        [SerializeField]
+        private AudioClip? _openModalSound;
+
+        [SerializeField]
+        private AudioClip? _swipeOver;
+
         [SerializeField]
         private AppButtonRow? _appButtonRow;
 
@@ -73,73 +86,84 @@ namespace OutLoop.UI
                 _appButtonRow.FavoritesButton.Clicked += CreatePageToEvent(_pages[3]);
             }
 
-            if (_relay != null)
+            if (_relay == null)
             {
-                var loopData = _relay.State();
-                loopData.PuzzleTriggered += (puzzle) =>
-                {
-                    foreach (var message in puzzle.QuestionMessages)
-                    {
-                        loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
-                    }
-
-                    loopData.StartPuzzle(puzzle);
-                };
-                
-                loopData.CommentsModalRequested += (post) =>
-                {
-                    if (_currentPage.GetTopModal() is CommentsModalController existingCommentsModal)
-                    {
-                        if (existingCommentsModal.CachedPost == post)
-                        {
-                            // don't open comments for a modal we're already in
-                            return;
-                        }
-                    }
-                    
-                    var commentsModal = _currentPage.OpenModal(_commentsPrefab);
-                    if (commentsModal != null)
-                    {
-                        commentsModal.PopulateForPost(post);
-                    }
-                };
-
-                loopData.ProfileModalRequested += (account) =>
-                {
-                    if (_currentPage.GetTopModal() is ProfileModalController existingProfileModal)
-                    {
-                        if (existingProfileModal.CachedAccount == account)
-                        {
-                            // don't open the profile we're currently looking at
-                            return;
-                        }
-                    }
-                    
-                    var profileModal = _currentPage.OpenModal(_profilePrefab);
-                    if (profileModal != null)
-                    {
-                        profileModal.PopulateWithProfile(account);
-                    }
-                };
-                
-                loopData.ConversationModalRequested += (account) =>
-                {
-                    if (_currentPage.GetTopModal() is ConversationModalController existingModal)
-                    {
-                        if (existingModal.Sender == account)
-                        {
-                            // don't open the profile we're currently looking at
-                            return;
-                        }
-                    }
-                    
-                    var profileModal = _currentPage.OpenModal(_conversationPrefab);
-                    if (profileModal != null)
-                    {
-                        profileModal.PopulateWithProfile(account);
-                    }
-                };
+                return;
             }
+
+            var loopData = _relay.State();
+
+            loopData.WordAddedToBank += (_, _) => { SoundService.Instance.PlaySound(_addClueToBankSound); };
+
+            loopData.PuzzleTriggered += puzzle =>
+            {
+                foreach (var message in puzzle.QuestionMessages)
+                {
+                    loopData.ReceiveMessage(new DirectMessage(puzzle.Sender, message));
+                }
+
+                SoundService.Instance.PlaySound(_addClueToBankSound);
+
+                loopData.StartPuzzle(puzzle);
+            };
+
+            loopData.CommentsModalRequested += post =>
+            {
+                if (_currentPage.GetTopModal() is CommentsModalController existingCommentsModal)
+                {
+                    if (existingCommentsModal.CachedPost == post)
+                    {
+                        // don't open comments for a modal we're already in
+                        return;
+                    }
+                }
+
+                var commentsModal = _currentPage.OpenModal(_commentsPrefab);
+                SoundService.Instance.PlaySound(_openModalSound);
+
+                if (commentsModal != null)
+                {
+                    commentsModal.PopulateForPost(post);
+                }
+            };
+
+            loopData.ProfileModalRequested += account =>
+            {
+                if (_currentPage.GetTopModal() is ProfileModalController existingProfileModal)
+                {
+                    if (existingProfileModal.CachedAccount == account)
+                    {
+                        // don't open the profile we're currently looking at
+                        return;
+                    }
+                }
+
+                var profileModal = _currentPage.OpenModal(_profilePrefab);
+                SoundService.Instance.PlaySound(_openModalSound);
+                if (profileModal != null)
+                {
+                    profileModal.PopulateWithProfile(account);
+                }
+            };
+
+            loopData.ConversationModalRequested += account =>
+            {
+                if (_currentPage.GetTopModal() is ConversationModalController existingModal)
+                {
+                    if (existingModal.Sender == account)
+                    {
+                        // don't open the profile we're currently looking at
+                        return;
+                    }
+                }
+
+                var profileModal = _currentPage.OpenModal(_conversationPrefab);
+                SoundService.Instance.PlaySound(_openModalSound);
+                if (profileModal != null)
+                {
+                    profileModal.PopulateWithProfile(account);
+                }
+            };
         }
 
         private Action CreatePageToEvent(AppPage page)
@@ -165,6 +189,8 @@ namespace OutLoop.UI
             var targetPageIndex = _pages.IndexOf(page);
             var currentPageIndex = _pages.IndexOf(_currentPage);
             var direction = Math.Sign(targetPageIndex - currentPageIndex);
+
+            SoundService.Instance.PlaySound(_swipeOver);
 
             _currentPage.FlyOut(direction);
             page.FlyIn(direction);

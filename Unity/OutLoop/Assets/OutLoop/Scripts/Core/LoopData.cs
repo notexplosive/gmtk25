@@ -233,8 +233,13 @@ namespace OutLoop.Core
 
         public void AddToWordBank(string text)
         {
+            var hasSeen = _hashTagSeenStatus[text];
             _hashTagSeenStatus[text] = true;
-            OnAddedWord(AnswerType.Hashtag, text);
+
+            if (!hasSeen)
+            {
+                OnAddedWord(AnswerType.Hashtag, text);
+            }
         }
 
         private void OnAddedWord(AnswerType type, string text)
@@ -265,8 +270,12 @@ namespace OutLoop.Core
         public void AddToNameBank(Account account)
         {
             var text = account.UserNameWithAt;
+            var hadSeen = _accountSeenStatus[text];
             _accountSeenStatus[text] = true;
-            OnAddedWord(AnswerType.Username, text);
+            if (!hadSeen)
+            {
+                OnAddedWord(AnswerType.Username, text);
+            }
         }
 
         public TopLevelPost? GetTopLevelOfPost(IPost? post)
